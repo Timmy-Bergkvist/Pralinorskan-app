@@ -95,3 +95,17 @@ body {
   }
 
 /*---------------------------<-Footer->------------------------------*/
+
+.footer-container {
+    background: rgba(237, 237, 237, 0.767);
+    color: #000;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.social-links  li a i {
+    color: #000;
+}
+
+.social-links li a i:hover{
+    color: #19896F;
+}
