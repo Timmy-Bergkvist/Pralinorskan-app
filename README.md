@@ -202,18 +202,23 @@ The following instructions are based on Windows 10 and VS Code editor.
 
   II.   Install all the packages that are required
 ```shell
-pip install 
+pip install django
 pip install pymongo
 pip install dnspython
 pip install 
+
+```
+  III.   Use django-admin startproject <app-name> dot
+```shell
+  django-admin startproject pralinorskan_app .
 ```
 
-  III.   create a virtual environment with the command:
+  IV.   create a virtual environment with the command:
 ```shell
  python -m venv env
 ```
 
-  IV.   Activate an environment
+  V.   Activate an environment
 ```shell
 
 virtualenv env
@@ -223,8 +228,25 @@ For more information:
 https://code.visualstudio.com/docs/python/environments
 ```
 
+  VII.   Migrate the models to crete a database template.
+```shell
+python manage.py migrate
+```
 
-  V.   Set up environment variable keys.
+  VIII.   Create a super user to have access to the admin page.
+```shell
+python manage.py createsuperuser
+```
+
+
+  IX.   Run the application
+```shell
+python manage.py runserver
+
+Open the website at http://127.0.0.1:5000
+```
+
+  X.   Set up environment variable keys.
 ```shell
 os.environ.setdefault('SECRET_KEY', '<secrete key>')
 os.environ.setdefault('DATABASE_URL', '<postgres key>')
@@ -242,25 +264,7 @@ os.environ.setdefault('EMAIL_ADDRESS', '<your email here>')
 os.environ.setdefault('EMAIL_PASSWORD', '<your email password here>')
 ```
 
-    
-  VI.   Migrate the models to crete a database template.
-```shell
-python manage.py migrate
-```
-
-  VII.   Create a super user to have access to the admin page.
-```shell
-python manage.py createsuperuser
-```
-
-  IX.   Run the application
-```shell
-python manage.py runserver
-
-Open the website at http://127.0.0.1:5000
-```
-
-  X.   Log into your admin account add the /admin path at the end of the url link.
+  XI.   Log into your admin account add the /admin path at the end of the url link.
 ```shell
 http://127.0.0.1:5000/admin
 ```
