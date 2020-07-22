@@ -203,9 +203,12 @@ The following instructions are based on Windows 10 and VS Code editor.
   II.   Install all the packages that are required
 ```shell
 pip install django
-pip install pymongo
-pip install dnspython
+pip install django-allauth
 pip install 
+pip install
+
+For more information:
+https://django-allauth.readthedocs.io/en/latest/installation.html
 
 ```
   III.   Use django-admin startproject <app-name> dot
