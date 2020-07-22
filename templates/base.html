@@ -15,11 +15,90 @@
 
     {% block corecss %}
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Satisfy&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
     {% block extra_css %}
+    {% endblock %}
+
+    <title>Pralinörskan app{% block extra_title %}{% endblock %}</title>
+  </head>
+  <body>
+    <header class="container-fluid fixed-top">
+        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
+            <div class="col-12 col-lg-2 my-auto py-1 py-lg-0 text-center text-lg-left">
+                <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                    <h2 class="logo-font navbar-text my-0"><strong>Pralinörskan</strong></h2>
+                </a>
+            </div>
+
+            <div class="col-12 col-lg-7 my-auto py-1 py-lg-0">
+                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                    <li class="list-inline-item">
+                        <a class="navbar-text nav-link" href="#" id="user-options" aria-haspopup="true" aria-expanded="false">
+                            <div class="text-center">
+                                <p class="my-0">Home</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="navbar-text nav-link" href="#" id="user-options" aria-haspopup="true" aria-expanded="false">
+                            <div class="text-center">
+                                <p class="my-0">Products</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="navbar-text nav-link" href="#" id="user-options" aria-haspopup="true" aria-expanded="false">
+                            <div class="text-center">
+                                <p class="my-0">Vegan</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="navbar-text nav-link" href="#" id="user-options" aria-haspopup="true" aria-expanded="false">
+                            <div class="text-center">
+                                <p class="my-0">Gluten free</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="navbar-text nav-link" href="#" id="user-options" aria-haspopup="true" aria-expanded="false">
+                            <div class="text-center">
+                                <p class="my-0">Special offers</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="col-12 col-lg-3 my-auto py-1 py-lg-0">
+                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                    <li class="list-inline-item">
+                        <a class="navbar-text nav-link" href="#" id="user-options" aria-haspopup="true" aria-expanded="false">
+                            <div class="text-center">
+                                <p class="my-0"><strong>Register</strong></p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="navbar-text nav-link" href="#" id="user-options" aria-haspopup="true" aria-expanded="false>
+                            <div class="text-center">
+                                <p class="my-0"><strong>Login</strong></p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </header>
+
+    {% block page_header %}
+    {% endblock %}
+
+    {% block content %}
     {% endblock %}
 
     {% block corejs %}
@@ -33,80 +112,6 @@
 
     {% block extra_js %}
     {% endblock %}
-
-    <title>Pralinörskan app{% block extra_title %}{% endblock %}</title>
-  </head>
-  <body>
-    <header class="container-fluid fixed-top">
-        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-2 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-black my-0"><strong>Pralinörskan</strong></h2>
-                </a>
-            </div>
-
-            <div class="col-12 col-lg-7 my-auto py-1 py-lg-0">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                    <li class="list-inline-item">
-                        <a class="text-black nav-link" href="#" id="user-options" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <p class="my-0">Home</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="text-black nav-link" href="#" id="user-options" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <p class="my-0">Products</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="text-black nav-link" href="#" id="user-options" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <p class="my-0">Vegan</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="text-black nav-link" href="#" id="user-options" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <p class="my-0">Gluten free</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="text-black nav-link" href="#" id="user-options" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <p class="my-0">Special offers</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="col-12 col-lg-3 my-auto py-1 py-lg-0">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                    <li class="list-inline-item">
-                        <a class="text-black nav-link" href="#" id="user-options" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <p class="my-0"><strong>Register</strong></p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="text-black nav-link" href="#" id="user-options" aria-haspopup="true" aria-expanded="false>
-                            <div class="text-center">
-                                <p class="my-0"><strong>Login</strong></p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-    </header>
-    
         
   </body>
 </html>
