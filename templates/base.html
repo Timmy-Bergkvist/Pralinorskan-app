@@ -25,72 +25,29 @@
     <title>Pralinörskan app{% block extra_title %}{% endblock %}</title>
   </head>
   <body>
-    <header class="container-fluid fixed-top">
-        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-2 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font navbar-text my-0"><strong>Pralinörskan</strong></h2>
-                </a>
-            </div>
-            <div class="col-12 col-lg-7 my-auto py-1 py-lg-0">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                    <li class="list-inline-item">
-                        <a class="navbar-text nav-link" href="#" id="user-options" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <p class="my-0">Home</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="navbar-text nav-link" href="#" id="user-options" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <p class="my-0">Products</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="navbar-text nav-link" href="#" id="user-options" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <p class="my-0">Vegan</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="navbar-text nav-link" href="#" id="user-options" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <p class="my-0">Gluten free</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="navbar-text nav-link" href="#" id="user-options" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <p class="my-0">Special offers</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-12 col-lg-3 my-auto py-1 py-lg-0">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                    <li class="list-inline-item">
-                        <a class="navbar-text nav-link" href="#" id="user-options" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <p class="my-0"><strong>Register</strong></p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="navbar-text nav-link" href="#" id="user-options" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <p class="my-0"><strong>Login</strong></p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+    
+    <nav id="navbar" class="navbar navbar-expand-md navbar-dark">
+
+        <a class="navbar-brand navbar-logo" href="#"><strong>Pralinörskan</strong></a>
+    
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarToggler">
+          <ul class="navbar-nav ">
+              
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Vegan</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Gluten Free</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Special Offers</a></li>
+    
+    
+            <li class="nav-item"><a class="nav-link" href="#"><strong>Register</strong></a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><strong>Login</strong></a></li>
+          </ul>
         </div>
-    </header>
+      </nav>
 
     {% block page_header %}
     {% endblock %}
@@ -98,73 +55,8 @@
     {% block content %}
     {% endblock %}
 
+    {% include 'footer.html' %}
     
-    <footer class="footer-container font-small footer-color pt-4">
-        <div class="container text-center text-md-center">
-            <div class="row text-center text-md-center mt-3 pb-3">
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">About</h6>
-                    <p>
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmodtempor incididunt ut labore et dolore mco 
-                        laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehend
-                    </p>
-                </div>
-                <hr class="w-100 clearfix d-md-none">
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Links</h6>
-                    {% if user.is_authenticated %}
-                        <p><a class="text-black" href="#">Logout</a></p>
-                    {% else %}
-                        <p><a class="text-black" href="#">Register</a></p>
-                        <p><a class="text-black" href="#">Login</a></p>
-                    {% endif %}
-                </div>
-                <hr class="w-100 clearfix d-md-none">
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-                    <p><i class="fas fa-home mr-3"></i> K-Holm, SE 01505</p>
-                    <p><i class="fas fa-envelope mr-3"></i> pralin@gmail.com</p>
-                    <p><i class="fas fa-phone mr-3"></i> + 00 702 21 940</p>
-                </div>
-            </div>
-            <hr>
-            <div class="row d-flex align-items-center">
-                <div class="col-md-7 col-lg-8">
-                    <p class="text-center text-md-left text-black">© 2020 Copyright:
-                        <a><strong class="text-black">Pralinörskan Project</strong></a>
-                    </p>
-                </div>
-                <div class="col-md-5 col-lg-4 ml-lg-0">
-                    <div class="text-center text-md-right">
-                        <ul class="list-unstyled list-inline">
-                            <li class="list-inline-item social-links">
-                                <a href="https://www.facebook.com/" class="btn-floating btn-sm  mx-1 text-black" target="_blank">
-                                <i class="fab fa-facebook-f"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item social-links">
-                                <a href="https://www.twitter.com/" class="btn-floating btn-sm  mx-1 text-black" target="_blank">
-                                <i class="fab fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item social-links">
-                                <a href="https://www.instagram.com/" class="btn-floating btn-sm  mx-1 text-black" target="_blank">
-                                <i class="fab fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item social-links">
-                                <a href="https://www.linkedin.com/" class="btn-floating btn-sm  mx-1 text-black" target="_blank">
-                                <i class="fab fa-linkedin-in"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
 
     {% block corejs %}
         <script src="https://kit.fontawesome.com/4fdc8c1c9c.js" crossorigin="anonymous"></script>

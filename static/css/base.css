@@ -15,6 +15,96 @@ body {
 
 /*---------------------------<-Header->------------------------------*/
 
+#navbar {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    padding-right: 30px;
+    -webkit-transition: top 0.3s;
+    -o-transition: top 0.3s;
+    transition: top 0.3s;
+    background-color: #fff;
+  }
+    
+  .navbar-logo {
+    font-family: 'Satisfy', cursive;
+    font-size: 2.4rem;
+    color: #19896F !important;
+  }
+  
+  .navbar .navbar-nav .nav-link {
+    padding: 0 18px 0 18px;
+    line-height: 20px;
+    font-size: 20px;
+    color: #19896F;
+  }
+  
+  .dropdown-menu {
+    margin-top: 19px;
+    border: 0;
+    border-radius: 0 0 5px 5px;
+  }
+  
+  .dropdown-item:hover {
+    color: #fff;
+    background-color: #075342;
+  }
+  
+  .navbar .nav-item.active .nav-link,
+  .navbar .nav-item:hover .nav-link {
+    color: #075342;
+  }
+
+  .navbar-toggler {
+    background-color: #00000054;
+  }
+
+/* --------------- Media Queries --------------- */
+
+@media (max-width: 770px) {
+    .navbar .navbar-nav .nav-link {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: flex-end;
+      padding: 0.7rem 0;
+      border-left: none;
+    }
+    .dropdown-item:hover {
+      color: #075342;
+    }
+  }
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+  }
+  
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 510px) {
+      .fixed-top-desktop-only {
+          position: fixed;
+          top: 0;
+          right: 0;
+          left: 0;
+          z-index: 1030;
+      }
+  
+      .header-container {
+          padding-top: 164px;
+      }
+  }
+
+  
+
 /*---------------------------<-Section->------------------------------*/
 
 
@@ -27,11 +117,6 @@ body {
     width: 1.5rem;
 }
 
-.logo-font {
-    text-transform: uppercase;
-    font-family: 'Satisfy', cursive;
-    color: #19896F;
-}
 
 .welcome-text {
     font-family: 'Roboto Condensed', sans-serif;
@@ -80,29 +165,6 @@ body {
     border: 1px solid black !important;
 }
 
-/* --------------- Media Queries --------------- */
-
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-    .container {
-      max-width: 80%;
-    }
-  }
-  
-  /* fixed top navbar only on medium and up */
-  @media (min-width: 992px) {
-      .fixed-top-desktop-only {
-          position: fixed;
-          top: 0;
-          right: 0;
-          left: 0;
-          z-index: 1030;
-      }
-  
-      .header-container {
-          padding-top: 164px;
-      }
-  }
 
 /*---------------------------<-Footer->------------------------------*/
 
