@@ -3,6 +3,7 @@ from django.db import models
 
 class Category(models.Model):
     
+    # Chasing the products name in django admin
     class Meta:
             verbose_name_plural = 'Categories'
 
