@@ -107,8 +107,18 @@ body {
       }
   }
 
-  
 
+  /* Pushing down the image on mobile view */
+@media (max-width: 991px) {
+  .header-container {
+      padding-top: 116px;
+  }
+
+  body {
+      height: calc(100vh - 116px);
+  }
+  
+}
 /*---------------------------<-Section->------------------------------*/
 
 .content-header {
@@ -152,6 +162,7 @@ body {
     background: black;
     color: white;
 }
+
 
 .shop-now-button:hover,
 .shop-now-button:active,
