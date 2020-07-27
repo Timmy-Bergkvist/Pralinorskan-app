@@ -5,47 +5,52 @@ Milestone project 4: Full Stack Frameworks with Django - Code Institute
 
 ![Image of responsive](https://put-your-application-image-here.jpg)
 
-Pralinörskan-app is a ecommerce app for learning how to use djangos functions and usability.
 
 **Target Audience**
-  
+ 
+Pralinörskan is a ecommerce app to sell pralines with different variations of flavors and quantity.
+
   
 
 ## UX
 
 **Project sections:**
 
-  -
+  - Homepage: Containing a welcome message and a button that will redirect the user to product site and
+    different options for products.
   
-  -
+  - Products: Containing all products that the store is selling.
+  
+  - Product: Containing specific information and image about the product.
 
-  - 
+  - Sign up form: Containing a form that enables user to sign up for the app.
   
-  - 
+  - Login form: Containing a form that enables user to login for the app.
   
-  - 
+  - Shopping cart: Contains information on products that are posted by the user ready to be purchased, updated or deleted.
   
-  - 
+  - Checkout: Contains a form to be filled by the user to make the payment and delivery.
   
-  - 
+  - Profile: Containing user information and the options to delete and edit the acount.
+  
+  - Order history: Containing information of previous purchases.
 
 **User Stories**
 
 As a user of this platform, I will be able to:
 
-  - 
+|**Type**|**Have an option to**|**purpose**|
+| :---: |:---:| :---:|
+|User|Access the platform from a desktop, tablet and a smartphone.|Make the website user-friendly for everyone|
+|User|View several kinds of products.|Makes it easier for the user to see everything quickly|
+|User|To buy products.|To give the customer what they want to buy|
+|User|View a specific kind of product.|To get more specific information about a product|
+|User|Registrate for an account.|Have a personal account to view customer profile and to make a order|
+|User|Login and logout of the account.|To have access personal account information|
+|User|View order history from previous purchases.|To give the customer information from earlier purchases|
+|User|View all my products to see the total amount.|To make it easier for the customer to see how much they going to spend|
+|Admin|Create, read, update and delete|To be able to provide the customer with the latest information if needed|
   
-  - 
-  
-  - 
-  
-  - 
-  
-  - 
-  
-  -
-
-
 **Mockups**
   
   I have used Figma Mockups to visualize images I can work from.
@@ -342,6 +347,10 @@ V.    Set the config variables in your Heroku settings.
 
    **Acknowledgements**
   - Inspiration for this project was obtained from:
-    - .................
+    -  Code Institute Frameworks with Django.
+    
+    - https://nordicoil.se/eir-cbd-kraem-foer-psoriasis
+    
+    - https://www.templatemonster.com/blog/top-45-ecommerce-business-ideas/
     
 I wanna say thank you to my mentor Oluwafemi Medale for helping me through this project.
