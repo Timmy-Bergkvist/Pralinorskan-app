@@ -38,9 +38,9 @@
               
             <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="{% url 'products' %}">Products</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Vegan</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Gluten Free</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Special Offers</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'products' %}?category=vegan">Vegan</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'products' %}?category=gluten_free">Gluten Free</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'products' %}?category=special_offer">Special Offers</a></li>
     
     
             <li class="nav-item"><a class="nav-link" href="#"><strong>Register</strong></a></li>

@@ -127,6 +127,11 @@ body {
     text-transform: uppercase;
 }
 
+.content-header-category {
+  font-family: 'Roboto Condensed', sans-serif;
+    color: #19896F;
+    text-transform: uppercase;
+}
 
 /* from Bulma */
 .icon {
@@ -172,6 +177,11 @@ body {
 .btn-black:focus {
     background: #19896F;
     color: white;
+}
+
+.btn-secondary {
+  background: #4f4f4f;
+  color: white;
 }
 
 .text-black {
