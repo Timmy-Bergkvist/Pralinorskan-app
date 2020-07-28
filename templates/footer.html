@@ -14,10 +14,10 @@
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
                 <h6 class="text-uppercase mb-4 font-weight-bold">Links</h6>
                 {% if user.is_authenticated %}
-                    <p><a class="text-black" href="#">Logout</a></p>
+                    <p><a class="text-black" href="{% url 'account_logout' %}">Logout</a></p>
                 {% else %}
-                    <p><a class="text-black" href="#">Register</a></p>
-                    <p><a class="text-black" href="#">Login</a></p>
+                    <p><a class="text-black" href="{% url 'account_signup' %}">Register</a></p>
+                    <p><a class="text-black" href="{% url 'account_login' %}">Login</a></p>
                 {% endif %}
             </div>
             <hr class="w-100 clearfix d-md-none">

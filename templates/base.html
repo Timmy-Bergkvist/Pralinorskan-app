@@ -41,10 +41,38 @@
             <li class="nav-item"><a class="nav-link" href="{% url 'products' %}?category=vegan">Vegan</a></li>
             <li class="nav-item"><a class="nav-link" href="{% url 'products' %}?category=gluten_free">Gluten Free</a></li>
             <li class="nav-item"><a class="nav-link" href="{% url 'products' %}?category=special_offer">Special Offers</a></li>
-    
-    
-            <li class="nav-item"><a class="nav-link" href="#"><strong>Register</strong></a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><strong>Login</strong></a></li>
+            
+            {% if request.user.is_authenticated %}
+              <li class="list-inline-item">
+              <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="text-center">
+                    <div><i class="fas fa-user fa-lg"></i></div>
+                    <p class="my-0">My Account</p>
+                </div>
+              </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="{% if grand_total %}text-info font-weight-bold{% else %}{% endif %} nav-link" href="{% url 'view_cart' %}">
+                  <div class="text-center">
+                      <div><i class="fas fa-shopping-cart"></i></div>
+                      <p class="my-0">
+                          {% if grand_total %}
+                              ${{ grand_total|floatformat:2 }}
+                          {% else %}
+                              $0.00
+                          {% endif %}
+                      </p>
+                  </div>
+                </a>
+              </li>
+              <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                  <li class="nav-item dropdown-item"><a href="#" class="dropdown-item">My Profile</a></li>
+                  <li class="nav-item dropdown-item"><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
+                {% else %}
+                  <li class="nav-item dropdown-item"><a class="nav-link" href="{% url 'account_signup' %}"><strong>Register</strong></a></li>
+                  <li class="nav-item dropdown-item"><a class="nav-link" href="{% url 'account_login' %}"><strong>Login</strong></a></li>
+                {% endif %}
+            </div>
           </ul>
         </div>
       </nav>
