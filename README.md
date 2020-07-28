@@ -161,9 +161,9 @@ I have used ................. database for this project
 |**Feature type**|**Feature**|**Tests**|**Bugs**|
 | :---: |:---:| :---:|:---:|
 |..text..|..text..|..text..|..text..|
-|..text..|..text..|..text..|..text..|
-|..text..|..text..|..text..|..text..|
-|..text..|..text..|..text..|..text..|
+|Button|Add to Cart|Getting  the right items. Posts the right items|No Bugs|
+|Button|Shop Now|Sends the user to the right html|No Bugs|
+|Structure|Navbar|Works in mobile and tablet view. Sends the user to right html.|Issue to get the responsive|
 
 
 
@@ -187,7 +187,6 @@ To run this project you need the following tools installed:
 
   - <a href="https://www.python.org/downloads/" target="_blank"> Python3 </a>
   - <a href="https://code.visualstudio.com/" target="_blank"> VS Code </a> or a code editor that have a debug tool.
-  - <a href="https://www.mongodb.com/cloud/atlas" target="_blank"> MongoDB </a>
   - <a href="https://git-scm.com/" target="_blank"> Git </a>
   - <a href="https://en.wikipedia.org/wiki/Heroku" target="_blank"> Heroku </a>
 
@@ -209,8 +208,6 @@ The following instructions are based on Windows 10 and VS Code editor.
 ```shell
 pip install django
 pip install django-allauth
-pip install 
-pip install
 
 For more information:
 https://django-allauth.readthedocs.io/en/latest/installation.html

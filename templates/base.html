@@ -28,21 +28,15 @@
     
     <nav id="navbar" class="navbar navbar-expand-md navbar-dark">
 
-        <a class="navbar-brand navbar-logo" href="#"><strong>Pralinörskan</strong></a>
-    
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarToggler">
-          <ul class="navbar-nav ">
-              
-            <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="{% url 'products' %}">Products</a></li>
-            <li class="nav-item"><a class="nav-link" href="{% url 'products' %}?category=vegan">Vegan</a></li>
-            <li class="nav-item"><a class="nav-link" href="{% url 'products' %}?category=gluten_free">Gluten Free</a></li>
-            <li class="nav-item"><a class="nav-link" href="{% url 'products' %}?category=special_offer">Special Offers</a></li>
-            
-            {% if request.user.is_authenticated %}
+        <div class="d-none d-lg-block">
+          <a class="navbar-brand navbar-logo" href="{% url 'home' %}"><strong>Pralinörskan</strong></a>
+        </div>
+        <div class="d-lg-none">
+          <a class="navbar-brand navbar-logo" href="{% url 'home' %}"><strong>P</strong></a>
+        </div>
+        
+        {% if request.user.is_authenticated %}
+        <div class="d-lg-none list-inline-item">
               <li class="list-inline-item">
               <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="text-center">
@@ -65,14 +59,56 @@
                   </div>
                 </a>
               </li>
-              <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                  <li class="nav-item dropdown-item"><a href="#" class="dropdown-item">My Profile</a></li>
-                  <li class="nav-item dropdown-item"><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
-                {% else %}
-                  <li class="nav-item dropdown-item"><a class="nav-link" href="{% url 'account_signup' %}"><strong>Register</strong></a></li>
-                  <li class="nav-item dropdown-item"><a class="nav-link" href="{% url 'account_login' %}"><strong>Login</strong></a></li>
-                {% endif %}
             </div>
+        {% endif %}
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarToggler">
+          <ul class="navbar-nav ">
+            <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'products' %}">Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'products' %}?category=vegan">Vegan</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'products' %}?category=gluten_free">Gluten Free</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'products' %}?category=special_offer">Special Offers</a></li>
+            
+            {% if request.user.is_authenticated %}
+            <div class="d-none d-lg-block list-inline-item">
+              <li class="list-inline-item dropdown">
+                <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="text-center">
+                        <div><i class="fas fa-user fa-lg"></i></div>
+                        <p class="my-0">My Account</p>
+                    </div>
+                </a>
+                <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                  <a href="#" class="dropdown-item">My Profile</a>
+                  <a href="#" class="dropdown-item">Order History</a>
+                  <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>  
+                </div>
+              </li>
+
+              <li class="list-inline-item">
+                <a class="{% if grand_total %}text-info font-weight-bold{% else %}{% endif %} nav-link" href="{% url 'view_cart' %}">
+                  <div class="text-center">
+                      <div><i class="fas fa-shopping-cart"></i></div>
+                      <p class="my-0">
+                          {% if grand_total %}
+                              ${{ grand_total|floatformat:2 }}
+                          {% else %}
+                              $0.00
+                          {% endif %}
+                      </p>
+                  </div>
+                </a>
+              </li>
+              </div>
+              {% else %}
+                <li class="nav-item"><a class="nav-link" href="{% url 'account_signup' %}"><strong>Register</strong></a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'account_login' %}"><strong>Login</strong></a></li>
+              {% endif %}
           </ul>
         </div>
       </nav>
