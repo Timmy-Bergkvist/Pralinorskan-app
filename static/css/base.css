@@ -89,7 +89,12 @@ body {
     .container {
       max-width: 80%;
     }
+
+    .cart-template {
+      max-width: 90% !important;
+    }
   }
+
   
 
 /* fixed top navbar only on medium and up */
@@ -252,6 +257,30 @@ body {
     color: #4f4f4f !important;
 }
 
+/* --------------- Order summary Card --------------- */
+
+
+.order-summary-card-inner {
+  background-color: #e2e2e2c4;
+  height: 320px;
+  padding: 15px;
+}
+
+.grand-total {
+  background-color: #81818199;
+}
+
+.checkout-btn {
+  background-color: #19896F;
+}
+
+.checkout-btn {
+  color: #EDEDED;
+}
+
+.checkout-btn:hover {
+  background-color:  #075342;
+}
 
 /*---------------------------<-Footer->------------------------------*/
 
