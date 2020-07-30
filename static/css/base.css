@@ -282,6 +282,59 @@ body {
   background-color:  #075342;
 }
 
+
+
+/* --------------- Custom Input Group for Cart --------------- */
+
+#input-group-cart {
+  position: relative;
+    display: inline-flex;
+    /* flex-direction: row; */
+    border: 2px solid #eee;
+    align-items: center;
+    padding: 2px 2px;
+    background: #eee;
+    border-radius: 10px;
+    /* width: 100px; */
+    max-width: 100%;
+    min-width: 78px;
+    width: 100px;
+    height: 35px;
+    overflow: hidden;
+    flex-wrap: inherit;
+}
+
+#input-group-cart input {
+  display: inline-block;
+    font-weight: 700;
+    /* text-align: center; */
+    border: none;
+    /* height: 30px; */
+    min-width: 0;
+    flex-grow: 1;
+    background: #eee;
+}
+
+.input-group-prepend-cart button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 20px;
+  flex-shrink: 0;
+  min-width: 0;
+  padding: 0;
+}
+
+.input-group-append-cart button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 20px;
+  flex-shrink: 0;
+  min-width: 0;
+  padding: 0;
+}
+
 /*---------------------------<-Footer->------------------------------*/
 
 .footer-container {

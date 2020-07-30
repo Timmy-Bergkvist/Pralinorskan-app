@@ -42,38 +42,30 @@
                                     <img class="img-fluid rounded" src="{{ item.product.image.url }}">
                                     <p class="small text-muted">SKU: {{ item.product.sku|upper }}</p>
                                 </td>
-                                
-                                <td class="py-3">
+                                <td class="py-3" style="font-weight: 700;">
                                     <p class="my-0">${{ item.product.price }}</p>
                                 </td>
                                 <td class="py-3 w-25">
-                                    <p class="my-0">{{ item.quantity }}</p>
-                                    <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
+                                    <form class="form update-form" method="POST" action="#">
                                         {% csrf_token %}
                                         <div class="form-group">
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <button class="decrement-qty btn btn-sm btn-black rounded-0" 
-                                                        data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
-                                                        <span>
-                                                            <i class="fas fa-minus fa-sm"></i>
-                                                        </span>
+                                            <div id="input-group-cart" class="input-group">
+                                                <div class="input-group-prepend-cart">
+                                                    <button class="decrement-qty btn btn-sm  rounded-0"data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                                        <i style="color: black;" class="fas fa-minus"></i>
                                                     </button>
                                                 </div>
-                                                <input class="form-control form-control-sm qty_input" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
-                                                <div class="input-group-append">
-                                                    <button class="increment-qty btn btn-sm btn-black rounded-0"
-                                                        data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
-                                                        <span>
-                                                            <i class="fas fa-plus fa-sm"></i>
-                                                        </span>
+                                                <input class="text-center  qty_input" type="text" name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                                <div class="input-group-append-cart">
+                                                    <button class="increment-qty btn btn-sm  rounded-0" data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                                        <i style="color: black;" class="fas fa-plus"></i>
                                                     </button>
                                                 </div>
                                             </div>
                                         </div>
                                     </form>
                                 </td>
-                                <td class="py-3">
+                                <td class="py-3" style="font-weight: 700;">
                                     <p class="my-0">${{ item.product.price }}</p>
                                 </td>
                                 <td class="py-3">
