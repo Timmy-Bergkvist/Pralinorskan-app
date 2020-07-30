@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load tools %}
 
 
 {% block page_header %}
@@ -66,7 +67,7 @@
                                     </form>
                                 </td>
                                 <td class="py-3" style="font-weight: 700;">
-                                    <p class="my-0">${{ item.product.price }}</p>
+                                    <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
                                 </td>
                                 <td class="py-3">
                                     <a class="remove-item" id="remove_{{ item.item_id }}">
@@ -110,4 +111,19 @@
 
 {% block postloadjs %}
     {{ block.super }}
+    <script type="text/javascript">
+        
+        // Remove item and reload on click
+        $('.remove-item').click(function(e) {
+            var csrfToken = "{{ csrf_token }}";
+            var itemId = $(this).attr('id').split('remove_')[1];
+            var url = `/cart/remove/${itemId}/`;
+            var data = {'csrfmiddlewaretoken': csrfToken};
+    
+            $.post(url, data)
+             .done(function() {
+                 location.reload();
+             });
+        })
+    </script>
 {% endblock %}

@@ -34,3 +34,17 @@ def add_to_cart(request, item_id):
     # Overwrite the variable in the session with the updated version.
     request.session['cart'] = cart
     return redirect(redirect_url)
+
+
+"""Remove the item from the shopping cart"""
+
+
+def remove_from_cart(request, item_id):
+    
+    
+    cart = request.session.get('cart', {})
+    
+    cart.pop(item_id)
+
+    request.session['cart'] = cart
+    return HttpResponse(status=200)
