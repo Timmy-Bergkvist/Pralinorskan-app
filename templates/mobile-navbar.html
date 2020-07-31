@@ -1,122 +1,53 @@
 
 
-
-<div class="col-12 col-lg-2 my-auto py-1 py-lg-0 text-center text-lg-left">
-    <a href="{% url 'home' %}" class="nav-link main-logo-link">
-        <h2 class="logo-font navbar-text my-0"><strong>Pralinörskan</strong></h2>
-    </a>
+<div class="text-lg-left">
+    <a style="text-align: left;" class="navbar-brand navbar-logo" href="{% url 'home' %}"><strong>P</strong></a>
 </div>
-<div class="collapse navbar-collapse text-lg-left" id="main-nav">
-    <ul class="navbar-nav w-auto mx-auto">
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Home
-            </a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Products
-            </a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Vegan
-            </a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Gluten free
-            </a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Special Offers
-            </a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Register
-            </a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Login
-            </a>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Logout
-            </a>
-        </li>
-
-    </ul>
+<div class="mobile-navbar">
+    {% if request.user.is_authenticated %}
+    <li class="list-inline-item dropdown">
+        <a class="text-black nav-link d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="text-center">
+                <div><i class="fas fa-user fa-lg"></i></div>
+                <p class="my-0">My Account</p>
+            </div>
+        </a>
+        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+            {% if request.user.is_authenticated %}
+                <a href="#" class="dropdown-item">My Profile</a>
+                <a href="#" class="dropdown-item">Order History</a>
+                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+            {% endif %}
+        </div>
+    </li>
+    <li class="list-inline-item">
+        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_cart' %}">
+            <div class="text-center">
+                <div><i class="fas fa-shopping-cart fa-lg"></i></div>
+                <p class="my-0">
+                    {% if grand_total %}
+                        ${{ grand_total|floatformat:2 }}
+                    {% else %}
+                        $0.00
+                    {% endif %}
+                </p>
+            </div>
+        </a>
+    </li>
+    {% else %}
+    <li class="list-inline-item">
+        <a class="font-weight-bold nav-link" href="{% url 'account_login' %}" id="login-link" aria-haspopup="true" aria-expanded="false">
+        <div class="text-center">
+            <p class="my-0">Login</p>
+        </div>
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a class="font-weight-bold nav-link" href="{% url 'account_signup' %}" id="register-link" aria-haspopup="true" aria-expanded="false">
+            <div class="text-center">
+                <p class="my-0">Register</p>
+            </div>
+        </a>
+    </li>
 </div>
-
-<!--<header class="container-fluid fixed-top">
-    <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
-        <div class="col-12 col-lg-2 my-auto py-1 py-lg-0 text-center text-lg-left">
-            <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                <h2 class="navbar-logo navbar-text my-0"><strong>Pralinörskan</strong></h2>
-            </a>
-        </div>
-        <div class="col-12 col-lg-7 my-auto py-1 py-lg-0">
-            <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                <li class="list-inline-item dropdown">
-                    <a class="navbar-text nav-link" href="#" id="user-options" aria-haspopup="true" aria-expanded="false">
-                        <div class="text-center">
-                            <p class="my-0">Home</p>
-                        </div>
-                    </a>
-                </li>
-                <li class="list-inline-item dropdown">
-                    <a class="navbar-text nav-link" href="#" id="user-options" aria-haspopup="true" aria-expanded="false">
-                        <div class="text-center">
-                            <p class="my-0">Products</p>
-                        </div>
-                    </a>
-                </li>
-                <li class="list-inline-item dropdown">
-                    <a class="navbar-text nav-link" href="#" id="user-options" aria-haspopup="true" aria-expanded="false">
-                        <div class="text-center">
-                            <p class="my-0">Vegan</p>
-                        </div>
-                    </a>
-                </li>
-                <li class="list-inline-item dropdown">
-                    <a class="navbar-text nav-link" href="#" id="user-options" aria-haspopup="true" aria-expanded="false">
-                        <div class="text-center">
-                            <p class="my-0">Gluten free</p>
-                        </div>
-                    </a>
-                </li>
-                <li class="list-inline-item dropdown">
-                    <a class="navbar-text nav-link" href="#" id="user-options" aria-haspopup="true" aria-expanded="false">
-                        <div class="text-center">
-                            <p class="my-0">Special offers</p>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="col-12 col-lg-3 my-auto py-1 py-lg-0">
-            <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                <li class="list-inline-item dropdown">
-                    <a class="navbar-text nav-link" href="#" id="user-options" aria-haspopup="true" aria-expanded="false">
-                        <div class="text-center">
-                            <p class="my-0"><strong>Register</strong></p>
-                        </div>
-                    </a>
-                </li>
-                <li class="list-inline-item dropdown">
-                    <a class="navbar-text nav-link" href="#" id="user-options" aria-haspopup="true" aria-expanded="false">
-                        <div class="text-center">
-                            <p class="my-0"><strong>Login</strong></p>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-</header>-->
+{% endif %}
