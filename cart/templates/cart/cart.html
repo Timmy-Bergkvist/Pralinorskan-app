@@ -13,6 +13,7 @@
 
 {% block content %}
 <div class="overlay"></div>
+<div class="container-fluid">
 <div class="container cart-template mb-2">
     <div class="row">
         <div class="col-12 text-center mt-3">
@@ -22,7 +23,7 @@
     </div>
 
     <div class="row">
-        <div class="col-8">
+        <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
             {% if cart_items %}
                 <div class="col text-center table-responsive rounded">
                     <table class="table table-sm table-borderless">
@@ -89,15 +90,28 @@
                 </a>
             {% endif %}
         </div>
-        <div class="col-4 order-summary-card">
-            <div class="card order-summary-card-inner" style="width: 18rem;">
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 order-summary-card">
+            <div class="card order-summary-card-inner">
                 <div class="card-body">
                   <h5 class="card-title">Order summary</h5>
                   <hr>
-                  <h6><strong>Total: ${{ total|floatformat:2 }}</strong></h6>
-                    <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
-                    <div class="grand-total">
-                        <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                  <div >
+                    <div class="row">
+                      <div class="col-7"><h6><strong>Total:</strong></h6></div>
+                      <div style="text-align: right;" class="col-5"><h6><strong>{{ total|floatformat:2 }} Kr</strong></h6></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="row">
+                        <div class="col-7"><h6>Delivery:</h6></div>
+                        <div style="text-align: right;" class="col-5"><h6>{{ delivery|floatformat:2 }} Kr</h6></div>
+                    </div>
+                  </div>
+                  <div class="grand-total">
+                    <div class="row">
+                        <div class="col-7"><strong>Grand Total:</strong></div>
+                        <div style="text-align: right;" class="col-5"><strong>{{ grand_total|floatformat:2 }} Kr</strong></div>
+                    </div>
                     </div>
                     <div class="text-center mt-4">
                         <a href="#" class=" checkout-btn btn">Proceed checkout</a>
@@ -106,6 +120,7 @@
               </div>
         </div>
     </div>
+</div>
 </div>
 {% endblock %}
 

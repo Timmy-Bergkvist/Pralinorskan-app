@@ -264,6 +264,10 @@ body {
     color: #4f4f4f !important;
 }
 
+.card-body {
+  padding: 6px !important;
+}
+
 /* --------------- Order summary Card --------------- */
 
 
@@ -275,6 +279,7 @@ body {
 
 .grand-total {
   background-color: #81818199;
+  padding: 10px 10px;
 }
 
 .checkout-btn {
@@ -283,10 +288,15 @@ body {
 
 .checkout-btn {
   color: #EDEDED;
+  width: 100%;
+  padding: 20px 20px;
+  text-align: center;
+  margin-top: 0;
 }
 
 .checkout-btn:hover {
   background-color:  #075342;
+  color: #EDEDED;
 }
 
 
