@@ -119,8 +119,7 @@ body {
       }
   }
 
-
-  /* Pushing down the image on mobile view */
+/* Pushing down the image on mobile view */
 @media (max-width: 991px) {
   .header-container {
       padding-top: 116px;
@@ -129,7 +128,6 @@ body {
   body {
       height: calc(100vh - 116px);
   }
-  
 }
 /*---------------------------<-Section->------------------------------*/
 
@@ -154,17 +152,6 @@ body {
     width: 1.5rem;
 }
 
-
-.welcome-text {
-    font-family: 'Roboto Condensed', sans-serif;
-    color: #19896F;
-}
-
-.welcome-text-under {
-    font-family: 'Roboto Condensed', sans-serif;
-    color: #19896F;
-}
-
 .main-logo-link {
     width: fit-content;
 }
@@ -179,7 +166,6 @@ body {
     background: black;
     color: white;
 }
-
 
 .shop-now-button:hover,
 .shop-now-button:active,
@@ -252,13 +238,28 @@ body {
   color: #fff;
 }
 
-/* --------------- Item Card Section --------------- */
+
+/*---------------------------<-Home Index->------------------------------*/
+
+.welcome-text {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #19896F;
+}
+
+.welcome-text-under {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #19896F;
+}
+
+
+/*-----------------------------<-Cart->--------------------------------*/
+
+/* --------------- Item Card --------------- */
 
 .card, .card-img-body, .card-body,
 .card-footer {
     background-color: rgba(236 236 236 / 19%);
 }
-
 
 .text-muted {
     color: #4f4f4f !important;
@@ -268,8 +269,7 @@ body {
   padding: 6px !important;
 }
 
-/* --------------- Order summary Card --------------- */
-
+/* ------------ Order summary Card ------------ */
 
 .order-summary-card-inner {
   background-color: #e2e2e2c4;
@@ -299,9 +299,7 @@ body {
   color: #EDEDED;
 }
 
-
-
-/* --------------- Custom Input Group for Cart --------------- */
+/* --------- Custom Input Group for Cart --------- */
 
 #input-group-cart {
   position: relative;
@@ -352,7 +350,10 @@ body {
   padding: 0;
 }
 
-/* --------------- Login Template Section --------------- */
+
+/*---------------------------<-Allauth->------------------------------*/
+
+/* ------------ Login Template ------------ */
 
 .overlay-account {
   height: 100%;
@@ -369,8 +370,13 @@ body {
   margin-right: auto;
 }
 
-/* --------------- Signup Template Section --------------- */
+/* ------------ Signup Template ------------ */
 
+
+/*---------------------------<-Checkout->------------------------------*/
+
+
+/*---------------------------<-Profiles->------------------------------*/
 
 
 /*---------------------------<-Footer->------------------------------*/
