@@ -1,3 +1,5 @@
+
+// Return to top button
 window.onload = function()  {              
     $(window).scroll(function() {
         if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 200px
@@ -12,3 +14,8 @@ window.onload = function()  {
         }, 500);
     });
         }
+
+
+// Tosat function
+$('.toast').toast('show');
+    

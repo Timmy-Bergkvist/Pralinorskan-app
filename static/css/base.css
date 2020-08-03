@@ -282,11 +282,9 @@ body {
   padding: 10px 10px;
 }
 
-.checkout-btn {
-  background-color: #19896F;
-}
 
 .checkout-btn {
+  background-color: #19896F;
   color: #EDEDED;
   width: 100%;
   padding: 20px 20px;
@@ -348,6 +346,72 @@ body {
   flex-shrink: 0;
   min-width: 0;
   padding: 0;
+}
+
+/* ------------ Toasts ------------ */
+
+.toast-checkout-btn{
+  background-color: #19896F;
+  color: #EDEDED;
+}
+  
+.toast-checkout-btn:hover {
+  background-color: #075342;
+  color: #EDEDED;
+}
+
+.message-container {
+  position: fixed;
+  top: 50px;
+  right: 15px;
+  z-index: 99999999999;
+}
+
+.custom-toast {
+  overflow: visible;
+}
+
+.toast-capper {
+  height: 2px;
+}
+
+/* Convenience classes - colors copied from Bootstrap */
+.toast-primary {
+  border-bottom-color: #007bff !important;
+}
+
+.toast-secondary {
+  border-bottom-color: #6c757d !important;
+}
+
+.toast-success {
+  border-bottom-color: #28a745 !important;
+}
+
+.toast-danger {
+  border-bottom-color: #dc3545 !important;
+}
+
+.toast-warning {
+  border-bottom-color: #ffc107 !important;
+}
+
+.toast-info {
+  border-bottom-color: #17a2b8 !important;
+}
+
+.toast-light {
+  border-bottom-color: #f8f9fa !important;
+}
+
+.toast-dark {
+  border-bottom-color: #343a40 !important;
+}
+
+.cart-notification-wrapper {
+  height: 100px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 
