@@ -77,6 +77,7 @@ TEMPLATES = [
                 'django.template.context_processors.request', # required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media', # provides a no-image is no image is provided
                 'cart.contexts.cart_contents',
             ],
             'builtins': [

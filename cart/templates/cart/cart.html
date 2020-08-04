@@ -45,7 +45,7 @@
                                     <p class="small text-muted">SKU: {{ item.product.sku|upper }}</p>
                                 </td>
                                 <td class="py-3" style="font-weight: 700;">
-                                    <p class="my-0">${{ item.product.price }}</p>
+                                    <p class="my-0">{{ item.product.price }} Kr</p>
                                 </td>
                                 <td class="py-3 w-25">
                                     <form class="form update-form" method="POST" action="{% url 'add_to_cart' item.item_id %}">
@@ -68,7 +68,7 @@
                                     </form>
                                 </td>
                                 <td class="py-3" style="font-weight: 700;">
-                                    <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                                    <p class="my-0">{{ item.product.price | calc_subtotal:item.quantity }} Kr</p>
                                 </td>
                                 <td class="py-3">
                                     <a class="remove-item" id="remove_{{ item.item_id }}">
@@ -114,7 +114,7 @@
                     </div>
                     </div>
                     <div class="text-center mt-4">
-                        <a href="#" class=" checkout-btn btn">Proceed to checkout</a>
+                        <a href="{% url 'checkout' %}" class=" checkout-btn btn">Proceed to checkout</a>
                     </div>
                 </div>
               </div>

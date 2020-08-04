@@ -439,6 +439,34 @@ body {
 
 /*---------------------------<-Checkout->------------------------------*/
 
+.card-product-detail-checkout {
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.card-footer {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.card-footer-left {
+  text-align: left;
+}
+
+
+.card-footer-right {
+  text-align: right;
+}
+
+.content-box {
+  border-radius: 8px;
+  border: 1px solid #dadada;
+  background: #fff;
+  box-shadow: none;
+  padding: 0;
+}
 
 /*---------------------------<-Profiles->------------------------------*/
 
