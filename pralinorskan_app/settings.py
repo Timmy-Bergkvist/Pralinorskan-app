@@ -166,4 +166,12 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-STANDARD_DELIVERY_PERCENTAGE = 130 # Shipping cost
+
+# Stripe payment
+# https://stripe.com/docs
+
+STANDARD_DELIVERY_PERCENTAGE = 10 # Shipping cost
+STRIPE_CURRENCY = 'sek'
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
