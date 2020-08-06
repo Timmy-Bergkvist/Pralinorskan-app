@@ -180,6 +180,7 @@ body {
 .btn-secondary {
   background: #4f4f4f;
   color: white;
+  border-radius: 5px;
 }
 
 .text-black {
@@ -265,7 +266,7 @@ body {
     color: #4f4f4f !important;
 }
 
-.card-body {
+#card-body {
   padding: 6px !important;
 }
 
@@ -425,10 +426,7 @@ body {
 /* Slightly smaler container on xl, lg and md screens  */
 @media (min-width: 770px) {
   .account-header-container {
-    padding-left: 150px;
-    padding-right: 150px;
-    padding-bottom: 130px;
-    padding-top: 104px;
+    width: 28rem;
   }
 }
 
@@ -446,6 +444,45 @@ body {
   background-color: #f8f9fa;
 }
 
+.card-header {
+  color: #19896F;
+}
+.allauth-form-inner-content p {
+  color: #6c757d;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+  display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+  color: #94949493;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+  display: inline-block;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #19896F;
+  border: 1px solid #19896F;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 5px;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {	
+  background-color: #075342;
+  color: #EDEDED;
+}
 
 /*---------------------------<-Checkout->------------------------------*/
 
