@@ -1,1 +1,19 @@
 {% extends "base.html" %}
+
+{% block content %}
+    <div class="container header-container account-header-container">
+        <div class="overlay"></div>
+        <div class="row">
+            <div class="col-12">
+                <div class="card card-account">
+                    <div class="allauth-form-inner-content">
+                        {% block inner_content %}
+                            <!--- All the account content template is inside this block--->
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+{% endblock %}

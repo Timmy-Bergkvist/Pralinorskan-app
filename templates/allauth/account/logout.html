@@ -1,34 +1,20 @@
 {% extends "account/base.html" %}
-{% load static %}
 
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
-{% endblock %}
+{% load i18n %}
 
-{% block content %}
-<div class="overlay-account"></div>
-<div class="container-fluid">
-  <div class="row">
-    {% load i18n %}
-    {% load account %}
-    <div class="card card-account border-dark mb-3" style="max-width: 25rem;">
-      <div class="card-header"><h1>{% trans "Sign Out" %}</h1></div>
-      <div class="card-body text-dark">
-        <p>{% trans 'Are you sure you want to sign out?' %}</p>
+{% block head_title %}{% trans "Sign Out" %}{% endblock %}
 
-        <form method="post" action="{% url 'account_logout' %}">
-          {% csrf_token %}
-          {% if redirect_field_value %}
-          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
-          {% endif %}
-          <button type="submit">{% trans 'Sign Out' %}</button>
-        </form>
-      </div>
-    </div>
-  </div>
+{% block inner_content %}
+<h2 class="card-header">{% trans "Sign Out" %}</h2>
+<div class="card-body">
+  <p>{% trans 'Are you sure you want to sign out?' %}</p>
+  <form method="post" action="{% url 'account_logout' %}">
+    {% csrf_token %}
+    {% if redirect_field_value %}
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+    {% endif %}
+    <a class="btn btn-outline-black rounded-0" href="{% url 'home' %}">Cancel</a>
+    <button type="submit">{% trans 'Sign Out' %}</button>
+  </form>
 </div>
 {% endblock %}

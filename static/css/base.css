@@ -417,24 +417,34 @@ body {
 
 /*---------------------------<-Allauth->------------------------------*/
 
-/* ------------ Login Template ------------ */
+.account-header-container {
+  padding-bottom: 130px;
+  padding-top: 104px;
+}
 
-.overlay-account {
+/* Slightly smaler container on xl, lg and md screens  */
+@media (min-width: 770px) {
+  .account-header-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 130px;
+    padding-top: 104px;
+  }
+}
+
+.overlay {
   height: 100%;
 	width: 100%;
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: white;
+	background: #e9ecefd1;
 	z-index: -1;
 }
 
 .card-account {
-  margin-left: auto;
-  margin-right: auto;
+  background-color: #f8f9fa;
 }
-
-/* ------------ Signup Template ------------ */
 
 
 /*---------------------------<-Checkout->------------------------------*/
