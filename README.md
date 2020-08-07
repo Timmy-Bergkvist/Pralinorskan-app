@@ -206,6 +206,7 @@ The following instructions are based on Windows 10 and VS Code editor.
 
   II.   Install all the packages that are required
 ```shell
+pip install python
 pip install django
 pip install django-allauth
 
@@ -269,7 +270,30 @@ os.environ.setdefault('EMAIL_ADDRESS', '<your email here>')
 os.environ.setdefault('EMAIL_PASSWORD', '<your email password here>')
 ```
 
-  XI.   Log into your admin account add the /admin path at the end of the url link.
+  XI.  Set up the env path to manage.py
+```shell
+from os import path
+if path.exists("env.py"):
+    import env
+
+def main():
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pralinorskan_app.settings')
+    try:
+        from django.core.management import execute_from_command_line
+    except ImportError as exc:
+        raise ImportError(
+            "Couldn't import Django. Are you sure it's installed and "
+            "available on your PYTHONPATH environment variable? Did you "
+            "forget to activate a virtual environment?"
+        ) from exc
+    execute_from_command_line(sys.argv)
+
+
+if __name__ == '__main__':
+    main()
+```
+
+  XII.   Log into your admin account add the /admin path at the end of the url link.
 ```shell
 http://127.0.0.1:5000/admin
 ```

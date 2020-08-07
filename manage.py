@@ -3,6 +3,9 @@
 import os
 import sys
 
+from os import path
+if path.exists("env.py"):
+    import env
 
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pralinorskan_app.settings')
