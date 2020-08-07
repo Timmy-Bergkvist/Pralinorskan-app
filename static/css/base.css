@@ -131,6 +131,10 @@ body {
 }
 /*---------------------------<-Section->------------------------------*/
 
+.container-fluid {
+  padding-bottom: 100px;
+}
+
 .content-header {
     font-family: 'Roboto Condensed', sans-serif;
     color: #19896F;
@@ -518,6 +522,20 @@ body {
 
 /*---------------------------<-Profiles->------------------------------*/
 
+.card-checkout-success {
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+/* Slightly smaler container on xl, lg and md screens  */
+@media (min-width: 770px) {
+  .card-checkout-success {
+    width: 40rem;
+    margin: auto;
+  }
+}
 
 /*---------------------------<-Stripe->------------------------------*/
 
