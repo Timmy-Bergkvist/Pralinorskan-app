@@ -12,29 +12,29 @@ Pralinörskan is a ecommerce app to sell pralines with different variations of f
 
 ## Table of Contents
   * [UX](#ux)
-    + [Project sections:](#project-sections:)
+    + [Project sections:](#project-sections)
     + [User Stories](#user-stories)
     + [Mockups](#mockups)
   * [Features](#features)
     + [Existing Features](#existing-features)
   	+ [Features Left to Implement](#features-left-to-implement)
   * [Technologies Used](#technologies-used)
-    + [Language](#Language)
+    + [Language](#language)
     + [Libraries and frameworks](#libraries-and-frameworks)
     + [Tools](#tools)
   * [Database structure](#database-structure)
-    + [Collection Name:](#collection-name:)
+    + [Collection Name:](#collection-name)
   * [Testing](#testing)
   * [Deployment](#deployment)
     + [Local deployment](#local-deployment)
     + [Heroku deployment](#heroku-deployment)
-  * [Credits](#Credits)
+  * [Credits](#credits)
     + [media](#media)
     + [Acknowledgements](#acknowledgements)
 
 ## UX
 
-**Project sections:**
+#### Project sections:
 
   - Homepage: Containing a welcome message and a button that will redirect the user to product site and
     different options for products.
@@ -55,7 +55,7 @@ Pralinörskan is a ecommerce app to sell pralines with different variations of f
   
   - Order history: Containing information of previous purchases.
 
-**User Stories**
+#### User Stories
 
 As a user of this platform, I will be able to:
 
@@ -71,7 +71,7 @@ As a user of this platform, I will be able to:
 |User|View all my products to see the total amount.|To make it easier for the customer to see how much they going to spend|
 |Admin|Create, read, update and delete|To be able to provide the customer with the latest information if needed|
   
-**Mockups**
+#### Mockups
   
   I have used Figma Mockups to visualize images I can work from.
 
@@ -84,7 +84,7 @@ As a user of this platform, I will be able to:
 
 ## Features
 
-**Existing Features**
+#### Existing Features
 
 - ....................
 
@@ -92,7 +92,7 @@ As a user of this platform, I will be able to:
 
 - ....................
 
-**Features Left to Implement**
+#### Features Left to Implement
 
 - ....................
 
@@ -103,7 +103,7 @@ As a user of this platform, I will be able to:
 
 ## Technologies Used
 
-**Language**
+#### Language
 
 - <a href="https://en.wikipedia.org/wiki/HTML" target="_blank"> Html </a>
   
@@ -114,7 +114,7 @@ As a user of this platform, I will be able to:
 - <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank"> Python </a>
 
 
-**Libraries and frameworks**
+#### Libraries and frameworks
 
 - <p><a href="https://www.djangoproject.com/" target="_blank"> Django</a>- A python web-framework to build projects.</p>
 
@@ -133,7 +133,7 @@ As a user of this platform, I will be able to:
 - <p><a href="https://boto3.amazonaws.com/v1/documentation/api/latest/index.html" target="_blank"> Boto3 </a>- A library that enables python code to modify AWS service.</p>
 
 
-**Tools**
+#### Tools
 
 - <p><a href="https://en.wikipedia.org/wiki/Heroku" target="_blank"> Heroku </a>- For hosting the application and deploy.</p>
 
@@ -152,7 +152,7 @@ I have used ................. database for this project
 - .........................
 
 
- **Collection Name:**
+ #### Collection Name:
  
 - ....................
 
@@ -378,7 +378,7 @@ V.    Set the config variables in your Heroku settings.
 
 ## Credits
   
-   **media**
+   #### media
   - The photos used in this site were obtained from:
 
     - https://pixabay.com/sv/
@@ -386,7 +386,7 @@ V.    Set the config variables in your Heroku settings.
     - ........................
     
 
-   **Acknowledgements**
+   #### Acknowledgements
   - Inspiration for this project was obtained from:
     -  Code Institute Frameworks with Django.
     
