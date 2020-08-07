@@ -10,7 +10,27 @@ Milestone project 4: Full Stack Frameworks with Django - Code Institute
  
 Pralinörskan is a ecommerce app to sell pralines with different variations of flavors and quantity.
 
-  
+## Table of Contents
+  * [UX](#ux)
+    + [Project sections:](#project-sections:)
+    + [User Stories](#user-stories)
+    + [Mockups](#mockups)
+  * [Features](#features)
+    + [Existing Features](#existing-features)
+  	+ [Features Left to Implement](#features-left-to-implement)
+  * [Technologies Used](#technologies-used)
+    + [Language](#Language)
+    + [Libraries and frameworks](#libraries-and-frameworks)
+    + [Tools](#tools)
+  * [Database structure](#database-structure)
+    + [Collection Name:](#collection-name:)
+  * [Testing](#testing)
+  * [Deployment](#deployment)
+    + [Local deployment](#local-deployment)
+    + [Heroku deployment](#heroku-deployment)
+  * [Credits](#Credits)
+    + [media](#media)
+    + [Acknowledgements](#acknowledgements)
 
 ## UX
 
