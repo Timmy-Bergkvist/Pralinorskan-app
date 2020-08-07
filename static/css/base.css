@@ -369,7 +369,8 @@ body {
 }
 
 .custom-toast {
-  overflow: visible;
+  overflow: hidden;
+  border-radius: 7px;
 }
 
 .toast-capper {
