@@ -12,7 +12,8 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
+<div class="overlay"></div>
+<div class="container-fluid">
         <div class="row">
             <div class="col">
                 <div class="col-12 text-center mt-3">
@@ -21,7 +22,160 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-12 col-lg-5 order-lg-last mb-5">
+                <div class="card bg-light mb-3">
+                    <div class="card-header">Order Summary</div>
+                    <div class="card-body">
+                        {% for item in cart_items %}
+                            <div class="row card-product-detail-checkout">
+                                <div class="col-3 my-1">
+                                    <a href="{% url 'product_detail' item.product.id %}">
+                                        {% if item.product.image %}
+                                            <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                                        {% else %}
+                                            <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                        {% endif %}
+                                    </a>
+                                </div>
+                                <div class="col-9">
+                                    <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                                    <p class="my-0 small text-muted">Qty: {{ item.quantity }} x {{ item.product.price | calc_subtotal:item.quantity }} Kr</p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="row card-footer">
+                            <div class="col-6 card-footer-left">
+                                <p  class="my-0">Total:</p>
+                                <p  class="my-0">Delivery:</p>
+                                <p  class="my-0">Grand Total:</p>
+                            </div>
+                            <div class="col-6 card-footer-right">
+                                <p  class="my-0">{{ total | floatformat:2 }} Kr</p>
+                                <p  class="my-0">{{ delivery | floatformat:2 }} Kr</p>
+                                <p  class="my-0"><strong>{{ grand_total | floatformat:2 }} Kr</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col-12 col-lg-7 order-md-1">
+                <div class="card bg-light mb-3">
+                    <div class="card-header"><h4>Billing address</h4></div>
+                    <div class="card-body">
+                        <form  action="{% url 'checkout' %}" method="POST" id="payment-form" class="needs-validation">
+                            {% csrf_token %}
+                            <fieldset>
+                                <div class="mb-3">
+                                    {{ order_form.full_name | as_crispy_field }}
+                                    <div class="invalid-feedback"> Valid full name is required. </div>
+                                </div>    
+                                <div class="mb-3">
+                                    {{ order_form.email | as_crispy_field }}
+                                    <div class="invalid-feedback"> Please enter a valid email address for shipping updates. </div>
+                                </div>
+                                <div class="mb-3">
+                                    {{ order_form.phone_number | as_crispy_field }}
+                                    <div class="invalid-feedback"> Please enter a valid Phone number. </div>
+                                </div>
+                                <div class="mb-3">
+                                    {{ order_form.street_address1 | as_crispy_field }}
+                                    <div class="invalid-feedback"> Please enter your shipping address. </div>
+                                </div>
+                                <div class="mb-3">
+                                    {{ order_form.street_address2 | as_crispy_field }}
+                                </div>
+    
+                                <div class="mb-3">
+                                    {{ order_form.town_or_city | as_crispy_field }}
+                                    <div class="invalid-feedback"> Please enter your town or a city. </div>
+                                </div>
+                            </fieldset>
+                            
+                            <fieldset>
+                                <div class="row">
+                                    <div class="col-md-4 mb-3">
+                                            {{ order_form.country | as_crispy_field }}
+                                        <div class="invalid-feedback"> Please select a valid country. </div>
+                                    </div>
+                                    <div class="col-md-5 mb-3">
+                                            {{ order_form.county | as_crispy_field }}
+                                        <div class="invalid-feedback"> Please provide a valid County. </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        {{ order_form.postcode | as_crispy_field }}
+                                        <div class="invalid-feedback"> Postcode code required. </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            
+                            <div class="form-check form-check-inline mr-0">
+                                {% if user.is_authenticated %}
+                                    <input class="form-check-input" type="checkbox" id="id-save-info" name="save-info" checked>
+                                    <label class="form-check-label" for="id-save-info"> Save this information for next time</label>
+                                {% else %}
+                                    <label class="form-check-label" for="id-save-info">
+                                        <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
+                                        <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                                    </label>
+                                {% endif %}
+                            </div>
+
+                            <hr class="mb-4">
+
+                            <h4>Payment</h4>
+                            <fieldset>
+                                <div class="row">
+                                    <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
+                                        <!-- A Stripe card element will go here -->
+                                    <div class="mb-3" id="card-element"></div>
+            
+                                    <!-- Used to display form errors -->
+                                    <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                                </div>
+                                <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
+                                    <button id="submit-button" class="btn btn-secondary">
+                                        <span class="font-weight-bold">Complete Order</span>
+                                        <span class="icon"><i class="fas fa-check"></i></span>
+                                    </button>
+                                    <p class="small text-danger my-0">
+                                        <span>You will be charged <strong>{{ grand_total|floatformat:2 }} Kr</strong></span>
+                                    </p>
+                                </div>
+                                </div>
+                            </fieldset>
+
+                            <div class="submit-button text-left mt-5">                    
+                                <a href="{% url 'view_cart' %}" class="btn btn-secondary">
+                                    <span class="icon"><i class="fas fa-chevron-left"></i></span>
+                                    <span class="font-weight-bold">Adjust Cart</span>
+                                </a>   
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="loading-overlay">
+        <h1 class="loading-spinner">
+            <button class="btn loading-btn btn-lg" type="button" disabled>
+                <span class="spinner-border" role="status" aria-hidden="true"></span>
+                Payment in progress...
+            </button>
+        </h1>
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'js/stripe.js' %}"></script>
+{% endblock %}
+        <!------
         <div class="row">
             <div class="col-12 col-lg-6 order-lg-last mb-5">
                 <div class="card bg-light mb-3">
@@ -92,10 +246,10 @@
                     </fieldset>
                     <fieldset class="px-3">
                         <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
-                        <!-- A Stripe card element will go here -->
+                         A Stripe card element will go here 
                         <div class="mb-3" id="card-element"></div>
 
-                        <!-- Used to display form errors -->
+                         Used to display form errors 
                         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
                     </fieldset>
 
@@ -106,11 +260,8 @@
 							</span>
 							<span class="font-weight-bold">Adjust Cart</span>
 						</a>
-						<button id="submit-button" class="btn btn-black rounded-0">
+						<button id="submit-button" class="btn btn-secondary">
 							<span class="font-weight-bold">Complete Order</span>
-							<span class="icon">
-								<i class="fas fa-lock"></i>
-							</span>
 						</button>
 						<p class="small text-danger my-0">
 							<span class="icon">
@@ -131,12 +282,4 @@
                 Payment in progress...
             </button>
         </h1>
-    </div>
-{% endblock %}
-
-{% block postloadjs %}
-    {{ block.super }}
-    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
-    {{ client_secret|json_script:"id_client_secret" }}
-    <script src="{% static 'js/stripe.js' %}"></script>
-{% endblock %}
+    </div>---->

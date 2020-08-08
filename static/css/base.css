@@ -574,7 +574,8 @@ body {
 #payment-form .form-control,
 #card-element {
     color: #000;
-    border: 1px solid #000;
+    border: 1px solid #949494;
+    border-radius: 5px;
 }
 
 select,
