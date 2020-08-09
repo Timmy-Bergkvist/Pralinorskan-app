@@ -1,6 +1,6 @@
 
 
-/*-----------------------<-Background picture->-----------------------*/
+/*-----------------------<-Background->-----------------------*/
 html {
     height: 100%;
 }
@@ -11,6 +11,17 @@ body {
     height: calc(100vh - 164px);
     color: rgb(0, 0, 0);
     font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+.overlay {
+  height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: #e9ecefd1;
+	z-index: -1;
 }
 
 /*---------------------------<-Header->------------------------------*/
@@ -166,10 +177,6 @@ body {
     min-width: 260px;
 }
 
-.btn-black {
-    background: black;
-    color: white;
-}
 
 .shop-now-button:hover,
 .shop-now-button:active,
@@ -185,6 +192,11 @@ body {
   background: #4f4f4f;
   color: white;
   border-radius: 5px;
+}
+
+.btn-secondary:hover {
+  background-color:  #075342;
+  color: #EDEDED;
 }
 
 .text-black {
@@ -435,16 +447,6 @@ body {
   }
 }
 
-.overlay {
-  height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: #e9ecefd1;
-	z-index: -1;
-}
-
 .card-account {
   background-color: #f8f9fa;
 }
@@ -522,7 +524,7 @@ body {
 
 /*---------------------------<-Profiles->------------------------------*/
 
-.card-checkout-success {
+.custom-card {
   padding: 5px 0;
   border-bottom: 1px solid #ddd;
   margin-right: 0px;
@@ -531,7 +533,7 @@ body {
 
 /* Slightly smaler container on xl, lg and md screens  */
 @media (min-width: 770px) {
-  .card-checkout-success {
+  .custom-card {
     width: 40rem;
     margin: auto;
   }

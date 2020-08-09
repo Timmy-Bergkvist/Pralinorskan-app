@@ -19,7 +19,7 @@
                 <hr>
             </div>
         </div>
-        <div class="card card-checkout-success">
+        <div class="card custom-card">
             <div class="card-header">
                 <p class="text-black">A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
             </div>
@@ -185,9 +185,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="row card-footer">
-                    <div class="col">
-                        {% if from_profile %}
+                <br>
+                <div class="row card-footer-left">
+                    <div class="col ">
+                        {% if form_profile %}
                             <a href="{% url 'profile' %}" class="btn btn-secondary">
                                 <span class="icon">
                                     <i class="fas fa-angle-left"></i>
