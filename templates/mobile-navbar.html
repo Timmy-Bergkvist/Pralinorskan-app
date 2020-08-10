@@ -1,29 +1,22 @@
 
-
-<div class="text-lg-left">
-    <a style="text-align: left;" class="navbar-brand navbar-logo" href="{% url 'home' %}"><strong>P</strong></a>
-</div>
-<div class="mobile-navbar">
     {% if request.user.is_authenticated %}
-    <li class="list-inline-item dropdown">
-        <a class="text-black nav-link d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <li id="list-inline-item" class="list-inline-item dropdown">
+       <a id="nav-link" class="text-black nav-link d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
-                <div><i class="fas fa-user fa-lg"></i></div>
+               <div><i class="fas fa-user fa-md"></i></div>
                 <p class="my-0">My Account</p>
-            </div>
+           </div>
         </a>
-        <div class="dropdown-menu border-0" aria-labelledby="user-options">
-            {% if request.user.is_authenticated %}
+       <div class="dropdown-menu border-0" aria-labelledby="user-options">
                 <a href="{% url 'profile' %}" class="dropdown-item">Profile details</a>
                 <a href="{% url 'orders' %}" class="dropdown-item">Order History</a>
                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-            {% endif %}
         </div>
     </li>
-    <li class="list-inline-item">
-        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_cart' %}">
+    <li id="list-inline-item" class="list-inline-item">
+       <a id="nav-link" class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link " href="{% url 'view_cart' %}">
             <div class="text-center">
-                <div><i class="fas fa-shopping-cart fa-lg"></i></div>
+               <div><i class="fas fa-shopping-cart fa-md"></i></div>
                 <p class="my-0">
                     {% if grand_total %}
                         {{ grand_total|floatformat:2 }}Kr
@@ -36,18 +29,28 @@
     </li>
     {% else %}
     <li class="list-inline-item">
-        <a class="font-weight-bold nav-link" href="{% url 'account_login' %}" id="login-link" aria-haspopup="true" aria-expanded="false">
-        <div class="text-center">
-            <p class="my-0">Login</p>
-        </div>
+        <a class="font-weight-bold navbar-text" href="{% url 'account_login' %}" id="login-link" aria-haspopup="true" aria-expanded="false">
+        Login
         </a>
     </li>
     <li class="list-inline-item">
-        <a class="font-weight-bold nav-link" href="{% url 'account_signup' %}" id="register-link" aria-haspopup="true" aria-expanded="false">
-            <div class="text-center">
-                <p class="my-0">Register</p>
-            </div>
+        <a class="font-weight-bold navbar-text" href="{% url 'account_signup' %}" id="register-link" aria-haspopup="true" aria-expanded="false">
+        Register
         </a>
     </li>
-</div>
+
+    <li id="list-inline-item" class="list-inline-item text-lg-left">
+        <a id="nav-link" class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
+        <div class="text-center">
+            <div><i class="fas fa-shopping-cart fa-md"></i></div>
+            <p class="my-0">
+            {% if grand_total %}
+                {{ grand_total|floatformat:2 }}Kr
+            {% else %}
+                0.00 Kr
+            {% endif %}
+            </p>
+        </div>
+        </a>
+    </li>
 {% endif %}
