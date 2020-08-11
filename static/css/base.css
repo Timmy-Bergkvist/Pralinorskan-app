@@ -35,7 +35,13 @@ body {
   z-index: -1;
 }
 
+tr {
+  border-bottom: #00000026 solid 1px
+}
+
+
 /*---------------------------<-Header->------------------------------*/
+
 header {
   padding-top: 0 !important;
 }
@@ -105,6 +111,7 @@ header {
     display: inline;
   }
 
+
 /* --------------- Media Queries --------------- */
 
 @media (max-width: 990px) {
@@ -139,37 +146,39 @@ header {
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 510px) {
-      .fixed-top-desktop-only {
-          position: fixed;
-          top: 0;
-          right: 0;
-          left: 0;
-          z-index: 1030;
-      }
-  
-      .header-container {
-          padding-top: 164px;
-      }
+  .fixed-top-desktop-only {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
   }
+  
+  .header-container {
+    padding-top: 164px;
+  }
+}
 
-/* Pushing down the image on mobile view */
+/* mobile view */
 @media (max-width: 991px) {
   .header-container {
-      padding-top: 116px;
+    padding-top: 116px;
   }
 
   body {
-      height: calc(100vh - 116px);
+    height: calc(100vh - 116px);
   }
-  
 }
+
 /*---------------------------<-Section->------------------------------*/
+#extra-padding {
+  padding-bottom: 300px;
+}
 
 .container-fluid {
   padding-top: 100px;
   padding-bottom: 100px;
 }
-
 
 .content-header {
     font-family: 'Roboto Condensed', sans-serif;
@@ -311,7 +320,11 @@ header {
   padding: 6px !important;
 }
 
-/* ------------ Order summary Card ------------ */
+.update-link {
+  cursor: pointer;
+}
+
+/* ---------- Order summary Card ---------- */
 
 .order-summary-card-inner {
   background-color: #e2e2e2c4;
@@ -339,22 +352,32 @@ header {
   color: #EDEDED;
 }
 
-/* --------- Custom Input Group for Cart and products --------- */
+/* --------- Media Queries for cart --------- */
 
-@media (max-width: 570px){
-  
-  thead, .thead-inner {
-    display: none !important;
+/* Smaller card in tablet*/
+@media (max-width: 991px) {
+  .order-summary-card {
+    padding-left: 100px;
+    padding-right: 100px;
   }
-  /*
-  .product-name {
-    width: 80px;
-  }
-  .product-price {
-    display: none !important;
-  }*/
-
 }
+
+@media (max-width: 600px){
+  .order-summary-card {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* Smaller img in tablet*/
+@media (max-width: 774px){
+  .cart-img {
+    max-width: 38%;
+  }
+}
+
+
+/* --------- Custom Input Group for Cart and products --------- */
 
 #input-group-cart {
   position: relative;
