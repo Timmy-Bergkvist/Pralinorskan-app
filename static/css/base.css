@@ -341,6 +341,21 @@ header {
 
 /* --------- Custom Input Group for Cart and products --------- */
 
+@media (max-width: 570px){
+  
+  thead, .thead-inner {
+    display: none !important;
+  }
+  /*
+  .product-name {
+    width: 80px;
+  }
+  .product-price {
+    display: none !important;
+  }*/
+
+}
+
 #input-group-cart {
   position: relative;
     display: inline-flex;
