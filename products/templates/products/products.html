@@ -78,16 +78,44 @@
                                 <hr>
                             </div>
                         {% endif %}
-                    {% endfor %}
+                    {% endfor %}   
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Pagination -->
+    <nav aria-label="...">
+        <ul id="ul-pagination" class="pagination justify-content-center">
+            {% if products.has_previous %}
+                <li class="page-item"><a class="page-link" href="?page={{ products.previous_page_number }}" tabindex="-1" aria-disabled="true">&laquo;</a></li>
+                {% else %}
+                <li class="page-item disabled"><a class="page-link" href="#"><span>&laquo;</span></a></li>
+            {% endif %}
+
+            {% for i in products.paginator.page_range %}
+                {% if products.number == i %}
+                    <li class="page-item active" aria-current="page"><a class="page-link" href="?page={{ i }}">{{ i }}<span class="sr-only">(current)</span></a></li>
+                {% else %}
+                    <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                {% endif %}
+            {% endfor %}
+    
+            {% if products.has_next %}
+                <li class="page-item"><a class="page-link" href="?page={{ products.next_page_number }}">&raquo;</a></li>
+                {% else %}
+                <li class="page-item disabled"><a class="page-link" href="#"><span>&raquo;</span></a></li>
+            {% endif %}
+        </ul>
+    </nav>
+
+    <!-- Return to top button -->
     <div>
         <a id="return-to-top">
             <i class="fas fa-arrow-up mx-auto my-auto"></i>
         </a>
     </div>
+   
 {% endblock %}
 
 {% block postloadjs %}

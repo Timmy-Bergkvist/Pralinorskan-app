@@ -177,7 +177,6 @@ header {
 
 .container-fluid {
   padding-top: 100px;
-  padding-bottom: 100px;
 }
 
 .content-header {
@@ -241,7 +240,33 @@ header {
 .border-black {
     border: 1px solid black !important;
 }
+/* --------------- pagination --------------- */
 
+.page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color: #19896F;
+  border-color: #19896F;
+}
+
+.page-link {
+  position: relative;
+  display: block;
+  padding: .5rem .75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #000000;
+  background-color: rgba(237, 237, 237, 0.767);
+  border: 1px solid rgba(237, 237, 237, 0.767);
+}
+
+.page-link:hover {
+  color: #075342;
+}
+
+#ul-pagination {
+  margin-bottom: 10rem;
+}
 
 /* --------------- Return To Top Btn --------------- */
 
