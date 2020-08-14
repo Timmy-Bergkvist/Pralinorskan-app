@@ -11,7 +11,7 @@ def all_products(request):
     product_list = Product.objects.all()
     # Creates pagination
     page = request.GET.get('page', 1)
-    paginator = Paginator(product_list, 12) # Show 12 products per page
+    paginator = Paginator(product_list, 8) # Show 8 products per page
     try:
         products = paginator.page(page)
     except PageNotAnInteger:

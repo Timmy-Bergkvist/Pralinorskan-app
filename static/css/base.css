@@ -171,6 +171,12 @@ header {
 }
 
 /*---------------------------<-Section->------------------------------*/
+.sticky {
+  position: absolute;
+  width: 50%;
+  bottom: 10px;
+}
+
 #extra-padding {
   padding-bottom: 300px;
 }
