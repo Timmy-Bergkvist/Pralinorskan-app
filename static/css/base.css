@@ -228,14 +228,27 @@ header {
 }
 
 .btn-secondary {
-  background: #4f4f4f;
-  color: white;
-  border-radius: 5px;
+  background: #818181;
+  color: #EDEDED;
+  border-color: #818181;
 }
 
 .btn-secondary:hover {
-  background-color:  #075342;
+  background: #19896F;
+  color: white;
+  border-color: #19896F;
+}
+
+.btn-success {
+  background: #19896F;
   color: #EDEDED;
+  border-color: #19896F;
+}
+
+.btn-success:hover {
+  background: #075342;
+  color: #EDEDED;
+  border-color: #075342;
 }
 
 .text-black {
@@ -588,6 +601,7 @@ header {
 .allauth-form-inner-content input[type='submit']:hover {	
   background-color: #075342;
   color: #EDEDED;
+  border-color: #075342;
 }
 
 /*---------------------------<-Checkout->------------------------------*/

@@ -181,12 +181,12 @@
                 <br>
                 <div class="row card-footer-left">
                     <div class="col ">
-                        {% if form_profile %}
-                            <a href="{% url 'profile' %}" class="btn btn-secondary">
+                        {% if request.user.is_authenticated %}
+                            <a href="{% url 'orders' %}" class="btn btn-secondary">
                                 <span class="icon">
                                     <i class="fas fa-angle-left"></i>
                                 </span>
-                                <span class="text-uppercase">Back to Profile</span>
+                                <span class="text-uppercase">Back to Orders</span>
                             </a>
                         {% else %}
                             <a href="{% url 'products' %}" class="btn btn-secondary">
