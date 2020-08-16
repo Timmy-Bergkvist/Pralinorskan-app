@@ -24,9 +24,6 @@
         <link href="{% static 'css/base.css' %}" rel="stylesheet">
     {% endblock %}
 
-    {% block extra_css %}
-    {% endblock %}
-
     <title>Pralinörskan app{% block extra_title %}{% endblock %}</title>
   </head>
   <body>
@@ -84,12 +81,12 @@
                     </div>
                   </li>
                   <li class="list-inline-item">
-                    <a id="nav-link" class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
+                    <a id="nav-link" class="{% if grand_total %} font-weight-bold {% else %} text-black {% endif %} text-black nav-link" href="{% url 'view_cart' %}">
                       <div class="text-center">
                         <div><i class="fas fa-shopping-cart fa-md"></i></div>
                         <p class="my-0">
                           {% if grand_total %}
-                            {{ grand_total|floatformat:2 }}Kr
+                          <p class="text-info"> {{ grand_total|floatformat:2 }}Kr</p>
                           {% else %}
                             0.00 Kr
                           {% endif %}
@@ -99,42 +96,40 @@
                   </li>
               {% else %}
                   <div class="row">
-
                     <div class="col-7 my-auto py-1 py-lg-0 text-lg-right">
                       <span  id="list-inline-item" class="list-inline-item">
-                        <a class="font-weight-bold navbar-text" href="{% url 'account_login' %}" id="login-link" aria-haspopup="true" aria-expanded="false">
+                        <a class="font-weight-bold text-info" href="{% url 'account_login' %}" id="login-link" aria-haspopup="true" aria-expanded="false">
                           Login
                         </a>
                       </span>
                       <span  id="list-inline-item" class="list-inline-item">
-                        <a class="font-weight-bold navbar-text" href="{% url 'account_signup' %}" id="register-link" aria-haspopup="true" aria-expanded="false">
+                        <a class="font-weight-bold text-info" href="{% url 'account_signup' %}" id="register-link" aria-haspopup="true" aria-expanded="false">
                           Register
                         </a>
                       </span>
                     </div>
-
                     <div class="col-5">
                       <span class="list-inline-item text-lg-left">
-                        <a id="nav-link" class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
+                        <a id="nav-link" class="{% if grand_total %} font-weight-bold {% else %} text-black {% endif %} text-black nav-link" href="{% url 'view_cart' %}">
                           <div class="text-center">
                             <div><i class="fas fa-shopping-cart fa-md"></i></div>
                             <p class="my-0">
                               {% if grand_total %}
-                                {{ grand_total|floatformat:2 }}Kr
+                              <p class="text-info"> {{ grand_total|floatformat:2 }}Kr</p>
                               {% else %}
-                                0.00 Kr
+                                  0.00 Kr
                               {% endif %}
                             </p>
                           </div>
                         </a>
                       </span>
                     </div>
-
                   </div>
                 </ul>
               {% endif %}
           </div>
         </div>
+
         <!-- Mobile Navbar and Button -->
         <div class="row bg-white d-block d-lg-none">
           <nav class="navbar navbar-expand-lg navbar-light w-100">
@@ -152,7 +147,6 @@
             </div>
           </div>
         </div>
-
     </header>
 
     <!-- Django toast message -->
@@ -202,6 +196,7 @@
         <script src="https://js.stripe.com/v3/"></script>
     {% endblock %}
 
+    <!-- Javascript -->
     {% block postloadjs %}
       <script src="/static/js/main.js"></script>
       <script src="/static/js/quantity-input-script.js"></script>

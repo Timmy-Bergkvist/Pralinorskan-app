@@ -12,7 +12,7 @@
 {% block content %}
 <div class="overlay"></div>
 <div class="overlay-under"></div>
-    <div class="container h-100">
+    <div id="extra-padding" class="container">
         <div class="row h-100">
             <div class="col-7 col-m-6 my-auto">
                 <h1 class="display-4 welcome-text">
@@ -23,7 +23,7 @@
                   </p>
                 <div class="my-5">
                     <h4>
-                        <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-2 py-2" role="button">Find your favorite!</a>
+                        <a href="{% url 'products' %}" class="btn btn-secondary btn-lg rounded-2 py-2" role="button">Find your favorite!</a>
                     </h4>
                 </div>
             </div>

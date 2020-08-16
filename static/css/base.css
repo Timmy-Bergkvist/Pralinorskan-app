@@ -1,16 +1,15 @@
-
-
 /*-----------------------<-Background->-----------------------*/
+
 html {
     height: 100%;
 }
 
 body {
-    background:  url('/media/images/chocolates-1737435_1920.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(90vh - 164px);
-    color: rgb(0, 0, 0);
-    font-family: 'Roboto Condensed', sans-serif;
+  background:  url('/media/images/chocolates-1737435_1920.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: calc(90vh - 164px);
+  color: rgb(0, 0, 0);
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .overlay {
@@ -39,6 +38,9 @@ tr {
   border-bottom: #00000026 solid 1px
 }
 
+.container-fluid {
+  padding-top: 100px;
+}
 
 /*---------------------------<-Header->------------------------------*/
 
@@ -46,70 +48,66 @@ header {
   padding-top: 0 !important;
 }
 
-  .navbar-text {
-    color: #19896F !important;
+.navbar-logo {
+  font-family: 'Satisfy', cursive;
+  font-size: 2.4rem;
+  color: #19896F !important;
+}
+  
+.navbar-nav{
+  padding: 0 18px 0 18px;
+  line-height: 20px;
+  font-size: 20px;
 }
 
-  .navbar-logo {
-    font-family: 'Satisfy', cursive;
-    font-size: 2.4rem;
-    color: #19896F !important;
-  }
-
-  .text-info {
-    color: #19896F !important;
-  }
-  
-  .navbar-nav{
-    padding: 0 18px 0 18px;
-    line-height: 20px;
-    font-size: 20px;
-  }
-
-  .nav-link {
-    color: #19896F;
-  }
-
-  #nav-link {
-    padding: 0.15rem;
+.text-info {
+  color: #19896F !important;
 }
 
-  #list-inline-item {
-    padding: 0.15rem;
+.nav-link {
+  color: #19896F;
 }
 
-  .nav-link:hover {
-    color: #075342;
-  }
+.nav-link:hover {
+  color: #075342;
+}
 
-  #main-nav-link {
-    float:right !important;
-  }
-  
-  .dropdown-menu {
-    margin-top: 19px;
-    border: 0;
-    border-radius: 0 0 5px 5px;
-    min-width: 5rem !important;
-    margin: 0;
-  }
-  
-  .dropdown-item:hover {
-    color: #075342;
-  }
-  
-  .navbar-toggler {
-    background-color: #00000054;
-    float:right !important;
-  }
+#nav-link {
+  padding: 0.15rem;
+}
 
-  .navbar-toggler:hover {
-    color: #075342;
-  }
+#list-inline-item {
+  padding: 0.15rem;
+}
 
-  .mobile-navbar {
-    display: inline;
-  }
+#main-nav-link {
+  float:right !important;
+}
+  
+.dropdown-menu {
+  margin-top: 19px;
+  border: 0;
+  border-radius: 0 0 5px 5px;
+  min-width: 5rem !important;
+  margin: 0;
+}
+  
+.dropdown-item:hover {
+  color: #075342;
+}
+  
+.navbar-toggler {
+  background-color: #00000054;
+  float:right !important;
+}
+
+.navbar-toggler:hover {
+  color: #075342;
+}
+
+.mobile-navbar {
+  display: inline;
+}
 
 
 /* --------------- Media Queries --------------- */
@@ -121,11 +119,9 @@ header {
       display: flex;
       -webkit-box-align: center;
       -ms-flex-align: center;
-      /*align-items: flex-end;*/
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: flex-end;
-      /*padding: 0.7rem 0;*/
       border-left: none;
     }
     .dropdown-item:hover {
@@ -171,18 +167,9 @@ header {
 }
 
 /*---------------------------<-Section->------------------------------*/
-.sticky {
-  position: absolute;
-  width: 50%;
-  bottom: 10px;
-}
 
 #extra-padding {
   padding-bottom: 300px;
-}
-
-.container-fluid {
-  padding-top: 100px;
 }
 
 .content-header {
@@ -193,38 +180,19 @@ header {
 
 .content-header-category {
   font-family: 'Roboto Condensed', sans-serif;
-    color: #19896F;
-    text-transform: uppercase;
+  color: #19896F;
+  text-transform: uppercase;
 }
 
 /* from Bulma */
 .icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
 }
 
 .main-logo-link {
-    width: fit-content;
-}
-
-.shop-now-button {
-    background: #818181;
-    color: #EDEDED;
-    min-width: 260px;
-}
-
-
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #19896F;
-    color: white;
+  width: fit-content;
 }
 
 .btn-secondary {
@@ -255,10 +223,6 @@ header {
     color: #000 !important;
 }
 
-
-.border-black {
-    border: 1px solid black !important;
-}
 /* --------------- pagination --------------- */
 
 .page-item.active .page-link {
@@ -425,31 +389,27 @@ header {
 
 #input-group-cart {
   position: relative;
-    display: inline-flex;
-    /* flex-direction: row; */
-    border: 2px solid #eee;
-    align-items: center;
-    padding: 2px 2px;
-    background: #eee;
-    border-radius: 10px;
-    /* width: 100px; */
-    max-width: 100%;
-    min-width: 78px;
-    width: 100px;
-    height: 35px;
-    overflow: hidden;
-    flex-wrap: inherit;
+  display: inline-flex;
+  border: 2px solid #eee;
+  align-items: center;
+  padding: 2px 2px;
+  background: #eee;
+  border-radius: 10px;
+  max-width: 100%;
+  min-width: 78px;
+  width: 100px;
+  height: 35px;
+  overflow: hidden;
+  flex-wrap: inherit;
 }
 
 #input-group-cart input {
   display: inline-block;
-    font-weight: 700;
-    /* text-align: center; */
-    border: none;
-    /* height: 30px; */
-    min-width: 0;
-    flex-grow: 1;
-    background: #eee;
+  font-weight: 700;
+  border: none;
+  min-width: 0;
+  flex-grow: 1;
+  background: #eee;
 }
 
 .input-group-prepend-cart button{
@@ -478,16 +438,6 @@ header {
 }
 
 /* ------------ Toasts ------------ */
-
-.toast-checkout-btn{
-  background-color: #19896F;
-  color: #EDEDED;
-}
-  
-.toast-checkout-btn:hover {
-  background-color: #075342;
-  color: #EDEDED;
-}
 
 .message-container {
   position: fixed;
@@ -552,13 +502,6 @@ header {
   padding-top: 104px;
 }
 
-/* Slightly smaler container on xl, lg and md screens  */
-@media (min-width: 770px) {
-  .account-header-container {
-    width: 28rem;
-  }
-}
-
 .card-account {
   background-color: #f8f9fa;
 }
@@ -604,6 +547,16 @@ header {
   border-color: #075342;
 }
 
+/* --------- Media Queries for Allauth --------- */
+
+/* Slightly smaler container on xl, lg and md screens  */
+@media (min-width: 770px) {
+  .account-header-container {
+    width: 28rem;
+  }
+}
+
+
 /*---------------------------<-Checkout->------------------------------*/
 
 .card-product-detail-checkout {
@@ -622,7 +575,6 @@ header {
   text-align: left;
 }
 
-
 .card-footer-right {
   text-align: right;
 }
@@ -635,6 +587,7 @@ header {
   padding: 0;
 }
 
+
 /*---------------------------<-Profiles->------------------------------*/
 
 .custom-card {
@@ -644,6 +597,8 @@ header {
   margin-left: 0px;
 }
 
+/* --------- Media Queries for Profiles --------- */
+
 /* Slightly smaler container on xl, lg and md screens  */
 @media (min-width: 770px) {
   .custom-card {
@@ -651,6 +606,7 @@ header {
     margin: auto;
   }
 }
+
 
 /*---------------------------<-Stripe->------------------------------*/
 
@@ -678,29 +634,29 @@ header {
 }
 
 .stripe-style-input::placeholder {
-    color: #aab7c4;
+  color: #aab7c4;
 }
 
 .fieldset-label {
-    position: relative;
-    right: .5rem;
+  position: relative;
+  right: .5rem;
 }
 
 #payment-form .form-control,
 #card-element {
-    color: #000;
-    border: 1px solid #949494;
-    border-radius: 5px;
+  color: #000;
+  border: 1px solid #949494;
+  border-radius: 5px;
 }
 
 select,
 select option {
-    color: #000000;
+  color: #000000;
 }
 
 select:invalid,
 select option[value=""] {
-    color: #aab7c4 !important;
+  color: #aab7c4 !important;
 }
 
 #loading-overlay {
@@ -735,15 +691,15 @@ select option[value=""] {
 /*---------------------------<-Footer->------------------------------*/
 
 .footer-container {
-    background: rgba(237, 237, 237, 0.767);
-    color: #000;
-    font-family: 'Roboto Condensed', sans-serif;
+  background: rgba(237, 237, 237, 0.767);
+  color: #000;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .social-links  li a i {
-    color: #000;
+  color: #000;
 }
 
 .social-links li a i:hover{
-    color: #19896F;
+  color: #19896F;
 }

@@ -14,12 +14,12 @@
         </div>
     </li>
     <li id="list-inline-item" class="list-inline-item">
-       <a id="nav-link" class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link " href="{% url 'view_cart' %}">
+       <a id="nav-link" class="{% if grand_total %} font-weight-bold {% else %} text-black {% endif %} text-black nav-link " href="{% url 'view_cart' %}">
             <div class="text-center">
                <div><i class="fas fa-shopping-cart fa-md"></i></div>
                 <p class="my-0">
                     {% if grand_total %}
-                        {{ grand_total|floatformat:2 }}Kr
+                    <p class="text-info"> {{ grand_total|floatformat:2 }}Kr</p>
                     {% else %}
                         0.00 Kr
                     {% endif %}
@@ -29,28 +29,28 @@
     </li>
     {% else %}
     <li class="list-inline-item">
-        <a class="font-weight-bold navbar-text" href="{% url 'account_login' %}" id="login-link" aria-haspopup="true" aria-expanded="false">
+        <a class="font-weight-bold text-info" href="{% url 'account_login' %}" id="login-link" aria-haspopup="true" aria-expanded="false">
         Login
         </a>
     </li>
     <li class="list-inline-item">
-        <a class="font-weight-bold navbar-text" href="{% url 'account_signup' %}" id="register-link" aria-haspopup="true" aria-expanded="false">
+        <a class="font-weight-bold text-info" href="{% url 'account_signup' %}" id="register-link" aria-haspopup="true" aria-expanded="false">
         Register
         </a>
     </li>
 
     <li id="list-inline-item" class="list-inline-item text-lg-left">
-        <a id="nav-link" class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
-        <div class="text-center">
-            <div><i class="fas fa-shopping-cart fa-md"></i></div>
-            <p class="my-0">
-            {% if grand_total %}
-                {{ grand_total|floatformat:2 }}Kr
-            {% else %}
-                0.00 Kr
-            {% endif %}
-            </p>
-        </div>
+        <a id="nav-link" class="{% if grand_total %} font-weight-bold {% else %} text-black {% endif %} text-black nav-link" href="{% url 'view_cart' %}">
+            <div class="text-center">
+                <div><i class="fas fa-shopping-cart fa-md"></i></div>
+                <p class="my-0">
+                    {% if grand_total %}
+                    <p class="text-info"> {{ grand_total|floatformat:2 }}Kr</p>
+                    {% else %}
+                        0.00 Kr
+                    {% endif %}
+                </p>
+            </div>
         </a>
     </li>
 {% endif %}
