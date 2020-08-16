@@ -86,11 +86,25 @@ As a user of this platform, I will be able to:
 
 #### Existing Features
 
-- ....................
+- A registration form to sign up for the application.
 
-- ....................
+- A login form to access the application to view profile details.
 
-- ....................
+- A nav bar that displays a Logo, Home, Products, Vegan, Gluten Free, Special Offers, Login/Logout, Account and Cart urls.
+
+- A hamburger menu button that will display options in phone and tablet mode.
+
+- A personal profile page where the user can view profile details and order history.
+
+- A products page where the user can view all available products.
+
+- A product detail page where the user can view personal details about the product and add the product to the shopping cart.
+
+- A choping cart page where the user can view order details, update and remove the amount of products in the cart.
+
+- A payment page where the user can pay for the order.
+
+- A footer that displays info and links to social medias.
 
 #### Features Left to Implement
 
@@ -181,9 +195,22 @@ I have used ................. database for this project
 |**Feature type**|**Feature**|**Tests**|**Bugs**|
 | :---: |:---:| :---:|:---:|
 |..text..|..text..|..text..|..text..|
-|Button|Add to Cart|Getting  the right items. Posts the right items|No Bugs|
-|Button|Shop Now|Sends the user to the right html|No Bugs|
-|Structure|Navbar|Works in mobile and tablet view. Sends the user to right html.|Issue to get the responsive|
+|Button|Add to Cart|Getting  the right items. Posts the right items|No bugs|
+|Button|Shop Now|Sends the user to the right html|No bugs|
+|Button|Navbar toggler|Displays all links. Sends the user to the right html|No bugs|
+|Button|Login|Logs in the user to home page. Toast popup|No bugs|
+|Button|Register|Registers the user. Toast popup. Registration confirmation email sent|No bugs|
+|Button|Add to cart|Adds items to cart. Toast popup|No bugs|
+|Button|Decrement/Increment|Adds the right amount|No bugs|
+|Link|Login|Sends the user to right html|No bugs|
+|Link|Register|Sends the user to right html|No bugs|
+|Link|Navbar|Sends the user to right pages|No bugs|
+|Link|Main logo|Sends the user to home page|No bugs|
+|Link|Product detail|Sends the user to right page. Displays right item|No bugs|
+|Structure|Navbar|Works in mobile and tablet view. Sends the user to right html.|Responsive is working. No bugs|
+|Structure|Navbar toggler|Works in mobile and tablet view. Sends the user to right html.|No bugs|
+|Structure|Content|Stays in the midle. Works in mobile and tablet view.|Responsive is working. No bugs|
+|Structure|Footer|Stays at the bottom. Works in mobile and tablet view.|No bugs|
 
 
 
@@ -269,7 +296,7 @@ python manage.py createsuperuser
 ```shell
 python manage.py runserver
 
-Open the website at http://127.0.0.1:5000
+Open the website at http://127.0.0.1:8000
 ```
 
   X.   Set up environment variable keys.
@@ -315,7 +342,7 @@ if __name__ == '__main__':
 
   XII.   Log into your admin account add the /admin path at the end of the url link.
 ```shell
-http://127.0.0.1:5000/admin
+http://127.0.0.1:8000/admin
 ```
 
 </details>
@@ -383,7 +410,9 @@ V.    Set the config variables in your Heroku settings.
 
     - https://pixabay.com/sv/
     
-    - ........................
+    - https://www.pngjoy.com/
+
+    - https://www.pngwave.com/
     
 
    #### Acknowledgements
