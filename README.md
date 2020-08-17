@@ -54,6 +54,8 @@ Pralinörskan is a ecommerce app to sell pralines with different variations of f
   - Profile: Containing user information and the options to delete and edit the acount.
   
   - Order history: Containing information of previous purchases.
+  
+  - Footer: Displays info and links to social medias.
 
 #### User Stories
 
@@ -103,8 +105,6 @@ As a user of this platform, I will be able to:
 - A choping cart page where the user can view order details, update and remove the amount of products in the cart.
 
 - A payment page where the user can pay for the order.
-
-- A footer that displays info and links to social medias.
 
 #### Features Left to Implement
 
