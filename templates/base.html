@@ -35,27 +35,22 @@
                 <h2 class="navbar-logo my-0"><strong>Pralinörskan</strong></h2>
             </a>
           </div>            
-          <div class="col-6 col-lg-6 my-auto py-1 py-lg-0">
-            <ul class="list-inline list-unstyled text-center my-0">
+          <div class="col-6 col-lg-6 product-links my-auto py-1 py-lg-0">
+            <ul class="list-inline list-unstyled text-right my-0">
               <li class="list-inline-item">
                 <a class="nav-link" href="{% url 'home' %}" id="home-link">
                     Home
                 </a>
               </li>
               <li class="list-inline-item">
-                <a class="nav-link" href="{% url 'products' %}" id="all-products-link"  aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link" href="#" id="products-options"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Products
                 </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="nav-link" href="{% url 'products' %}?category=vegan" id="vegan-products-link"  aria-haspopup="true" aria-expanded="false">
-                    Vegan
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="nav-link" href="{% url 'products' %}?category=gluten_free" id="glutenFree-products-link"  aria-haspopup="true" aria-expanded="false">
-                    Gluten Free
-                </a>
+                <div class="dropdown-menu border-0" aria-labelledby="products-options">
+                    <a href="{% url 'products' %}" class="dropdown-item" id="all-products-link">All Products</a>
+                    <a href="{% url 'products' %}?category=vegan" class="dropdown-item" id="vegan-products-link">Vegan</a>
+                    <a href="{% url 'products' %}?category=gluten_free" class="dropdown-item" id="glutenFree-products-link">Gluten Free</a>
+                </div>
               </li>
               <li class="list-inline-item">
                 <a class="nav-link" href="{% url 'products' %}?category=special_offer" id="specialsOffers-products-link"  aria-haspopup="true" aria-expanded="false">
@@ -66,7 +61,7 @@
           </div>
           <div class="col-3 col-lg-3 my-auto py-1 py-lg-0">
               {% if request.user.is_authenticated %}
-                <ul class="list-inline list-unstyled  text-lg-center my-0">
+                <ul class="list-inline list-unstyled text-lg-center my-0">
                   <li class="list-inline-item">
                     <a id="nav-link" class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <div class="text-center">

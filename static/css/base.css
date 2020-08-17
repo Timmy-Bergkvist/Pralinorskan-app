@@ -83,6 +83,10 @@ header {
 #main-nav-link {
   float:right !important;
 }
+
+.product-links{
+  padding-right: 0px !important;
+}
   
 .dropdown-menu {
   margin-top: 19px;
@@ -109,6 +113,10 @@ header {
   display: inline;
 }
 
+.dropdown-item {
+  padding: .3rem .9rem !important;
+  color: #19896F;
+}
 
 /* --------------- Media Queries --------------- */
 
