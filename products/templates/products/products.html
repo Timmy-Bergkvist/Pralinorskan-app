@@ -88,7 +88,7 @@
     <nav aria-label="...">
         <ul id="ul-pagination" class="pagination justify-content-center">
             {% if products.has_previous %}
-                <li class="page-item"><a class="page-link" href="?page={{ products.previous_page_number }}" tabindex="-1" aria-disabled="true">&laquo;</a></li>
+                <li class="page-item"><a class="page-link" href="?page={{ products.previous_page_number }}{% if collection_page %}&category={{ collection_page }}{% elif sort %}&sort={{ sort }}&direction={{ direction }}{% endif %}" tabindex="-1" aria-disabled="true">&laquo;</a></li>
                 {% else %}
                 <li class="page-item disabled"><a class="page-link" href="#"><span>&laquo;</span></a></li>
             {% endif %}
@@ -97,12 +97,12 @@
                 {% if products.number == i %}
                     <li class="page-item active" aria-current="page"><a class="page-link" href="?page={{ i }}">{{ i }}<span class="sr-only">(current)</span></a></li>
                 {% else %}
-                    <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                    <li class="page-item"><a class="page-link" href="?page={{ i }}{% if collection_page %}&category={{ collection_page }}{% elif sort %}&sort={{ sort }}&direction={{ direction }}{% endif %}">{{ i }}</a></li>
                 {% endif %}
             {% endfor %}
     
             {% if products.has_next %}
-                <li class="page-item"><a class="page-link" href="?page={{ products.next_page_number }}">&raquo;</a></li>
+                <li class="page-item"><a class="page-link" href="?page={{ products.next_page_number }}{% if collection_page %}&category={{ collection_page }}{% elif sort %}&sort={{ sort }}&direction={{ direction }}{% endif %}">&raquo;</a></li>
                 {% else %}
                 <li class="page-item disabled"><a class="page-link" href="#"><span>&raquo;</span></a></li>
             {% endif %}
