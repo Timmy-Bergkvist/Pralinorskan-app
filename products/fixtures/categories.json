@@ -1,0 +1,26 @@
+[
+    {
+      "pk": 1,
+      "model": "products.categories",
+      "fields": {
+        "name": "special_offer",
+        "friendly_name": "special offer"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "products.categories",
+      "fields": {
+        "name": "gluten_free",
+        "friendly_name": "gluten free"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "products.categories",
+      "fields": {
+        "name": "vegan",
+        "friendly_name": "vegan"
+      }
+    }
+  ]

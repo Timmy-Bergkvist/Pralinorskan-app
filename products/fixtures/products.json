@@ -1,0 +1,376 @@
+[
+    {
+      "pk": 1,
+      "model": "products.product",
+      "fields": {
+        "sku": "glf001",
+        "name": "Box of 5 gluten free chocolate praline",
+        "description": "Box of 5 gluten free chocolate praline. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+        "price": 25.90,
+        "image": "pngwave_13.png"
+      }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+          "sku": "glf002",
+          "name": "Box of 10 gluten free chocolate praline",
+          "description": "Box of 10 gluten free chocolate praline. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 45.90,
+          "image": "pngwave_13_jgW60Gn.png"
+        }
+      },
+      {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+          "sku": "glf003",
+          "name": "Box of 15 gluten free chocolate praline",
+          "description": "Box of 15 gluten free chocolate praline. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 65.90,
+          "image": "pngwave_13_POq4xhj.png"
+        }
+      },
+      {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+          "sku": "glf004",
+          "name": "Box of 5 gluten free chocolate hazelnut praline",
+          "description": "Box of 5 gluten free chocolate hazelnut praline. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 25.90,
+          "image": "pngwave_8.png"
+        }
+      },
+      {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+          "sku": "glf005",
+          "name": "Box of 10 gluten free chocolate hazelnut praline",
+          "description": "Box of 10 gluten free chocolate hazelnut praline. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 45.90,
+          "image": "pngwave_8_x62pIEc.png"
+        }
+      },
+      {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+          "sku": "glf006",
+          "name": "Box of 15 gluten free chocolate hazelnut praline",
+          "description": "Box of 15 gluten free chocolate hazelnut praline. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 65.90,
+          "image": "pngwave_8_s6vbM0D.png"
+        }
+      },
+      {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+          "sku": "so001",
+          "name": "Summer Special Box",
+          "description": "Summer Special Box. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 99.90,
+          "image": "pngwave_4.png"
+        }
+      },
+      {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+          "sku": "so002",
+          "name": "Winter Special Box",
+          "description": "Winter Special Box. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 99.90,
+          "image": "pngwave_5.png"
+        }
+      },
+      {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+          "sku": "so003",
+          "name": "Valentines day Special Box",
+          "description": "Valentines day Special Box. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 99.90,
+          "image": "pngwave_10.png"
+        }
+      },
+      {
+        "pk": 10,
+        "model": "products.product",
+        "fields": {
+          "sku": "so004",
+          "name": "Special Box one of each flavors",
+          "description": "Special Box one of each flavors. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 59.90,
+          "image": "pngwave_19.png"
+        }
+      },
+      {
+        "pk": 11,
+        "model": "products.product",
+        "fields": {
+          "sku": "ve001",
+          "name": "Box of 5 Vegan Raspberry and Blueberry Praline",
+          "description": "Box of 5 Vegan Raspberry and Blueberry Praline. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 25.90,
+          "image": "pngwave_15.png"
+        }
+      },
+      {
+        "pk": 12,
+        "model": "products.product",
+        "fields": {
+          "sku": "ve002",
+          "name": "Box of 10 Vegan Raspberry and Blueberry Praline",
+          "description": "Box of 10 Vegan Raspberry and Blueberry Praline. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 45.90,
+          "image": "pngwave_15_oYGGCH9.png"
+        }
+      },
+      {
+        "pk": 13,
+        "model": "products.product",
+        "fields": {
+          "sku": "ve003",
+          "name": "Box of 15 Vegan Raspberry and Blueberry Praline",
+          "description": "Box of 15 Vegan Raspberry and Blueberry Praline. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 65.90,
+          "image": "pngwave_15_1p2zrBt.png"
+        }
+      },
+      {
+        "pk": 14,
+        "model": "products.product",
+        "fields": {
+          "sku": "ve004",
+          "name": "Box of 15 Vegan Mint Chocolate Praline",
+          "description": "Box of 15 Vegan Mint Chocolate Praline. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 25.90,
+          "image": "pngwave_14.png"
+        }
+      },
+      {
+        "pk": 15,
+        "model": "products.product",
+        "fields": {
+          "sku": "ve005",
+          "name": "Box of 10 Vegan Mint Chocolate Praline",
+          "description": "Box of 10 Vegan Mint Chocolate Praline. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 45.90,
+          "image": "pngwave_14_qDfaFtT.png"
+        }
+      },
+      {
+        "pk": 16,
+        "model": "products.product",
+        "fields": {
+          "sku": "ve006",
+          "name": "Box of 5 Vegan Mint Chocolate Praline",
+          "description": "Box of 5 Vegan Mint Chocolate Praline. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 65.90,
+          "image": "pngwave_14_8SxJSUX.png"
+        }
+      },
+      {
+        "pk": 17,
+        "model": "products.product",
+        "fields": {
+          "sku": "ve007",
+          "name": "Box of 5 Vegan Licorice Praline",
+          "description": "Box of 5 Vegan Licorice Praline. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 25.90,
+          "image": "pngwave_7.png"
+        }
+      },
+      {
+        "pk": 18,
+        "model": "products.product",
+        "fields": {
+          "sku": "ve008",
+          "name": "Box of 10 Vegan Licorice Praline",
+          "description": "Box of 10 Vegan Licorice Praline. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 45.90,
+          "image": "pngwave_7_vZRPOUd.png"
+        }
+      },
+      {
+        "pk": 19,
+        "model": "products.product",
+        "fields": {
+          "sku": "ve009",
+          "name": "Box of 15 Vegan Licorice Praline",
+          "description": "Box of 15 Vegan Licorice Praline. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 65.90,
+          "image": "pngwave_7_P8HvpSq.png"
+        }
+      },
+      {
+        "pk": 20,
+        "model": "products.product",
+        "fields": {
+          "sku": "ve010",
+          "name": "Box of 5 Vegan Chocolate Praline",
+          "description": "Box of 5 Vegan Chocolate Praline. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 25.90,
+          "image": "pngwave_12.png"
+        }
+      },
+      {
+        "pk": 21,
+        "model": "products.product",
+        "fields": {
+          "sku": "ve011",
+          "name": "Box of 10 Vegan Chocolate Praline",
+          "description": "Box of 10 Vegan Chocolate Praline. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 45.90,
+          "image": "pngwave_12_mXyy80T.png"
+        }
+      },
+      {
+        "pk": 22,
+        "model": "products.product",
+        "fields": {
+          "sku": "ve012",
+          "name": "Box of 15 Vegan Chocolate Praline",
+          "description": "Box of 15 Vegan Chocolate Praline. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 65.90,
+          "image": "pngwave_12_uBDwE6q.png"
+        }
+      },
+      {
+        "pk": 23,
+        "model": "products.product",
+        "fields": {
+          "sku": "ve013",
+          "name": "Box of 5 Vegan Chocolate Strawberry",
+          "description": "Box of 5 Vegan Chocolate Strawberry. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 25.90,
+          "image": "pngwave_16.png"
+        }
+      },
+      {
+        "pk": 24,
+        "model": "products.product",
+        "fields": {
+          "sku": "ve014",
+          "name": "Box of 10 Vegan Chocolate Strawberry",
+          "description": "Box of 10 Vegan Chocolate Strawberry. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 45.90,
+          "image": "pngwave_16_Q6lPvNA.png"
+        }
+      },
+      {
+        "pk": 25,
+        "model": "products.product",
+        "fields": {
+          "sku": "ve015",
+          "name": "Box of 15 Vegan Chocolate Strawberry",
+          "description": "Box of 15 Vegan Chocolate Strawberry. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 65.90,
+          "image": "pngwave_16_2vjr44c.png"
+        }
+      },
+      {
+        "pk": 26,
+        "model": "products.product",
+        "fields": {
+          "sku": "ve016",
+          "name": "Box of 5 Vegan Chocolate Fudge",
+          "description": "Box of 5 Vegan Chocolate Fudge. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 25.90,
+          "image": "pngwave_2.png"
+        }
+      },
+      {
+        "pk": 27,
+        "model": "products.product",
+        "fields": {
+          "sku": "ve017",
+          "name": "Box of 10 Vegan Chocolate Fudge",
+          "description": "Box of 10 Vegan Chocolate Fudge. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 45.90,
+          "image": "pngwave_2_gLES4UH.png"
+        }
+      },
+      {
+        "pk": 28,
+        "model": "products.product",
+        "fields": {
+          "sku": "ve018",
+          "name": "Box of 15 Vegan Chocolate Fudge",
+          "description": "Box of 15 Vegan Chocolate Fudge. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 65.90,
+          "image": "pngwave_2_lSEfewW.png"
+        }
+      },
+      {
+        "pk": 29,
+        "model": "products.product",
+        "fields": {
+          "sku": "ve019",
+          "name": "Box of 5 Vegan Chocolate Coco",
+          "description": "Box of 5 Vegan Chocolate Coco. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 25.90,
+          "image": "pngwave_1.png"
+        }
+      },
+      {
+        "pk": 30,
+        "model": "products.product",
+        "fields": {
+          "sku": "ve020",
+          "name": "Box of 10 Vegan Chocolate Coco",
+          "description": "Box of 10 Vegan Chocolate Coco. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 45.90,
+          "image": "pngwave_1_xsTxQlW.png"
+        }
+      },
+      {
+        "pk": 31,
+        "model": "products.product",
+        "fields": {
+          "sku": "ve021",
+          "name": "Box of 15 Vegan Chocolate Coco",
+          "description": "Box of 15 Vegan Chocolate Coco. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 65.90,
+          "image": "pngwave_1_xUXeSUI.png"
+        }
+      },
+      {
+        "pk": 32,
+        "model": "products.product",
+        "fields": {
+          "sku": "ve022",
+          "name": "Bag of 20 Vegan Chocolate Coco Drops",
+          "description": "Bag of 20 Vegan Chocolate Coco Drops. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 25.90,
+          "image": "pngwave_17.png"
+        }
+      },
+      {
+        "pk": 33,
+        "model": "products.product",
+        "fields": {
+          "sku": "ve023",
+          "name": "Bag of 40 Vegan Chocolate Coco Drops",
+          "description": "Bag of 40 Vegan Chocolate Coco Drops. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 45.90,
+          "image": "pngwave_17_2ppXEYS.png"
+        }
+      },
+      {
+        "pk": 34,
+        "model": "products.product",
+        "fields": {
+          "sku": "ve024",
+          "name": "Bag of 60 Vegan Chocolate Coco Drops",
+          "description": "Bag of 60 Vegan Chocolate Coco Drops. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+          "price": 65.90,
+          "image": "pngwave_17_kG1Gu0p.png"
+        }
+      }
+  ]
