@@ -1,0 +1,1 @@
+web: gunicorn pralinorskan-app.wsgi:application
