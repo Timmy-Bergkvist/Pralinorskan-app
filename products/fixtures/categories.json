@@ -1,7 +1,7 @@
 [
     {
       "pk": 1,
-      "model": "products.categories",
+      "model": "products.category",
       "fields": {
         "name": "special_offer",
         "friendly_name": "special offer"
@@ -9,7 +9,7 @@
     },
     {
       "pk": 2,
-      "model": "products.categories",
+      "model": "products.category",
       "fields": {
         "name": "gluten_free",
         "friendly_name": "gluten free"
@@ -17,7 +17,7 @@
     },
     {
       "pk": 3,
-      "model": "products.categories",
+      "model": "products.category",
       "fields": {
         "name": "vegan",
         "friendly_name": "vegan"
