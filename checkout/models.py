@@ -13,7 +13,6 @@ import datetime
 
 class Order(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False)
-    # if you set null=False, blank=False a user needs to have a user acount to make purchases.
     user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
                                      null=True, blank=True, related_name='orders')
     full_name = models.CharField(max_length=50, null=False, blank=False)
@@ -54,7 +53,7 @@ class Order(models.Model):
         """
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
         
-        self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 130
+        self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 150
         
         self.grand_total = self.order_total + self.delivery_cost
         self.save()
