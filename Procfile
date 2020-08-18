@@ -1,1 +1,1 @@
-web: gunicorn pralinorskan-app.wsgi:application
+web: gunicorn pralinorskan_app.wsgi:application

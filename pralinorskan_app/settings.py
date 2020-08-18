@@ -116,7 +116,7 @@ ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
-WSGI_APPLICATION = 'pralinorskan-app.wsgi.application'
+WSGI_APPLICATION = 'pralinorskan_app.wsgi.application'
 
 
 # Database
