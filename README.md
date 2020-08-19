@@ -401,7 +401,7 @@ It is important to do them in this order!
 
 Step 6 Put back everything as it was.
 when everything is migrate and done remove the Heroku database config.
-And uncomment the original so it doesn t end up in version control and then set up the databases like this.
+And uncomment the original so it doesn't end up in version control and then set up the databases like this.
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
@@ -438,16 +438,16 @@ IX. Set the config variables in your Heroku settings.
 
 |**KEY NAME**|**KEY VALUE**|
 | :---: |:---:|
-|AWS_ACCESS_KEY_ID|<your aws access key>|
-|AWS_SECRET_ACCESS_KEY|<your aws secret access key>|
-|DATABASE_URL|<your database url>|
-|EMAIL_HOST_PASS|<your email host password>|
-|EMAIL_HOST_USER|<your email>@gmail.com|
-|HEROKU_HOSTNAME|<your heroku hostname>.herokuapp.com|
-|SECRET_KEY|<your secret key>|
-|STRIPE_PUBLIC_KEY|<your stripe public key>|
-|STRIPE_SECRET_KEY|<your stripe secret key>|
-|STRIPE_WH_SECRET|<your stripe webhook key>|
+|AWS_ACCESS_KEY_ID|your aws access key|
+|AWS_SECRET_ACCESS_KEY|your aws secret access key|
+|DATABASE_URL|your database url|
+|EMAIL_HOST_PASS|your email host password|
+|EMAIL_HOST_USER|your email@gmail.com|
+|HEROKU_HOSTNAME|your heroku hostname.herokuapp.com|
+|SECRET_KEY|your secret key|
+|STRIPE_PUBLIC_KEY|your stripe public key|
+|STRIPE_SECRET_KEY|your stripe secret key|
+|STRIPE_WH_SECRET|your stripe webhook key|
 |USE_AWS|True|
 
  
