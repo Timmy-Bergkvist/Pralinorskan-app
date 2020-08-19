@@ -323,24 +323,9 @@ from os import path
 if path.exists("env.py"):
     import env
 
-def main():
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pralinorskan_app.settings')
-    try:
-        from django.core.management import execute_from_command_line
-    except ImportError as exc:
-        raise ImportError(
-            "Couldn't import Django. Are you sure it's installed and "
-            "available on your PYTHONPATH environment variable? Did you "
-            "forget to activate a virtual environment?"
-        ) from exc
-    execute_from_command_line(sys.argv)
-
-
-if __name__ == '__main__':
-    main()
 ```
 
-  XII.   Log into your admin account add the /admin path at the end of the url link.
+  XII.  Log into your admin account add the /admin path at the end of the url link.
 ```shell
 http://127.0.0.1:8000/admin
 ```
@@ -357,49 +342,124 @@ This project is hosted using Heroku.
 
 > Instructions:
 
-I.    Install Heroku
-  
+  I.  Install Heroku
 ```shell
-       npm install -g heroku
-       heroku login
-       cd my-project/
-       git init
+npm install -g heroku
+heroku login
+cd my-project/
+git init
        
-       Existing Git repository:
-       heroku git:remote -a <app name>
+Existing Git repository:heroku git:remote -a <app name>
 ```
 
-II.    Generate a requirements file and then install from it in another environment.
+  II. Install the necessary requirements
+```shell
+pip install dj_database_url
+pip install psycopg2-binary
+pip install gunicorn
+```
 
- ```shell
-       pip freeze > requirements.txt
- ```
+  III.  Generate a requirements file and then install from it in another environment.
+```shell
+pip freeze > requirements.txt
+```
+
+  IV. Seting up Heroku.
+```shell
+On the resources tab select:
+Heroku Postgres Database
+```
+
+  V.  Setting up to connect to Heroku Postgres Database In settings.py.
+```shell
+Step 1 import dj_database_url
+
+Step 2 comment out the default configuration.
+#DATABASES = {
+#  'default': {
+#     'ENGINE': 'django.db.backends.sqlite3',
+#      'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#  }
+#}
+
+Step 3  replace the default database with a call to dj_database_url.parse
+        And give it the database URL from Heroku.
+
+DATABASES = {
+        'default': dj_database_url.parse('postgres://<your database url>')
+      }
+
+Step 4 Migrate.
+python manage.py migrate
+
+step 5 Load the categories and products. 
+It is important to do them in this order!
+
+1. python manage.py loaddata categories
+2. python manage.py loaddata products
+3. python manage.py createsuperuser
+
+Step 6 Put back everything as it was.
+when everything is migrate and done remove the Heroku database config.
+And uncomment the original so it doesn t end up in version control and then set up the databases like this.
+
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+          'default': dj_database_url.parse(os.environ.get('DATABASE_URL',''))
+    }
+else:
+    DATABASES = {
+          'default': {
+          'ENGINE': 'django.db.backends.sqlite3',
+          'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+```
     
-III.   Create a Procfile
+  VI. Create a Procfile
+```shell
+echo web: python app.py > Procfile
 
- ```shell
-       echo web: python app.py > Procfile
- ```
- 
- IV.   Deploy your application to Heroku
+web: gunicorn <your application name>.wsgi:application
+```
 
- ```shell
-       git add .
-       git commit -am "make it better"
-       git push heroku master
-       
-       Existing Git repository:
-       heroku git:remote -a <app name>
- ```
-    
-V.    Set the config variables in your Heroku settings.
+  VII.  Login to Heroku and temporarily disable collectstatic,
+        So that Heroku won't try to collect static files on deploy.
+```shell
+Heroku config:set DISABLE_COLLECTSTATIC=1 --app <your app name>
+      
+```
+VIII. Set hostname of our Heroku app in settings.py
+```shell
+      ALLOWED_HOSTS = ['<your app name>', 'localhost', '127.0.0.1']
+      
+```
+IX. Set the config variables in your Heroku settings.
 
 |**KEY NAME**|**KEY VALUE**|
 | :---: |:---:|
 |AWS_ACCESS_KEY_ID|<your aws access key>|
-|..text..|..text..|
-|..text..|..text..|
-|..text..|..text..|
+|AWS_SECRET_ACCESS_KEY|<your aws secret access key>|
+|DATABASE_URL|<your database url>|
+|EMAIL_HOST_PASS|<your email host password>|
+|EMAIL_HOST_USER|<your email>@gmail.com|
+|HEROKU_HOSTNAME|<your heroku hostname>.herokuapp.com|
+|SECRET_KEY|<your secret key>|
+|STRIPE_PUBLIC_KEY|<your stripe public key>|
+|STRIPE_SECRET_KEY|<your stripe secret key>|
+|STRIPE_WH_SECRET|<your stripe webhook key>|
+|USE_AWS|True|
+
+ 
+ X. Deploy your application to Heroku
+```shell
+git add .
+git commit -am "make it better"
+git push heroku master
+       
+Existing Git repository:
+heroku git:remote -a <app name>
+```
  
 </details>
 
