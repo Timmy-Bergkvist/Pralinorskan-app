@@ -335,6 +335,27 @@ header {
   color: #19896F;
 }
 
+.bestseller-bar {
+  background-color: #f8f9fad2;
+}
+
+/* Desktop view */
+@media (max-width: 1400px) {
+  .bestseller-container {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+/* Desktop, tablet and mobile view */
+@media (max-width: 417px) {
+  .bestseller-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+
 
 /*-----------------------------<-Cart->--------------------------------*/
 
@@ -721,10 +742,10 @@ select option[value=""] {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
-.social-links  li a i {
+.social-links {
   color: #000;
 }
 
-.social-links li a i:hover{
+.social-links:hover{
   color: #19896F;
 }

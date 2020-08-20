@@ -1,8 +1,21 @@
 from django.shortcuts import render
+from products.models import Product, Category
 
-
-'''a view to return the index page'''
 
 def index(request):
+    '''
+    A view of the index/home page that displays
+    four of the sites best selling products.
+    '''
 
-    return render(request, 'home/index.html')
+    products = Product.objects.all()
+    bestsellers = products.filter(pk__in=[9,23,10,13])
+
+    context = {
+        'bestsellers': bestsellers,
+    }
+    
+    template = 'home/index.html'
+
+    
+    return render(request, template, context)

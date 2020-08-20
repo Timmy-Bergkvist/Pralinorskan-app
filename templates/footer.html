@@ -1,37 +1,24 @@
 <footer class="footer-container font-small footer-color pt-4">
     <div class="container text-center text-md-center">
         <div class="row text-center text-md-center mt-3 pb-3">
-            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mt-3">
                 <h6 class="text-uppercase mb-4 font-weight-bold">About</h6>
                 <p>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmodtempor incididunt ut labore et dolore mco 
-                    laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehend
+                    Pralinörskan is a self-run small business located in Katrineholm, Sweden.
+                    We make fresh pralines made upon order and only from the best ingredients.
+                    We like to experiment with new flavors and also do customized orders based on your requests.
                 </p>
             </div>
             <hr class="w-100 clearfix d-md-none">
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h6 class="text-uppercase mb-4 font-weight-bold">Links</h6>
-                {% if user.is_authenticated %}
-                    <p><a class="text-black" href="{% url 'account_logout' %}">Logout</a></p>
-                    <p><a class="text-black" href="#">My Profile</a></p>
-                {% else %}
-                    <p><a class="text-black" href="{% url 'account_signup' %}">Register</a></p>
-                    <p><a class="text-black" href="{% url 'account_login' %}">Login</a></p>
-                    <p><a class="text-black" href="/admin/login/?next=/admin/">Admin</a></p>
-                {% endif %}
-            </div>
-            <hr class="w-100 clearfix d-md-none">
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mt-3">
                 <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-                <p><i class="fas fa-home mr-3"></i> K-Holm, SE 01505</p>
-                <p><i class="fas fa-envelope mr-3"></i> pralin@gmail.com</p>
+                <p><i class="fas fa-home mr-3"></i> Katrineholm, SE 01505</p>
+                <p><i class="fas fa-envelope mr-3"></i> pralinorskan@gmail.com</p>
                 <p><i class="fas fa-phone mr-3"></i> + 00 702 21 940</p>
             </div>
         </div>
         <hr>
-        <div class="row d-flex align-items-center">
+        <div class="row d-flex align-items-center text-center">
             <div class="col-md-7 col-lg-8">
                 <p class="text-center text-md-left text-black">© 2020 Copyright:
                     <a><strong class="text-black">Pralinörskan Project</strong></a>
@@ -40,23 +27,23 @@
             <div class="col-md-5 col-lg-4 ml-lg-0">
                 <div class="text-center text-md-right">
                     <ul class="list-unstyled list-inline">
-                        <li class="list-inline-item social-links">
-                            <a href="https://www.facebook.com/" class="btn-floating btn-sm  mx-1 text-black" target="_blank">
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com/" class="btn-floating btn-sm  mx-1 social-links" target="_blank">
                             <i class="fab fa-facebook-f"></i>
                             </a>
                         </li>
-                        <li class="list-inline-item social-links">
-                            <a href="https://www.twitter.com/" class="btn-floating btn-sm  mx-1 text-black" target="_blank">
+                        <li class="list-inline-item">
+                            <a href="https://www.twitter.com/" class="btn-floating btn-sm  mx-1 social-links" target="_blank">
                             <i class="fab fa-twitter"></i>
                             </a>
                         </li>
-                        <li class="list-inline-item social-links">
-                            <a href="https://www.instagram.com/" class="btn-floating btn-sm  mx-1 text-black" target="_blank">
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com/" class="btn-floating btn-sm  mx-1 social-links" target="_blank">
                             <i class="fab fa-instagram"></i>
                             </a>
                         </li>
-                        <li class="list-inline-item social-links">
-                            <a href="https://www.linkedin.com/" class="btn-floating btn-sm  mx-1 text-black" target="_blank">
+                        <li class="list-inline-item">
+                            <a href="https://www.linkedin.com/" class="btn-floating btn-sm  mx-1 social-links" target="_blank">
                             <i class="fab fa-linkedin-in"></i>
                             </a>
                         </li>
