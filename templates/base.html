@@ -193,8 +193,8 @@
 
     <!-- Javascript -->
     {% block postloadjs %}
-      <script src="/static/js/main.js"></script>
-      <script src="/static/js/quantity-input-script.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
+      <script src="{% static 'js/quantity-input-script.js' %}"></script>
     {% endblock %}
     
     {% block extra_js %}
