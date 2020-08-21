@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
-from django.contrib.auth.decorators import login_required
+
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -35,7 +35,6 @@ def cache_checkout_data(request):
         return HttpResponse(content=e, status=400)
 
 
-@login_required
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
@@ -67,15 +66,12 @@ def checkout(request):
             for item_id, item_data in cart.items():
                 try:
                     product = Product.objects.get(id=item_id)
-                    if isinstance(item_data, int):
-                        order_line_item = OrderLineItem(
-                            order=order,
-                            product=product,
-                            quantity=item_data,
-                        )
-                        order_line_item.save()
-                    else:
-                        order_line_item.save()
+                    order_line_item = OrderLineItem(
+                        order=order,
+                        product=product,
+                        quantity=item_data,
+                    )
+                    order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your cart wasn't found in our database. "
@@ -83,7 +79,8 @@ def checkout(request):
                     )
                     order.delete()
                     return redirect(reverse('view_cart'))
-                    
+            
+            # Save the info to the user's profile if all is well
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
@@ -127,20 +124,19 @@ def checkout(request):
             order_form = OrderForm()
 
 
-        if not stripe_public_key:
-            messages.warning(request, 'Stripe public key is missing.')
+    if not stripe_public_key:
+        messages.warning(request, 'Stripe public key is missing.')
 
-        order_form = OrderForm()
-        template = 'checkout/checkout.html'
-        context = {
-            'order_form': order_form,
-            'stripe_public_key': stripe_public_key,
-            'client_secret': intent.client_secret,
-        }
+    template = 'checkout/checkout.html'
+    context = {
+        'order_form': order_form,
+        'stripe_public_key': stripe_public_key,
+        'client_secret': intent.client_secret,
+    }
 
-        return render(request, template, context)
+    return render(request, template, context)
 
-@login_required
+
 def checkout_success(request, order_number):
     """
     Handle successful checkouts
