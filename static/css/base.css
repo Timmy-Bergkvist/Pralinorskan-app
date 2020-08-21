@@ -39,7 +39,7 @@ tr {
 }
 
 .container-fluid {
-  padding-top: 100px;
+  padding-top: 120px;
 }
 
 /*---------------------------<-Header->------------------------------*/
@@ -181,6 +181,11 @@ header {
     padding: .6rem .6rem;
     font-size: 1rem;
   }
+
+  .index-container {
+    padding-bottom: 150px;
+    padding-top: 40px;
+  }
 }
 
 /* xs mobile view */
@@ -194,8 +199,7 @@ header {
 /*---------------------------<-Section->------------------------------*/
 
 #extra-padding {
-  padding-bottom: 300px;
-  padding-top: 120px;
+  padding-bottom: 150px;
 }
 
 .content-header {
@@ -381,7 +385,7 @@ header {
 }
 
 /* Pagination in xxl desktop view */
-@media (min-width: 1200px) {
+@media (min-width: 998px) {
   .index-container {
     padding-bottom: 175px;
   }
@@ -401,7 +405,7 @@ header {
 
   .index-container {
     padding-bottom: 213px;
-    padding-top: 184px;
+    padding-top: 75px;
   }
 }
 
@@ -592,7 +596,7 @@ header {
 /*---------------------------<-Allauth->------------------------------*/
 
 .account-header-container {
-  padding-bottom: 130px;
+  padding-bottom: 140px;
   padding-top: 140px;
 }
 
@@ -603,6 +607,7 @@ header {
 .card-header {
   color: #19896F;
 }
+
 .allauth-form-inner-content p {
   color: #6c757d;
 }
@@ -685,8 +690,6 @@ header {
 /*---------------------------<-Profiles->------------------------------*/
 
 .custom-card {
-  padding: 5px 0;
-  border-bottom: 1px solid #ddd;
   margin-right: 0px;
   margin-left: 0px;
 }
@@ -784,7 +787,7 @@ select option[value=""] {
 
 /*---------------------------<-Footer->------------------------------*/
 footer {
-  margin-top: 100px;
+  margin-top: 190px;
 }
 
 .footer-container {
@@ -797,6 +800,6 @@ footer {
   color: #000;
 }
 
-.social-links:hover{
+.social-links:hover {
   color: #19896F;
 }
