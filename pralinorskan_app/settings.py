@@ -67,6 +67,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+X_FRAME_OPTIONS = 'ALLOW-FROM http://ami.responsivedesign.is'
+
 ROOT_URLCONF = 'pralinorskan_app.urls'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
