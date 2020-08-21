@@ -1,0 +1,46 @@
+    {% for item in cart_items %}
+        <div class="row text-center">
+            <div class="col-12">
+                <p class="text-center"><strong>{{ item.product.name }}</strong></p>
+                    <img class="img-fluid cart-img rounded" src="{{ item.product.image.url }}">
+                <p class="small text-muted">SKU: {{ item.product.sku|upper }}</p>
+            </div>
+            <div class="col-12 mb-2">
+                <div class="row">
+                    <div class="col-4 text-center font-weight-bold">
+                        <p>Qty</p>
+                        <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <div id="input-group-cart" class="input-group">
+                                    <div class="input-group-prepend-cart">
+                                        <button class="decrement-qty btn btn-sm  rounded-0"data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                            <i class="fas fa-minus text-dark"></i>
+                                        </button>
+                                    </div>
+                                    <input class="text-center  qty_input" type="text" name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                    <div class="input-group-append-cart">
+                                        <button class="increment-qty btn btn-sm  rounded-0" data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                            <i class="fas fa-plus text-dark"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <a class="update-link text-info"><small>Update</small></a>
+                    </div>
+                    <div class="col-4 text-center font-weight-bold">
+                        <p>Price</p>
+                        <p class="my-0">{{ item.product.price }} Kr</p>
+                    </div>
+                    <div class="col-4 text-center font-weight-bold">
+                        <p>Remove</p>
+                        <a class="remove-item" id="remove_{{ item.item_id }}">
+                        <i class="icon-large fas fa-trash-alt btn"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row"><div class="col"><hr></div></div>
+    {% endfor %}

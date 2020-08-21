@@ -195,6 +195,7 @@ header {
 
 #extra-padding {
   padding-bottom: 300px;
+  padding-top: 120px;
 }
 
 .content-header {
@@ -322,7 +323,23 @@ header {
   color: #fff;
 }
 
+/*---------------------------<-Products->------------------------------*/
 
+@media (min-width: 1800px) {
+  /* smaller img in xxl desktop view */
+    .img-fluid {
+      max-width: 80%;
+      height: auto;
+    }
+  
+  /* Padding in xxl desktop view */
+    .product-detail-container {
+      padding-bottom: 150px;
+      padding-top: 100px;
+    }
+  }
+
+  
 /*---------------------------<-Home Index->------------------------------*/
 
 .welcome-text {
@@ -339,13 +356,16 @@ header {
   background-color: #f8f9fad2;
 }
 
-/* Desktop view */
-@media (max-width: 1400px) {
+/* Desktop view xxl */
+@media (max-width: 2100px) {
   .bestseller-container {
     padding-left: 80px;
     padding-right: 80px;
+    padding-bottom: 100px;
   }
 }
+
+/* -------- Media Queries for home index -------- */
 
 /* Desktop, tablet and mobile view */
 @media (max-width: 417px) {
@@ -353,9 +373,37 @@ header {
     padding-left: 15px;
     padding-right: 15px;
   }
+
+  .index-container {
+    padding-bottom: 50px;
+    padding-top: 10px;
+  }
 }
 
+/* Pagination in xxl desktop view */
+@media (min-width: 1200px) {
+  .index-container {
+    padding-bottom: 175px;
+  }
+}
 
+/* Bigger text in xxl desktop view */
+@media (min-width: 1800px) {
+  .display-4, .welcome-text {
+    font-size: 5.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+  }
+
+  .welcome-text-under {
+    font-size: 1.5rem;
+  }
+
+  .index-container {
+    padding-bottom: 213px;
+    padding-top: 184px;
+  }
+}
 
 /*-----------------------------<-Cart->--------------------------------*/
 
@@ -545,7 +593,7 @@ header {
 
 .account-header-container {
   padding-bottom: 130px;
-  padding-top: 104px;
+  padding-top: 140px;
 }
 
 .card-account {
@@ -735,6 +783,9 @@ select option[value=""] {
 
 
 /*---------------------------<-Footer->------------------------------*/
+footer {
+  margin-top: 100px;
+}
 
 .footer-container {
   background: rgba(237, 237, 237, 0.767);
