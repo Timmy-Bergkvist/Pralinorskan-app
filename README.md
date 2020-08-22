@@ -98,11 +98,11 @@ Admin user:
   
   I have used Figma Mockups to visualize images I can work from.
 
-- <a href="#" target="_blank">Desktop</a>
+- <a href="media/mockup-desktop.jpg" target="_blank">Desktop</a>
 
-- <a href="#" target="_blank">Phone</a>
+- <a href="media/mockup-mobile.jpg" target="_blank">Phone</a>
 
-- <a href="#" target="_blank">Tablet</a>
+- <a href="media/mockup-tablet.jpg" target="_blank">Tablet</a>
 
 
 ## Features
