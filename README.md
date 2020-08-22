@@ -37,17 +37,17 @@ Pralinörskan is a ecommerce app to sell pralines with different variations of f
 #### Project sections:
 
   - Header and navbar:
-  A logo that are displayed on the left side and on click will redirect the user to home page.
+    A logo that are displayed on the left side and on click will redirect the user to home page.
 
-  Three links are displayed Home, Products and Special Offers and on click will redirect the user to home page,
-  Special Offers page. Clicking products link a drop down menu will be displayed with different products alternatives.
+    Three links are displayed Home, Products and Special Offers and on click will redirect the user to home page,
+    Special Offers page. Clicking products link a drop down menu will be displayed with different products alternatives.
 
-  A cart logo that are displayed on the right side and on click will redirect the user to cart page.
+    A cart logo that are displayed on the right side and on click will redirect the user to cart page.
 
-  If user is logged in a user logo are displayed on the right side and on click a dropdown menu will be displayed
-  with three options. Profile details, Order History and Logout.
+    If user is logged in a user logo are displayed on the right side and on click a dropdown menu will be displayed
+    with three options. Profile details, Order History and Logout.
 
-  If user is logout a Login and Register links are displayed.
+    If user is logout a Login and Register links are displayed.
                        
 
   - Homepage: 
@@ -235,9 +235,10 @@ I have used <a href="https://www.sqlite.org/index.html" target="_blank">SQLite 3
 Stripe payment testing.
 
 ```shell
-The hosted demo is running in test mode -- use 4242424242424242 as a test card number with any CVC + future expiration date.
+The hosted demo is running in test mode use 4242424242424242 as a test card number with any CVC + future expiration date.
 Use the 4000000000003220 test card number to trigger a 3D Secure challenge flow.
-      
+Read more about test cards on Stripe at https://stripe.com/docs/testing.
+```
 |**NUMBER**|**BRAND**|**CVC**|**DATE**|
 | :---: |:---:| :---:|:---:|
 |4242424242424242|Visa|Any 3 digits|Any future date|
@@ -245,8 +246,6 @@ Use the 4000000000003220 test card number to trigger a 3D Secure challenge flow.
 |5555555555554444|Mastercard|Any 3 digits|Any future date|
 |2223003122003222|Mastercard (2-series)|Any 3 digits|Any future date|
 
-Read more about test cards on Stripe at https://stripe.com/docs/testing.
-```
 
   - Bugs
 
