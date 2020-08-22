@@ -3,7 +3,7 @@
 
 Milestone project 4: Full Stack Frameworks with Django - Code Institute
 
-![Image of responsive](https://pralinorskan.display.jpg)
+![Image of responsive](https://timmy-bergkvist.github.io/Pralinorskan-app/media/pralinorskan.display.jpg)
 
 
 **Target Audience**
