@@ -3,7 +3,7 @@
 
 Milestone project 4: Full Stack Frameworks with Django - Code Institute
 
-![Image of responsive](https://put-your-application-image-here.jpg)
+![Image of responsive](https://pralinorskan.display.jpg)
 
 
 **Target Audience**
@@ -36,8 +36,23 @@ Pralinörskan is a ecommerce app to sell pralines with different variations of f
 
 #### Project sections:
 
-  - Homepage: Containing a welcome message and a button that will redirect the user to product site and
-    different options for products.
+  - Header and navbar:
+  A logo that are displayed on the left side and on click will redirect the user to home page.
+
+  Three links are displayed Home, Products and Special Offers and on click will redirect the user to home page,
+  Special Offers page. Clicking products link a drop down menu will be displayed with different products alternatives.
+
+  A cart logo that are displayed on the right side and on click will redirect the user to cart page.
+
+  If user is logged in a user logo are displayed on the right side and on click a dropdown menu will be displayed
+  with three options. Profile details, Order History and Logout.
+
+  If user is logout a Login and Register links are displayed.
+                       
+
+  - Homepage: 
+  Containing a welcome message and a button that will redirect the user to all product page.
+  In the middle of the page there will be four images of the stores best selling products.
   
   - Products: Containing all products that the store is selling.
   
@@ -51,7 +66,7 @@ Pralinörskan is a ecommerce app to sell pralines with different variations of f
   
   - Checkout: Contains a form to be filled by the user to make the payment and delivery.
   
-  - Profile: Containing user information and the options to delete and edit the acount.
+  - Profile: Containing user information and the options to edit user information.
   
   - Order history: Containing information of previous purchases.
   
@@ -59,19 +74,25 @@ Pralinörskan is a ecommerce app to sell pralines with different variations of f
 
 #### User Stories
 
-As a user of this platform, I will be able to:
+None registered customer:
+- As a customer, I want to access the platform from a desktop, tablet and a smartphone.
+- As a customer, I want to view several kinds of products.
+- As a customer, I want to buy products.
+- As a customer, I want to view a specific kind of product.
+- As a customer, I want to update the amount of products in my cart.
+- As a customer, I want to remove products in my cart.
+- As a customer, I want to make online payments.
+- As a customer, I want to see details of a specific product.
+- As a customer, I want to receive orderdetails to my email.
+- As a customer, I want to registrate for an account.
+- As a customer, I want to login and logout of the account.
 
-|**Type**|**Have an option to**|**purpose**|
-| :---: |:---:| :---:|
-|User|Access the platform from a desktop, tablet and a smartphone.|Make the website user-friendly for everyone|
-|User|View several kinds of products.|Makes it easier for the user to see everything quickly|
-|User|To buy products.|To give the customer what they want to buy|
-|User|View a specific kind of product.|To get more specific information about a product|
-|User|Registrate for an account.|Have a personal account to view customer profile and to make a order|
-|User|Login and logout of the account.|To have access personal account information|
-|User|View order history from previous purchases.|To give the customer information from earlier purchases|
-|User|View all my products to see the total amount.|To make it easier for the customer to see how much they going to spend|
-|Admin|Create, read, update and delete|To be able to provide the customer with the latest information if needed|
+Registered customer:
+- As a registered customer, I want to view order history from previous purchases.
+- As a registered customer, I want to view all my products to see the total amount.
+
+Admin user:
+- As a admin, I want to add, remove and update products.
   
 #### Mockups
   
@@ -161,9 +182,8 @@ As a user of this platform, I will be able to:
   
 ## Database structure
 
-I have used ................. database for this project
+I have used <a href="https://www.sqlite.org/index.html" target="_blank">SQLite 3</a> database for this project
 
-- .........................
 
 
  #### Collection Name:
@@ -177,8 +197,8 @@ I have used ................. database for this project
 
   - The HTML code is run and tested at:
     - https://validator.w3.org/#validate_by_input
-    - If you run the code you will get Bad value and Text not allowed in element.
-    This is because I'm using
+    - If you run the code you will get bad value and text not allowed in element,
+    this is because I'm using
     <a href="https://en.wikipedia.org/wiki/Jinja_(template_engine)" target="_blank"> Jinja (template engine)</a>
   
   
@@ -212,7 +232,21 @@ I have used ................. database for this project
 |Structure|Content|Stays in the midle. Works in mobile and tablet view.|Responsive is working. No bugs|
 |Structure|Footer|Stays at the bottom. Works in mobile and tablet view.|No bugs|
 
+Stripe payment testing.
 
+```shell
+The hosted demo is running in test mode -- use 4242424242424242 as a test card number with any CVC + future expiration date.
+Use the 4000000000003220 test card number to trigger a 3D Secure challenge flow.
+      
+|**NUMBER**|**BRAND**|**CVC**|**DATE**|
+| :---: |:---:| :---:|:---:|
+|4242424242424242|Visa|Any 3 digits|Any future date|
+|4000056655665556|Visa (debit)|Any 3 digits|Any future date|
+|5555555555554444|Mastercard|Any 3 digits|Any future date|
+|2223003122003222|Mastercard (2-series)|Any 3 digits|Any future date|
+
+Read more about test cards on Stripe at https://stripe.com/docs/testing.
+```
 
   - Bugs
 
@@ -227,7 +261,7 @@ I have used ................. database for this project
   
   
  The hosting platform for this project is Heroku and can be run directly here: 
- https://..text...herokuapp.com/ 
+ https://pralinorskan-app.herokuapp.com/
   
   
 To run this project you need the following tools installed:
