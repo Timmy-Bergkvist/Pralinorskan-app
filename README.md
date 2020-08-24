@@ -11,26 +11,65 @@ Milestone project 4: Full Stack Frameworks with Django - Code Institute
 Pralinörskan is a ecommerce app to sell pralines with different variations of flavors and quantity.
 
 ## Table of Contents
+<details>
+<summary>UX</summary>
+ 
   * [UX](#ux)
     + [Project sections:](#project-sections)
     + [User Stories](#user-stories)
     + [Mockups](#mockups)
+ 
+</details>
+<details>
+<summary>Features</summary>
+ 
   * [Features](#features)
     + [Existing Features](#existing-features)
-  	+ [Features Left to Implement](#features-left-to-implement)
+  	 + [Features Left to Implement](#features-left-to-implement)
+ 
+</details>
+<details>
+<summary>Technologies</summary>
+
   * [Technologies Used](#technologies-used)
     + [Language](#language)
     + [Libraries and frameworks](#libraries-and-frameworks)
     + [Tools](#tools)
+ 
+</details>
+<details>
+<summary>Database</summary>
+
   * [Database structure](#database-structure)
     + [Collection Name:](#collection-name)
+ 
+</details>
+<details>
+<summary>Testing</summary>
+
   * [Testing](#testing)
+    + [Testing tools](#local-deployment)
+    + [Tests](#tests)
+    + [Stripe payment testing](#stripe-payment-testing)
+    + [Bugs](#bugs)
+ 
+</details>
+<details>
+<summary>Deployment</summary>
+
   * [Deployment](#deployment)
     + [Local deployment](#local-deployment)
     + [Heroku deployment](#heroku-deployment)
+ 
+</details>
+<details>
+<summary>Credits</summary>
+
   * [Credits](#credits)
     + [media](#media)
     + [Acknowledgements](#acknowledgements)
+ 
+</details>
 
 ## UX
 
@@ -235,6 +274,7 @@ I have used <a href="https://www.sqlite.org/index.html" target="_blank">SQLite 3
 
 ## Testing 
 
+#### Testing tools
   - The responsiveness is run and tested at:
     - http://ami.responsivedesign.is/#
 
@@ -254,6 +294,8 @@ I have used <a href="https://www.sqlite.org/index.html" target="_blank">SQLite 3
   - The Python is run and tested at:
     - http://pep8online.com/
     - 
+
+#### Tests
 
 |**Feature type**|**Feature**|**Tests**|**Bugs**|
 | :---: |:---:| :---:|:---:|
@@ -275,7 +317,7 @@ I have used <a href="https://www.sqlite.org/index.html" target="_blank">SQLite 3
 |Structure|Content|Stays in the midle. Works in mobile and tablet view.|Responsive is working. No bugs|
 |Structure|Footer|Stays at the bottom. Works in mobile and tablet view.|No bugs|
 
-Stripe payment testing.
+#### Stripe payment testing
 
 ```shell
 The hosted demo is running in test mode use 4242424242424242 as a test card number with any CVC + future expiration date.
@@ -290,9 +332,9 @@ Read more about test cards on Stripe at https://stripe.com/docs/testing.
 |2223003122003222|Mastercard (2-series)|Any 3 digits|Any future date|
 
 
-  - Bugs
+#### Bugs
 
-  - ..text..
+  - Bugs
 
     ```shell
        ..text....text..
