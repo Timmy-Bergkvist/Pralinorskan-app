@@ -271,15 +271,19 @@ I have used <a href="https://www.sqlite.org/index.html" target="_blank">SQLite 3
 I have used <a href="https://en.wikipedia.org/wiki/PostgreSQL" target="_blank">PostgreSQL</a> in Heroku for the project to store the data for the deployed application.
 
 #### Database Tables
-User profile, categories, products, cart contents, Order and Order Details
+User profile, categories, products, cart contents, order and order details
 
 #### Database Design
 
 ![Image of database](https://timmy-bergkvist.github.io/Pralinorskan-app/media/database-design.jpg)
 
 #### Database Workflow
-
+<details>
+<summary>Click to see database workflow</summary>
+ 
 ![Image of workflow](https://timmy-bergkvist.github.io/Pralinorskan-app/media/database-workflow1.jpg)
+ 
+</details>
 
 ## Testing 
 
