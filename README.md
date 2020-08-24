@@ -275,11 +275,11 @@ User profile, categories, products, cart contents, Order and Order Details
 
 #### Database Design
 
-![Image of database](https://timmy-bergkvist.github.io/Pralinorskan-app/media/)
+![Image of database](https://timmy-bergkvist.github.io/Pralinorskan-app/media/database-design.jpg)
 
 #### Database Workflow
 
-![Image of workflow](https://timmy-bergkvist.github.io/Pralinorskan-app/media/)
+![Image of workflow](https://timmy-bergkvist.github.io/Pralinorskan-app/media/database-workflow1.jpg)
 
 ## Testing 
 
