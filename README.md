@@ -36,41 +36,27 @@ Pralinörskan is a ecommerce app to sell pralines with different variations of f
 
 #### Project sections:
 
-  - Header and navbar:
-    A logo that are displayed on the left side and on click will redirect the user to home page.
-
-    Three links are displayed Home, Products and Special Offers and on click will redirect the user to home page,
-    Special Offers page. Clicking products link a drop down menu will be displayed with different products alternatives.
-
-    A cart logo that are displayed on the right side and on click will redirect the user to cart page.
-
-    If user is logged in a user logo are displayed on the right side and on click a dropdown menu will be displayed
-    with three options. Profile details, Order History and Logout.
-
-    If user is logout a Login and Register links are displayed.
-                       
-
-  - Homepage: 
-  Containing a welcome message and a button that will redirect the user to all product page.
-  In the middle of the page there will be four images of the stores best selling products.
+  - Header and navbar: Containing a logo, Home, Products, Special Offers, My Account logo, Cart logo and Login/Logout links.
+           
+  - Homepage: Containing a welcome message and images of the stores best selling products.
   
   - Products: Containing all products that the store is selling.
   
   - Product: Containing specific information and image about the product.
 
-  - Sign up form: Containing a form that enables user to sign up for the app.
+  - Sign up form: Containing a form that enables customer to sign up for the app.
   
-  - Login form: Containing a form that enables user to login for the app.
+  - Login form: Containing a form that enables customer to login for the app.
   
-  - Shopping cart: Contains information on products that are posted by the user ready to be purchased, updated or deleted.
+  - Shopping cart: Contains information on products that are posted by the customer ready to be purchased, updated or deleted.
   
-  - Checkout: Contains a form to be filled by the user to make the payment and delivery.
+  - Checkout: Contains a form to be filled by the customer to make the payment and delivery.
   
-  - Profile: Containing user information and the options to edit user information.
+  - Profile: Containing customer information and the options to edit customer information.
   
   - Order history: Containing information of previous purchases.
   
-  - Footer: Displays info and links to social medias.
+  - Footer: Displays information and links to social medias.
 
 #### User Stories
 
@@ -109,31 +95,88 @@ Admin user:
 
 #### Existing Features
 
-- A registration form to sign up for the application.
-
-- A login form to access the application to view profile details.
-
-- A nav bar that displays a Logo, Home, Products, Vegan, Gluten Free, Special Offers, Login/Logout, Account and Cart urls.
-
+###### Navbar:
 - A hamburger menu button that will display options in phone and tablet mode.
+Logged In:
+  - Logo on click redirects the customer to home page.
+  - Home on click redirects the customer to home page.
+  - Products on click a drop down menu will be displayed with different products alternatives.
+  - Special Offers on click redirects the customer to Special Offers page.
+  - Account on click redirects the customer to
+  - Cart on click redirects the customer to cart page.
+  - Logout on click redirects the customer to logout form.
 
-- A personal profile page where the user can view profile details and order history.
+Logged Out:
+  - Logo on on click redirects the customer to home page.
+  - Home on on click redirects the customer to home page.
+  - Products on click a drop down menu will be displayed with different products alternatives.
+  - Special Offers on click redirects the customer to Special Offers page.
+  - Cart on click redirects the customer to cart page.
+  - Register on click redirects the customer to register form.
+  - Login on click redirects the customer to login form.
 
-- A products page where the user can view all available products.
+###### Home page:
+- Button. Redirects the customer to products page.
+- Cards images. Four cards of the stores best selling products. If the customer click the card it will redirect 
+  the customer to that specific product page.
 
-- A product detail page where the user can view personal details about the product and add the product to the shopping cart.
+###### Toast:
+- Toast messages. Will highlight different right, wrong and info actions in the top right corner.
 
-- A choping cart page where the user can view order details, update and remove the amount of products in the cart.
+###### Products page:
+- Cards with product name, image, price and category. Clicking the card will redirect the customer that specific product page.
+- Return to top button will be displayed if page is scrolled more than 200px.
+- Pagination at the bottom of the page. Displays how many pages of products there is.
 
-- A payment page where the user can pay for the order.
+###### Producks detail page:
+- Add to cart button. Will add the product to the cart.
+- Increment and Decrement buttons. Option to increase or decrease the amount of items to be in the cart.
+- Image. Clicking the image will display a bigger image.
+
+###### Profile page:
+- Order form. Displays a form with the customer's order number and order history.
+- Order number link. Redirects the customer to more detailed order information.
+- Customer informaton. Displays a form with the customer's current information.
+- Update button. Updates the form with the customer's information.
+- Home button. Redirects the customer to products page, will only be displayed if the customer is not registered.
+- Orders button. Redirects the customer to order history page, will only be displayed if the customer is registered.
+
+###### Cart page:
+- Delete button. Delete the specific product information.
+- Update button. Updates the amount of items in the cart.
+- Increment and Decrement buttons. Option to increase or decrease the amount.
+- Back to home button. Redirects the customer to products page.
+- Checkout button. Redirects the customer to checkout page.
+
+###### Checkout page:
+- Billing information form. Form that needs to be filled in by customer to make a order.
+- Payment fieldset. A fieldset that needs to be filled with card number, CVC and expiration date.
+- Submit button. Submits the order and redirects the customer to checkout success that displays order information.
+- Save check label. Gives the customer the option to save order details for future purchase.
+- Login link. Gives the customer the option to login before purchase.
+- Register link. Gives the customer the option to get registered before purchase.
+- Adjust cart button. Redirects the customer to cart page.
+
+###### Fotter:
+- Social links. On click redirects the customer to Facebook, Twitter, Instagram and Linkedin.
+
+
 
 #### Features Left to Implement
 
-- ....................
+- Delete customer information button.
 
-- ....................
+- Contact page so the customer can send emails directly from the store.
 
-- ....................
+- Sort flavors function on the all product page.
+
+- Search function on the all product page.
+
+- Comment section so the customer can comment, review and rate.
+
+- Ingredients information in products detail to view more information about the products.
+
+- Automatic update on the increment and decrement buttons in cart, instead of having an update button.
 
 
 ## Technologies Used
@@ -216,19 +259,19 @@ I have used <a href="https://www.sqlite.org/index.html" target="_blank">SQLite 3
 | :---: |:---:| :---:|:---:|
 |..text..|..text..|..text..|..text..|
 |Button|Add to Cart|Getting  the right items. Posts the right items|No bugs|
-|Button|Shop Now|Sends the user to the right html|No bugs|
-|Button|Navbar toggler|Displays all links. Sends the user to the right html|No bugs|
-|Button|Login|Logs in the user to home page. Toast popup|No bugs|
-|Button|Register|Registers the user. Toast popup. Registration confirmation email sent|No bugs|
+|Button|Shop Now|Sends the customer to the right html|No bugs|
+|Button|Navbar toggler|Displays all links. Sends the customer to the right html|No bugs|
+|Button|Login|Logs in the customer to home page. Toast popup|No bugs|
+|Button|Register|Registers the customer. Toast popup. Registration confirmation email sent|No bugs|
 |Button|Add to cart|Adds items to cart. Toast popup|No bugs|
 |Button|Decrement/Increment|Adds the right amount|No bugs|
-|Link|Login|Sends the user to right html|No bugs|
-|Link|Register|Sends the user to right html|No bugs|
-|Link|Navbar|Sends the user to right pages|No bugs|
-|Link|Main logo|Sends the user to home page|No bugs|
-|Link|Product detail|Sends the user to right page. Displays right item|No bugs|
-|Structure|Navbar|Works in mobile and tablet view. Sends the user to right html.|Responsive is working. No bugs|
-|Structure|Navbar toggler|Works in mobile and tablet view. Sends the user to right html.|No bugs|
+|Link|Login|Sends the customer to right html|No bugs|
+|Link|Register|Sends the customer to right html|No bugs|
+|Link|Navbar|Sends the customer to right pages|No bugs|
+|Link|Main logo|Sends the customer to home page|No bugs|
+|Link|Product detail|Sends the customer to right page. Displays right item|No bugs|
+|Structure|Navbar|Works in mobile and tablet view. Sends the customer to right html.|Responsive is working. No bugs|
+|Structure|Navbar toggler|Works in mobile and tablet view. Sends the customer to right html.|No bugs|
 |Structure|Content|Stays in the midle. Works in mobile and tablet view.|Responsive is working. No bugs|
 |Structure|Footer|Stays at the bottom. Works in mobile and tablet view.|No bugs|
 
