@@ -95,9 +95,9 @@ Admin user:
 
 #### Existing Features
 
-###### Navbar:
+##### Navbar:
 - A hamburger menu button that will display options in phone and tablet mode.
-Logged In:
+###### Logged In:
   - Logo on click redirects the customer to home page.
   - Home on click redirects the customer to home page.
   - Products on click a drop down menu will be displayed with different products alternatives.
@@ -106,7 +106,7 @@ Logged In:
   - Cart on click redirects the customer to cart page.
   - Logout on click redirects the customer to logout form.
 
-Logged Out:
+###### Logged Out:
   - Logo on on click redirects the customer to home page.
   - Home on on click redirects the customer to home page.
   - Products on click a drop down menu will be displayed with different products alternatives.
@@ -115,25 +115,25 @@ Logged Out:
   - Register on click redirects the customer to register form.
   - Login on click redirects the customer to login form.
 
-###### Home page:
+##### Home page:
 - Button. Redirects the customer to products page.
 - Cards images. Four cards of the stores best selling products. If the customer click the card it will redirect 
   the customer to that specific product page.
 
-###### Toast:
+##### Toast:
 - Toast messages. Will highlight different right, wrong and info actions in the top right corner.
 
-###### Products page:
+##### Products page:
 - Cards with product name, image, price and category. Clicking the card will redirect the customer that specific product page.
 - Return to top button will be displayed if page is scrolled more than 200px.
 - Pagination at the bottom of the page. Displays how many pages of products there is.
 
-###### Producks detail page:
+##### Producks detail page:
 - Add to cart button. Will add the product to the cart.
 - Increment and Decrement buttons. Option to increase or decrease the amount of items to be in the cart.
 - Image. Clicking the image will display a bigger image.
 
-###### Profile page:
+##### Profile page:
 - Order form. Displays a form with the customer's order number and order history.
 - Order number link. Redirects the customer to more detailed order information.
 - Customer informaton. Displays a form with the customer's current information.
@@ -141,14 +141,14 @@ Logged Out:
 - Home button. Redirects the customer to products page, will only be displayed if the customer is not registered.
 - Orders button. Redirects the customer to order history page, will only be displayed if the customer is registered.
 
-###### Cart page:
+##### Cart page:
 - Delete button. Delete the specific product information.
 - Update button. Updates the amount of items in the cart.
 - Increment and Decrement buttons. Option to increase or decrease the amount.
 - Back to home button. Redirects the customer to products page.
 - Checkout button. Redirects the customer to checkout page.
 
-###### Checkout page:
+##### Checkout page:
 - Billing information form. Form that needs to be filled in by customer to make a order.
 - Payment fieldset. A fieldset that needs to be filled with card number, CVC and expiration date.
 - Submit button. Submits the order and redirects the customer to checkout success that displays order information.
@@ -157,7 +157,7 @@ Logged Out:
 - Register link. Gives the customer the option to get registered before purchase.
 - Adjust cart button. Redirects the customer to cart page.
 
-###### Fotter:
+##### Fotter:
 - Social links. On click redirects the customer to Facebook, Twitter, Instagram and Linkedin.
 
 
