@@ -41,7 +41,9 @@ Pralinörskan is a ecommerce app to sell pralines with different variations of f
 <summary>Database</summary>
 
   * [Database structure](#database-structure)
-    + [Collection Name:](#collection-name)
+    + [Database Design](#database-design)
+    + [Database Tables](#database-tables)
+    + [Database Workflow](#database-workflow)
  
 </details>
 <details>
@@ -264,13 +266,20 @@ Admin user:
   
 ## Database structure
 
-I have used <a href="https://www.sqlite.org/index.html" target="_blank">SQLite 3</a> database for this project
+I have used <a href="https://www.sqlite.org/index.html" target="_blank">SQLite 3</a> database for the project to store data locally.
 
+I have used <a href="https://en.wikipedia.org/wiki/PostgreSQL" target="_blank">PostgreSQL</a> in Heroku for the project to store the data for the deployed application.
 
+#### Database Tables
+User profile, categories, products, cart contents, Order and Order Details
 
- #### Collection Name:
- 
-- ....................
+#### Database Design
+
+![Image of database](https://timmy-bergkvist.github.io/Pralinorskan-app/media/)
+
+#### Database Workflow
+
+![Image of workflow](https://timmy-bergkvist.github.io/Pralinorskan-app/media/)
 
 ## Testing 
 
