@@ -33,7 +33,7 @@
                                 </div>
                                 <div class="col-9">
                                     <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                                    <p class="my-0 small text-muted">Qty: {{ item.quantity }} x {{ item.product.price | calc_subtotal:item.quantity }} Kr</p>
+                                    <p class="my-0 small text-muted">Qty: {{ item.quantity }} x {{ item.product.price | calc_subtotal:item.quantity }} Sek</p>
                                 </div>
                             </div>
                         {% endfor %}
@@ -44,9 +44,9 @@
                                 <p  class="my-0">Grand Total:</p>
                             </div>
                             <div class="col-6 card-footer-right">
-                                <p  class="my-0">{{ total | floatformat:2 }} Kr</p>
-                                <p  class="my-0">{{ delivery | floatformat:2 }} Kr</p>
-                                <p  class="my-0"><strong>{{ grand_total | floatformat:2 }} Kr</strong></p>
+                                <p  class="my-0">{{ total | floatformat:2 }} Sek</p>
+                                <p  class="my-0">{{ delivery | floatformat:2 }} Sek</p>
+                                <p  class="my-0"><strong>{{ grand_total | floatformat:2 }} Sek</strong></p>
                             </div>
                         </div>
                     </div>
@@ -134,7 +134,7 @@
                                         <span class="icon"><i class="fas fa-check"></i></span>
                                     </button>
                                     <p class="small text-danger my-0">
-                                        <span>You will be charged <strong>{{ grand_total|floatformat:2 }} Kr</strong></span>
+                                        <span>You will be charged <strong>{{ grand_total|floatformat:2 }} Sek</strong></span>
                                     </p>
                                 </div>
                                 </div>

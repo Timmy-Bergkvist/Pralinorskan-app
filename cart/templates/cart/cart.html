@@ -39,7 +39,7 @@
                                     <p class="small text-muted">SKU: {{ item.product.sku|upper }}</p>
                                 </td>
                                 <td class="py-3 font-weight-bold">
-                                    <p class="my-0">{{ item.product.price }} Kr</p>
+                                    <p class="my-0">{{ item.product.price }} Sek</p>
                                 </td>
                                 <td class="py-3 w-25">
                                     <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
@@ -63,7 +63,7 @@
                                     <a class="update-link text-info"><small>Update</small></a>
                                 </td>
                                 <td class="py-3 font-weight-bold">
-                                    <p class="my-0">{{ item.product.price | calc_subtotal:item.quantity }} Kr</p>
+                                    <p class="my-0">{{ item.product.price | calc_subtotal:item.quantity }} Sek</p>
                                 </td>
                                 <td class="py-3">
                                     <a class="remove-item" id="remove_{{ item.item_id }}">
@@ -88,19 +88,19 @@
                     <div >
                         <div class="row">
                         <div class="col-7"><h6><strong>Total:</strong></h6></div>
-                        <div class="col-5 text-right"><h6><strong>{{ total|floatformat:2 }} Kr</strong></h6></div>
+                        <div class="col-5 text-right"><h6><strong>{{ total|floatformat:2 }} Sek</strong></h6></div>
                         </div>
                     </div>
                     <div>
                         <div class="row">
                             <div class="col-7"><h6>Delivery:</h6></div>
-                            <div class="col-5 text-right"><h6>{{ delivery|floatformat:2 }} Kr</h6></div>
+                            <div class="col-5 text-right"><h6>{{ delivery|floatformat:2 }} Sek</h6></div>
                         </div>
                     </div>
                     <div class="grand-total">
                         <div class="row">
                             <div class="col-7"><strong>Grand Total:</strong></div>
-                            <div class="col-5 text-right"><strong>{{ grand_total|floatformat:2 }} Kr</strong></div>
+                            <div class="col-5 text-right"><strong>{{ grand_total|floatformat:2 }} Sek</strong></div>
                         </div>
                         </div>
                         <div class="text-center mt-4">
