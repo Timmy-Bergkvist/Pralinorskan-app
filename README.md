@@ -138,21 +138,18 @@ Admin user:
 
 ##### Navbar:
 - A hamburger menu button that will display options in phone and tablet mode.
+- Products on click a drop down menu will be displayed with different products alternatives.
+- Logo on click redirects the customer to home page.
+- Home on click redirects the customer to home page.
+- Cart on click redirects the customer to cart page.
+- Special Offers on click redirects the customer to Special Offers page.
 ###### Logged In:
-  - Logo on click redirects the customer to home page.
-  - Home on click redirects the customer to home page.
-  - Products on click a drop down menu will be displayed with different products alternatives.
-  - Special Offers on click redirects the customer to Special Offers page.
-  - Account on click redirects the customer to
-  - Cart on click redirects the customer to cart page.
+  - My Account on click gives the customer three options to choose between Profile detail, Order History and Logout
+  - Order History on click redirects the customer to order history page.
+  - Profile detail on click redirects the customer to profile detail page.
   - Logout on click redirects the customer to logout form.
 
 ###### Logged Out:
-  - Logo on on click redirects the customer to home page.
-  - Home on on click redirects the customer to home page.
-  - Products on click a drop down menu will be displayed with different products alternatives.
-  - Special Offers on click redirects the customer to Special Offers page.
-  - Cart on click redirects the customer to cart page.
   - Register on click redirects the customer to register form.
   - Login on click redirects the customer to login form.
 
@@ -347,12 +344,12 @@ Read more about test cards on Stripe at https://stripe.com/docs/testing.
 
 #### Bugs
 
-  - Bugs
-
-    ```shell
-       ..text....text..
-       ..text....text..
-    ```
+  - Stripe card element in mobile view:
+```shell
+    When the customer types in the card number, CVC and date the numbers overlap and it looks messy.
+    It does not affect the purchase but it looks bad from a user's experience.
+    This is an issue from Stripe in card element.
+```
   
 ## Deployment
   
