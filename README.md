@@ -1,14 +1,18 @@
 # Pralinörskan-app
 
 
-Milestone project 4: Full Stack Frameworks with Django - Code Institute
+Milestone project: Full Stack Frameworks with Django.
 
 ![Image of responsive](https://timmy-bergkvist.github.io/Pralinorskan-app/media/pralinorskan.display.jpg)
 
+This project is part of the 'Full Stack Frameworks with Django' module of the Code Institute Full Stack Software Development course.
 
 **Target Audience**
  
-Pralinörskan is a ecommerce app to sell pralines with different variations of flavors and quantity.
+Pralinörskan is a ecommerce app that allows customer to choose between 30+ different variations of pralines such as Vegan, Gluten free and Special Offers.
+Customers can choose to have them delivered to their one country with payment using Stripe.
+Customers also have the option to save their profile details for future purchases and to view order history from older purchases.
+
 
 ## Table of Contents
 <details>
@@ -77,27 +81,27 @@ Pralinörskan is a ecommerce app to sell pralines with different variations of f
 
 #### Project sections:
 
-  - Header and navbar: Containing a logo, Home, Products, Special Offers, My Account logo, Cart logo and Login/Logout links.
+  - **Header and navbar:** Containing a logo, Home, Products, Special Offers, My Account logo, Cart logo and Login/Logout links.
            
-  - Homepage: Containing a welcome message and images of the stores best selling products.
+  - **Homepage:** Containing a welcome message and images of the stores best selling products.
   
-  - Products: Containing all products that the store is selling.
+  - **Products:** Containing all products that the store is selling.
   
-  - Product: Containing specific information and image about the product.
+  - **Product:** Containing specific information and image about the product.
 
-  - Sign up form: Containing a form that enables customer to sign up for the app.
+  - **Sign up form:** Containing a form that enables customer to sign up for the app.
   
-  - Login form: Containing a form that enables customer to login for the app.
+  - **Login form:** Containing a form that enables customer to login for the app.
   
-  - Shopping cart: Contains information on products that are posted by the customer ready to be purchased, updated or deleted.
+  - **Shopping cart:** Contains information on products that are posted by the customer ready to be purchased, updated or deleted.
   
-  - Checkout: Contains a form to be filled by the customer to make the payment and delivery.
+  - **Checkout:** Contains a form to be filled by the customer to make the payment and delivery.
   
-  - Profile: Containing customer information and the options to edit customer information.
+  - **Profile:** Containing customer information and the options to edit customer information.
   
-  - Order history: Containing information of previous purchases.
+  - **Order history:** Containing information of previous purchases.
   
-  - Footer: Displays information and links to social medias.
+  - **Footer:** Displays information and links to social medias.
 
 #### User Stories
 
