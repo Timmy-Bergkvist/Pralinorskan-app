@@ -198,7 +198,7 @@ Admin user:
 - Register link. Gives the customer the option to get registered before purchase.
 - Adjust cart button. Redirects the customer to cart page.
 
-##### Fotter:
+##### Footer:
 - Social links. On click redirects the customer to Facebook, Twitter, Instagram and Linkedin.
 
 
