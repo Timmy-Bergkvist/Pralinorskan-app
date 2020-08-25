@@ -313,7 +313,6 @@ User profile, categories, products, cart contents, order and order details
 
 |**Feature type**|**Feature**|**Tests**|**Bugs**|
 | :---: |:---:| :---:|:---:|
-|..text..|..text..|..text..|..text..|
 |Button|Add to Cart|Getting  the right items. Posts the right items|No bugs|
 |Button|Shop Now|Sends the customer to the right html|No bugs|
 |Button|Navbar toggler|Displays all links. Sends the customer to the right html|No bugs|
@@ -433,20 +432,35 @@ Open the website at http://127.0.0.1:8000
 
   X.   Set up environment variable keys.
 ```shell
-os.environ.setdefault('SECRET_KEY', '<secrete key>')
-os.environ.setdefault('DATABASE_URL', '<postgres key>')
+SECRET_KEY = os.environ.get('SECRET_KEY','')
+
+# Don't run with debug turned on/True in production!
+DEBUG = 'DEVELOPMENT' in os.environ
+
+DATABASES = {
+  'default': {
+     'ENGINE': 'django.db.backends.sqlite3',
+      'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+  }
+}
 
 """ STRIPE API Keys """
-os.environ.setdefault('STRIPE_PUBLISHABLE', '<stripe publishable key>')
-os.environ.setdefault('STRIPE_SECRET', '<stripe secret key>')
-
-""" AWS API Keys """
-os.environ.setdefault('AWS_ACCESS_KEY_ID', '<aws access key id>')
-os.environ.setdefault('AWS_SECRET_ACCESS_KEY', '<aws secret access key>')
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 """ Email Keys """
-os.environ.setdefault('EMAIL_ADDRESS', '<your email here>')
-os.environ.setdefault('EMAIL_PASSWORD', '<your email password here>')
+if 'DEVELOPMENT' in os.environ:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    DEFAULT_FROM_EMAIL = '<your app name>@example.com'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_USE_TLS = True
+    EMAIL_PORT = 587
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+    DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
 ```
 
   XI.  Set up the env path to manage.py
