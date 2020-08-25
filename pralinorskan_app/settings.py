@@ -212,7 +212,7 @@ if 'USE_AWS' in os.environ:
 # Stripe payment
 # https://stripe.com/docs
 
-STANDARD_DELIVERY_PERCENTAGE = 150 # Shipping cost
+STANDARD_DELIVERY_PERCENTAGE = 49 # Shipping cost
 STRIPE_CURRENCY = 'sek'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
