@@ -314,21 +314,36 @@ User profile, categories, products, cart contents, order and order details
 |**Feature type**|**Feature**|**Tests**|**Bugs**|
 | :---: |:---:| :---:|:---:|
 |Button|Add to Cart|Getting  the right items. Posts the right items|No bugs|
-|Button|Shop Now|Sends the customer to the right html|No bugs|
-|Button|Navbar toggler|Displays all links. Sends the customer to the right html|No bugs|
-|Button|Login|Logs in the customer to home page. Toast popup|No bugs|
+|Button|Shop Now|Sends the customer to the right page|No bugs|
+|Button|Navbar toggler|Displays all links. Sends the customer to the right page|No bugs|
+|Button|Login|Logs in the customer and redirect to home page. Toast popup|No bugs|
 |Button|Register|Registers the customer. Toast popup. Registration confirmation email sent|No bugs|
 |Button|Add to cart|Adds items to cart. Toast popup|No bugs|
 |Button|Decrement/Increment|Adds the right amount|No bugs|
-|Link|Login|Sends the customer to right html|No bugs|
+|Button|Update Information|Updates customers contact information|No bugs|
+|Button|Complete Order|Complete customers order. Order email sent. Redirects the customer to checkout success page|No bugs|
+|Link|Image|Clicking on product image redirect customer to product page|No bugs|
+|Link|Order number|Sends the customer to right order number page. Displays all information about the purchase|No bugs|
+|Link|Login|Sends the customer to right page|No bugs|
 |Link|Register|Sends the customer to right html|No bugs|
 |Link|Navbar|Sends the customer to right pages|No bugs|
 |Link|Main logo|Sends the customer to home page|No bugs|
 |Link|Product detail|Sends the customer to right page. Displays right item|No bugs|
-|Structure|Navbar|Works in mobile and tablet view. Sends the customer to right html.|Responsive is working. No bugs|
-|Structure|Navbar toggler|Works in mobile and tablet view. Sends the customer to right html.|No bugs|
-|Structure|Content|Stays in the midle. Works in mobile and tablet view.|Responsive is working. No bugs|
+|Functions|Paginator|Displays the right pages. Clicking the numbers Sends the customer to right page|No bugs|
+|Functions|Sort|Sorts the right categorys|No bugs|
+|Functions|Order Summary|Calculates the order summary|No bugs|
+|Functions|Quantity|Calculates the quantity. Updates the quantity|No bugs|
+|Functions|Delivery cost|Calculates the delivery cost|No bugs. But displaying the wrong amount|
+|Functions|Forms|Displays the right form. Saves the right information|No bugs|
+|Structure|Mobile view|Tested on iphone 6s and 8|No bugs|
+|Structure|Tablet view|Tested on google chrome debugger tool|No bugs|
+|Structure|Desktop view|Tested on Asus 13 inch and lenovo 15,6 ince|No bugs|
+|Structure|Web browser|Tested on Firefox, Chrome and Brave|No bugs. But some of the font awesome features may not work properly|
+|Structure|Navbar|Works in mobile and tablet view. Sends the customer to right html.|No bugs. Responsive is working|
+|Structure|Navbar toggler|Works in mobile and tablet view. Sends the customer to right page|No bugs|
+|Structure|Content|Stays in the midle. Works in mobile and tablet view.|No bugs. Responsive is working|
 |Structure|Footer|Stays at the bottom. Works in mobile and tablet view.|No bugs|
+
 
 #### Stripe payment testing
 
