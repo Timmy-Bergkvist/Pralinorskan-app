@@ -23,7 +23,8 @@
                     <table class="table table-sm table-borderless">
                         <thead class="text-black">
                             <tr>
-                                <th scope="col">Product Info</th>
+                                <th></th>
+                                <th scope="col">Product</th>
                                 <th scope="col">Price</th>
                                 <th scope="col">Qty</th>
                                 <th scope="col">Subtotal</th>
@@ -33,10 +34,11 @@
 
                         {% for item in cart_items %}
                             <tr>
+                                <td class="w-20">
+                                    <img class="rounded cart-img" src="{{ item.product.image.url }}">
+                                </td>
                                 <td class="py-3 w-25">
                                     <p ><strong>{{ item.product.name }}</strong></p>
-                                    <img class="img-fluid rounded" src="{{ item.product.image.url }}">
-                                    <p class="small text-muted">SKU: {{ item.product.sku|upper }}</p>
                                 </td>
                                 <td class="py-3 font-weight-bold">
                                     <p class="my-0">{{ item.product.price }} Sek</p>
