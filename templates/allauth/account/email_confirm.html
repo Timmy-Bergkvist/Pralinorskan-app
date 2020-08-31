@@ -3,8 +3,11 @@
 {% load i18n %}
 {% load account %}
 
-{% block head_title %}{% trans "Confirm E-mail Address" %}{% endblock %}
+{% block extra_body %}
+    <div class="extra-padding-container"></div>
+{% endblock %}
 
+{% block head_title %}{% trans "Confirm E-mail Address" %}{% endblock %}
 
 {% block inner_content %}
 <h2 class="card-header">{% trans "Confirm E-mail Address" %}</h2>

@@ -9,7 +9,7 @@
                 <div class="card card-account">
                     <div class="allauth-form-inner-content">
                         {% block inner_content %}
-                            <!--- All the account content template is inside this block--->
+                            <!-- All the account content template is inside this block -->
                         {% endblock %}
                     </div>
                 </div>
@@ -17,4 +17,8 @@
         </div>
         <br>
     </div>
+{% block extra_body %}
+<!-- Extra body for more padding in different templates -->
+{% endblock %}
+
 {% endblock %}

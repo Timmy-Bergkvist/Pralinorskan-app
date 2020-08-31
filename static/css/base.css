@@ -183,7 +183,6 @@ header {
   }
 
   .index-container {
-    padding-bottom: 150px;
     padding-top: 40px;
   }
 }
@@ -379,7 +378,7 @@ header {
   }
 
   .index-container {
-    padding-bottom: 50px;
+    padding-bottom: 10px;
     padding-top: 10px;
   }
 }
@@ -387,7 +386,7 @@ header {
 /* Pagination in xxl desktop view */
 @media (min-width: 998px) {
   .index-container {
-    padding-bottom: 175px;
+    padding-bottom: 10px;
   }
 }
 
@@ -404,7 +403,7 @@ header {
   }
 
   .index-container {
-    padding-bottom: 213px;
+    padding-bottom: 150px;
     padding-top: 75px;
   }
 }
@@ -607,6 +606,10 @@ header {
 .account-header-container {
   padding-bottom: 140px;
   padding-top: 140px;
+}
+
+.extra-padding-container {
+  padding-bottom: 155px;
 }
 
 .card-account {
