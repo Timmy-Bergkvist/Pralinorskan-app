@@ -76,12 +76,12 @@
                     </div>
                   </li>
                   <li class="list-inline-item">
-                    <a id="nav-link" class="{% if grand_total %} font-weight-bold {% else %} text-black {% endif %} text-black nav-link" href="{% url 'view_cart' %}">
+                    <a id="nav-link" class="{% if total %} font-weight-bold {% else %} text-black {% endif %} text-black nav-link" href="{% url 'view_cart' %}">
                       <div class="text-center">
                         <div><i class="fas fa-shopping-cart fa-md"></i></div>
                         <p class="my-0">
-                          {% if grand_total %}
-                          <span class="text-info"> {{ grand_total|floatformat:2 }} Sek</span>
+                          {% if total %}
+                          <span class="text-info"> {{ total|floatformat:2 }} Sek</span>
                           {% else %}
                             0.00 Sek
                           {% endif %}
@@ -105,12 +105,12 @@
                     </div>
                     <div class="col-5">
                       <span class="list-inline-item text-lg-left">
-                        <a id="nav-link" class="{% if grand_total %} font-weight-bold {% else %} text-black {% endif %} text-black nav-link" href="{% url 'view_cart' %}">
+                        <a id="nav-link" class="{% if total %} font-weight-bold {% else %} text-black {% endif %} text-black nav-link" href="{% url 'view_cart' %}">
                           <div class="text-center">
                             <div><i class="fas fa-shopping-cart fa-md"></i></div>
                             <p class="my-0">
-                              {% if grand_total %}
-                              <p class="text-info"> {{ grand_total|floatformat:2 }}Sek</p>
+                              {% if total %}
+                              <p class="text-info"> {{ total|floatformat:2 }} Sek</p>
                               {% else %}
                                   0.00 Sek
                               {% endif %}

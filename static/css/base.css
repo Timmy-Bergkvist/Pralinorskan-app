@@ -328,6 +328,13 @@ header {
 
 /*---------------------------<-Products->------------------------------*/
 
+@media (min-width: 991px) and (max-width: 1463px) {
+  /* Padding in md desktop view */
+    .product-detail-container {
+      padding-bottom: 65px;
+    }
+  }
+
 @media (min-width: 1800px) {
   /* smaller img in xxl desktop view */
     .img-fluid {
@@ -359,6 +366,9 @@ header {
   background-color: #f8f9fad2;
 }
 
+
+/* -------- Media Queries for home index -------- */
+
 /* Desktop view xxl */
 @media (max-width: 2100px) {
   .bestseller-container {
@@ -367,8 +377,6 @@ header {
     padding-bottom: 100px;
   }
 }
-
-/* -------- Media Queries for home index -------- */
 
 /* Desktop, tablet and mobile view */
 @media (max-width: 417px) {
