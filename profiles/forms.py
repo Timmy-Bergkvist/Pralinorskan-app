@@ -1,5 +1,6 @@
 from django import forms
 from .models import UserProfile
+from django.contrib.auth.models import User
 
 
 class UserProfileForm(forms.ModelForm):
@@ -32,3 +33,9 @@ class UserProfileForm(forms.ModelForm):
                 self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'profile-form-input'
             self.fields[field].label = False
+
+class UserDeleteForm(forms.ModelForm):
+    """ Delete user form. """
+    class Meta:
+        model = User
+        fields = []

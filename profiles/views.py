@@ -1,8 +1,9 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import UserProfile
-from .forms import UserProfileForm
+from .forms import UserProfileForm, UserDeleteForm
+from django.contrib.auth.models import User
 
 from checkout.models import Order
 
@@ -68,3 +69,20 @@ def order_history(request, order_number):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_account(request):
+    """ Allow user to delete their account """
+    
+    if request.method == 'POST':
+        delete_form = UserDeleteForm(request.POST, instance=request.user)
+        if delete_form.is_valid():
+            user = request.user
+            user.delete()
+            messages.info(request, 'Your account has been deleted.')
+            return redirect('home')
+    else:
+        delete_form = UserDeleteForm(instance=request.user)
+    
+    return render(request, 'delete_account.html', {'delete_form': delete_form})

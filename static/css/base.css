@@ -248,6 +248,18 @@ header {
   border-color: #075342;
 }
 
+.btn-danger {
+  color: #EDEDED;
+  background-color: #a51524;
+  border-color: #a51524;
+}
+
+.btn-danger:hover {
+  color: #EDEDED;
+  background-color: #72010c;
+  border-color: #72010c;
+}
+
 .text-black {
     color: #000 !important;
 }
@@ -724,6 +736,25 @@ header {
   }
 }
 
+/* Float right on sm, md, lg, xl */
+@media (min-width: 378px) {
+.float-xs-right {
+    float: right!important;
+  }
+}
+
+/* Width 100 % in mobile view*/
+@media (max-width: 378px) {
+  .btn-update-info {
+    margin-top: 10px;
+    width: 100%;
+   }
+  
+  .btn-delete-user {
+    margin-top: 16px;
+    width: 100%;
+  }
+}
 
 /*---------------------------<-Stripe->------------------------------*/
 
