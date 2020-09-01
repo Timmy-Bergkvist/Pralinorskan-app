@@ -13,6 +13,13 @@ Pralinörskan is a ecommerce app that allows customer to choose between 30+ diff
 Customers can choose to have them delivered to their one country with payment using Stripe.
 Customers also have the option to save their profile details for future purchases and to view order history from older purchases.
 
+When testing this app, to make a payment, the following details should be used:
+
+- Card number: 4242 4242 4242 4242
+- CVC: any three numbers
+- Date: any future date
+- ZIP Code: any five numbers
+
 
 ## Table of Contents
 <details>
