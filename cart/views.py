@@ -5,11 +5,10 @@ from django.contrib import messages
 from products.models import Product
 
 
-""" A view to show all cart contents"""
-
 
 def view_cart(request):
-
+    """ A view to show all cart contents"""
+    
     return render(request, 'cart/cart.html')
 
 
@@ -40,22 +39,25 @@ def add_to_cart(request, item_id):
 def remove_from_cart(request, item_id):
     """Remove the item from the shopping cart"""
 
-    product = get_object_or_404(Product, pk=item_id)
-    cart = request.session.get('cart', {})
-    
-    cart.pop(item_id)
-    messages.success(request, f'Removed {product.name} from your cart')
+    try:
+        product = get_object_or_404(Product, pk=item_id)
+        cart = request.session.get('cart', {})
 
-    request.session['cart'] = cart
-    return HttpResponse(status=200)
+        cart.pop(item_id)
+        messages.success(request, f'Removed {product.name} from your cart')
 
+        request.session['cart'] = cart
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        return HttpResponse(status=500)
 
 
 def adjust_cart(request, item_id):
     """Adjust the quantity of the specified product to the specified amount"""
 
     product = get_object_or_404(Product, pk=item_id)
-    quantity = int(request.POST.get('quantity'))
+    quantity = int('0'+request.POST.get('quantity'))
     
     cart = request.session.get('cart', {})
 
@@ -63,8 +65,7 @@ def adjust_cart(request, item_id):
         cart[item_id] = quantity
         messages.info(request, f'Updated {product.name} quantity to {cart[item_id]}')
     else:
-        cart.pop(item_id)
-        messages.info(request, f'Removed {product.name} from your cart')
+        messages.error(request, 'Value must greather than or equal to 1.')
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
