@@ -18,7 +18,7 @@ from os import path
 if path.exists("env.py"):
     import env
 
-    
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -27,7 +27,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY','')
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
@@ -84,10 +84,10 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', # required by allauth
+                'django.template.context_processors.request',  # required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.template.context_processors.media', # provides a no-image is no image is provided
+                'django.template.context_processors.media',  # provides a no-image is no image is provided
                 'cart.contexts.cart_contents',
             ],
             'builtins': [
@@ -99,22 +99,22 @@ TEMPLATES = [
 ]
 
 AUTHENTICATION_BACKENDS = [
-    
+
     # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
 
     # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
-    
+
 ]
 
 SITE_ID = 1
 
 
-ACCOUNT_AUTHENTICATION_METHOD = 'username_email' # Authentication using either usernames or emails.
-ACCOUNT_EMAIL_REQUIRED = True # Email is required to register for the site.
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory' # Verifying your email is mandatory so we know users are using a real email.
-ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True # Required to enter their email twice on the registration page.
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'  # Authentication using either usernames or emails.
+ACCOUNT_EMAIL_REQUIRED = True  # Email is required to register for the site.
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'  # Verifying your email is mandatory so we know users are using a real email.
+ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True  # Required to enter their email twice on the registration page.
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
@@ -128,7 +128,7 @@ WSGI_APPLICATION = 'pralinorskan_app.wsgi.application'
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL',''))
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL', ''))
     }
 else:
     DATABASES = {
@@ -183,19 +183,20 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 if 'USE_AWS' in os.environ:
-   # Cache control
+    """ Cache control """
     AWS_S3_OBJECT_PARAMETERS = {
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
         'CacheControl': 'max-age=94608000',
     }
-    
+
     # Bucket Config
     AWS_STORAGE_BUCKET_NAME = 'pralinorskan-app'
     AWS_S3_REGION_NAME = 'eu-north-1'
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 
-    # F string so my bucket name from above will be interpreted and added to generate the appropriate URL
+    # F string so my bucket name from above will be -
+    # interpreted and added to generate the appropriate URL
     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 
     # Static and media files
@@ -212,7 +213,7 @@ if 'USE_AWS' in os.environ:
 # Stripe payment
 # https://stripe.com/docs
 
-STANDARD_DELIVERY_PERCENTAGE = 49 # Shipping cost
+STANDARD_DELIVERY_PERCENTAGE = 49  # Shipping cost
 STRIPE_CURRENCY = 'sek'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')

@@ -34,6 +34,7 @@ class UserProfileForm(forms.ModelForm):
             self.fields[field].widget.attrs['class'] = 'profile-form-input'
             self.fields[field].label = False
 
+
 class UserDeleteForm(forms.ModelForm):
     """ Delete user form. """
     class Meta:

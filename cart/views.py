@@ -5,10 +5,9 @@ from django.contrib import messages
 from products.models import Product
 
 
-
 def view_cart(request):
     """ A view to show all cart contents"""
-    
+
     return render(request, 'cart/cart.html')
 
 
@@ -35,7 +34,6 @@ def add_to_cart(request, item_id):
     return redirect(redirect_url)
 
 
-
 def remove_from_cart(request, item_id):
     """Remove the item from the shopping cart"""
 
@@ -58,7 +56,7 @@ def adjust_cart(request, item_id):
 
     product = get_object_or_404(Product, pk=item_id)
     quantity = int('0'+request.POST.get('quantity'))
-    
+
     cart = request.session.get('cart', {})
 
     if quantity > 0:

@@ -1,10 +1,12 @@
 from django.contrib import admin
 from .models import Product, Category
 
-''' 
+'''
     This snippet is for customising django
     admin to make it more user friendly.
 '''
+
+
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
         'sku',
@@ -15,6 +17,7 @@ class ProductAdmin(admin.ModelAdmin):
     )
 
     ordering = ('sku',)
+
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (

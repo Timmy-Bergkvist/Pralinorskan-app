@@ -7,6 +7,7 @@ from django.contrib.auth.models import User
 
 from checkout.models import Order
 
+
 @login_required
 def profile(request):
 
@@ -23,7 +24,7 @@ def profile(request):
             messages.error(request, 'Update failed. Please ensure the form is valid.')
     else:
         form = UserProfileForm(instance=profile)
-    
+
     template = 'profiles/profile.html'
     context = {
         'form': form,
@@ -46,7 +47,7 @@ def orders(request):
         'orders': orders,
         'on_orders_page': True
     }
-    
+
     return render(request, template, context)
 
 
@@ -74,7 +75,7 @@ def order_history(request, order_number):
 @login_required
 def delete_account(request):
     """ Allow user to delete their account """
-    
+
     if request.method == 'POST':
         delete_form = UserDeleteForm(request.POST, instance=request.user)
         if delete_form.is_valid():
@@ -84,5 +85,5 @@ def delete_account(request):
             return redirect('home')
     else:
         delete_form = UserDeleteForm(instance=request.user)
-    
+
     return render(request, 'delete_account.html', {'delete_form': delete_form})

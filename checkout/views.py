@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import(
+    render, redirect, reverse, get_object_or_404, HttpResponse)
 
 from django.views.decorators.http import require_POST
 from django.contrib import messages
@@ -13,6 +14,7 @@ from cart.contexts import cart_contents
 
 import stripe
 import json
+
 
 @require_POST
 def cache_checkout_data(request):
@@ -37,10 +39,9 @@ def cache_checkout_data(request):
 
 def checkout(request):
     ''' Returns checkout template and order form '''
-    
+
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
-
 
     if request.method == 'POST':
         cart = request.session.get('cart', {})
@@ -57,7 +58,6 @@ def checkout(request):
             'county': request.POST['county'],
         }
 
-        
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save(commit=False)
@@ -76,12 +76,13 @@ def checkout(request):
                     order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your cart wasn't found in our database. "
+                        "One of the products in your cart wasn't \
+                        found in our database. "
                         "Please call us for assistance!")
                     )
                     order.delete()
                     return redirect(reverse('view_cart'))
-            
+
             # Save the info to the user's profile if all is well
             request.session['save_info'] = 'save_info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
@@ -124,7 +125,6 @@ def checkout(request):
                 order_form = OrderForm()
         else:
             order_form = OrderForm()
-
 
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing.')

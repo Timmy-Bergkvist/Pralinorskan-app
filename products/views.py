@@ -4,6 +4,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import Product, Category
 from django.db.models.functions import Lower
 
+
 def all_products(request):
     """ A view to show all products, including sorting.
         Pagination included for more than 8 products on page.

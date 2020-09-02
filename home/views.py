@@ -9,13 +9,12 @@ def index(request):
     '''
 
     products = Product.objects.all()
-    bestsellers = products.filter(pk__in=[9,23,10,13])
+    bestsellers = products.filter(pk__in=[9, 23, 10, 13])
 
     context = {
         'bestsellers': bestsellers,
     }
-    
+
     template = 'home/index.html'
 
-    
     return render(request, template, context)
