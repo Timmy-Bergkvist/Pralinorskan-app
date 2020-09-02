@@ -329,7 +329,7 @@ User profile, categories, products, cart contents, order and order details
 |Button|Add to cart|Adds items to cart. Toast popup|No bugs|
 |Button|Decrement/Increment|Adds the right amount|No bugs|
 |Button|Update Information|Updates customers contact information|No bugs|
-|Button|Delete user account|Delete all user information|No bugs|
+|Button|Delete user account|Delete all user information and redirects to home page|No bugs|
 |Button|Complete Order|Complete customers order. Order email sent. Redirects the customer to checkout success page|No bugs|
 |Link|Image|Clicking on product image redirect customer to product page|No bugs|
 |Link|Order number|Sends the customer to right order number page. Displays all information about the purchase|No bugs|
