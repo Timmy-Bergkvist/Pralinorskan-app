@@ -13,7 +13,7 @@ Pralinörskan is a ecommerce app that allows customer to choose between 30+ diff
 Customers can choose to have them delivered to their one country with payment using Stripe.
 Customers also have the option to save their profile details for future purchases and to view order history from older purchases.
 
-When testing this app, to make a payment, the following details should be used:
+When testing this app, to make a payment, the following details should be provided:
 
 - Card number: 4242 4242 4242 4242
 - CVC: any three numbers
@@ -64,6 +64,7 @@ When testing this app, to make a payment, the following details should be used:
     + [Testing tools](#local-deployment)
     + [Tests](#tests)
     + [Stripe payment testing](#stripe-payment-testing)
+    + [User Stories Testing](#user-stories-testing)
     + [Bugs](#bugs)
  
 </details>
@@ -104,7 +105,7 @@ When testing this app, to make a payment, the following details should be used:
   
   - **Checkout:** Contains a form to be filled by the customer to make the payment and delivery.
   
-  - **Profile:** Containing customer information and the options to edit customer information.
+  - **Profile:** Containing customer information and the options to edit and delete customer information.
   
   - **Order history:** Containing information of previous purchases.
   
@@ -328,6 +329,7 @@ User profile, categories, products, cart contents, order and order details
 |Button|Add to cart|Adds items to cart. Toast popup|No bugs|
 |Button|Decrement/Increment|Adds the right amount|No bugs|
 |Button|Update Information|Updates customers contact information|No bugs|
+|Button|Delete user account|Delete all user information|No bugs|
 |Button|Complete Order|Complete customers order. Order email sent. Redirects the customer to checkout success page|No bugs|
 |Link|Image|Clicking on product image redirect customer to product page|No bugs|
 |Link|Order number|Sends the customer to right order number page. Displays all information about the purchase|No bugs|
@@ -351,7 +353,6 @@ User profile, categories, products, cart contents, order and order details
 |Structure|Content|Stays in the midle. Works in mobile and tablet view.|No bugs. Responsive is working|
 |Structure|Footer|Stays at the bottom. Works in mobile and tablet view.|No bugs|
 
-
 #### Stripe payment testing
 
 ```shell
@@ -366,7 +367,44 @@ Read more about test cards on Stripe at https://stripe.com/docs/testing.
 |5555555555554444|Mastercard|Any 3 digits|Any future date|
 |2223003122003222|Mastercard (2-series)|Any 3 digits|Any future date|
 
+#### User Stories Testing
+<details>
 
+<summary>Click to see User Stories Testing</summary>
+
+User Story 1:
+- Any customer have the options to sign up and buy products and save their billing information for future purchases.
+  By doing so the customer needs to registrate by using the registration form and provide email, username and password.
+  Customers also have the options to buy as a non registered customer.
+  
+User Story 2:
+- On the profile page customer can delete and update their account. By updating their account, the customer must fill in the form and then click on the update button.
+  By deleting their account, the customer just click the delete button, a pop up will appear and ask the customer if they really want to delete the account.
+
+User Story 3:
+- Customer can add products that they want to buy and the cart in the right corner will show the amount for each added item.
+  By adding an item, a pop up will be displayed with images of the items that the customer has added and Proceed to checkout button.
+  By clicking Proceed to checkout button and the cart logo will take the customer to Shopping Cart page.
+
+User Story 4:
+- On the Shopping Cart page, customer have the options to update and remove items from the cart.
+  A card will display total, delivery, grand total and a Proceed to checkout button.
+  When the customer feels satisfied with the items that will be purchased he/she can then kick on Proceed to checkout button that will take the customer to checkout page.
+
+User Story 5:
+- On the checkout page, customer need to fill in a form with the billing informations and add their card information to make a purchase.
+  If the customer is not registered there will be an option to login or create an account link.
+  If the customer is registered there will be an option to save billing information.
+  When the customer is ready, he/she can then press the Complete Order button.
+  Klicking Complete Order button will send the user an email confirmation with order information and redirect the user to checkout success page
+  that displays all the billing and purchase information.
+  
+User Story 6:
+- On the order history page, the entire purchase history with order number, date, items and order total will be displayed.
+  Clicking order number will redirect customer to checkout success page.
+ 
+</details>
+ 
 #### Bugs
 
   - Stripe card element in mobile view:
