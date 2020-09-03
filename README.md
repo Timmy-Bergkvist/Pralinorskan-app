@@ -892,14 +892,16 @@ if 'USE_AWS' in os.environ:
 |USE_AWS|True|
 
   VIII.  Custom storages
+  
+ Use s3 to store our static files whenever someone runs collectstatic.
+ And that we want any uploaded product images to go there also.
+
+Create a custom storages file.
 ```shell
-Use s3 to store our static files whenever someone runs collectstatic.
-And that we want any uploaded product images to go there also.
-
-Create a custom_storages.py file
-
-Next add this function to it
-
+custom_storages.py
+```
+Next add this function in to it.
+```shell
 from django.conf import settings
 from storages.backends.s3boto3 import S3Boto3Storage
 
@@ -910,6 +912,13 @@ class StaticStorage(S3Boto3Storage):
 
 class MediaStorage(S3Boto3Storage):
     location = settings.MEDIAFILES_LOCATION
+```
+
+Next push it up to github
+```shell
+git add .
+git commit -m "Set up for Amazon Web Services s3"
+git push origin master
 ```
 
   IX.  Upload images and files
