@@ -74,6 +74,7 @@ When testing this app, to make a payment, the following details should be provid
   * [Deployment](#deployment)
     + [Local deployment](#local-deployment)
     + [Heroku deployment](#heroku-deployment)
+    + [Amazon Web Services s3 deployment](#amazon-web-services-s3-deployment)
  
 </details>
 <details>
@@ -667,6 +668,263 @@ Existing Git repository:
 heroku git:remote -a <app name>
 ```
  
+</details>
+
+
+## Amazon Web Services s3 deployment
+
+<details>
+
+<summary>Click to see AWS s3 deployment instructions</summary>
+
+This project store static files and images on Amazon Web Services s3.
+Which is a cloud-based storage service.
+
+> Instructions:
+
+  I.  Create an account
+```shell
+First create a user account at https://aws.amazon.com/
+And sign-in in the upper right by accessing the AWS management console under my account.
+```
+![Image of set up step1](https://timmy-bergkvist.github.io/Pralinorskan-app/media/set-up-step1-img.jpg)
+```shell
+Search or open s3 and create a new bucket. Which will be used to store files.
+```
+![Image of set up step2](https://timmy-bergkvist.github.io/Pralinorskan-app/media/set-up-step2-img.jpg)
+
+  II.  Create bucket.
+```shell
+Click create bucket and give the bucket a name, recommend naming your bucket to match your Heroku app name.
+```
+![Image of set up step3](https://timmy-bergkvist.github.io/Pralinorskan-app/media/set-up-step3-img.jpg)
+![Image of set up step4](https://timmy-bergkvist.github.io/Pralinorskan-app/media/set-up-step4-img.jpg)
+
+```shell
+Select a region closest to you and uncheck block all public access and acknowledge that the bucket will be public.
+This bucket will need to be public in order to allow public access to our static files.
+```
+![Image of set up step5](https://timmy-bergkvist.github.io/Pralinorskan-app/media/set-up-step5-img.jpg)
+
+
+  III.  Settings on bucket.
+```shell
+Click properties tab and turn on static website hosting.
+This give you a new endpoint that you can use to access it from the internet.
+For the index and error document, just fill in some default values. 
+```
+![Image of set up step6](https://timmy-bergkvist.github.io/Pralinorskan-app/media/set-up-step6-img.jpg)
+
+```shell
+On the permissions tab  make this three changes.
+paste in a coors configuration
+which is going to set up the required access between our Heroku app and this s3 bucket.
+
+<?xml version="1.0" encoding="UTF-8"?>
+<CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+<CORSRule>
+    <AllowedOrigin>*</AllowedOrigin>
+    <AllowedMethod>GET</AllowedMethod>
+    <MaxAgeSeconds>3000</MaxAgeSeconds>
+    <AllowedHeader>Authorization</AllowedHeader>
+</CORSRule>
+</CORSConfiguration>
+```
+![Image of set up step7](https://timmy-bergkvist.github.io/Pralinorskan-app/media/set-up-step7-img.jpg)
+
+```shell
+Next I'll go to the bucket policy tab.
+And select, policy generator to create a security policy for this bucket.
+```
+![Image of set up step8](https://timmy-bergkvist.github.io/Pralinorskan-app/media/set-up-step8-img.jpg)
+
+```shell
+The policy type is going to be s3 bucket policy.
+Will allow all principals by using a star.
+And the action will be, get object.
+```
+![Image of set up step9](https://timmy-bergkvist.github.io/Pralinorskan-app/media/set-up-step9-img.jpg)
+
+```shell
+Copy the ARN "Amazon resource name" from the other tab.
+And paste it into the ARN box at the bottom.
+Click Add statement then generate policy.
+```
+![Image of set up step10](https://timmy-bergkvist.github.io/Pralinorskan-app/media/set-up-step10-img.jpg)
+
+```shell
+Then copy this policy into the bucket policy editor.
+Before you click Save you want to allow access to all resources in this bucket.
+Add a slash star onto the end of the resource key.
+Now click Save.
+So our bucket policy and course configuration will now allow full access to all resources in this bucket.
+```
+![Image of set up step11](https://timmy-bergkvist.github.io/Pralinorskan-app/media/set-up-step11-img.jpg)
+
+```shell
+Last thing you need to do to configure it is to go to the access control list tab
+and set the list objects permission for everyone under the Public Access section.
+```
+![Image of set up step12](https://timmy-bergkvist.github.io/Pralinorskan-app/media/set-up-step12-img.jpg)
+
+
+  IV.  Identity and Access Management.
+```shell
+Go to the services menu and search or open Iam. "Identity and Access Management".
+Click groups and then create new group.
+Give the group a name and click next two times.
+```
+![Image of set up step13](https://timmy-bergkvist.github.io/Pralinorskan-app/media/set-up-step13-img.jpg)
+![Image of set up step14](https://timmy-bergkvist.github.io/Pralinorskan-app/media/set-up-step14-img.jpg)
+
+```shell
+Nex create the policy.
+Click policies and then create policy.
+Go to the JSON tab and then select import managed policy which will let you import one that AWS has pre-built for full access to s3.
+```
+![Image of set up step15](https://timmy-bergkvist.github.io/Pralinorskan-app/media/set-up-step15-img.jpg)
+![Image of set up step16](https://timmy-bergkvist.github.io/Pralinorskan-app/media/set-up-step16-img.jpg)
+
+```shell
+Search for s3 and then import the s3 full access policy.
+```
+![Image of set up step17](https://timmy-bergkvist.github.io/Pralinorskan-app/media/set-up-step17-img.jpg)
+
+```shell
+You don't want to allow full access to everything you only want to allow full access to your new bucket and everything within it.
+Copy the bucket ARN from the bucket policy page in s3.
+click review policy.
+Give it a name and a description.
+Then click create policy.
+```
+![Image of set up step18](https://timmy-bergkvist.github.io/Pralinorskan-app/media/set-up-step18-img.jpg)
+
+```shell
+Then attach the policy to the group you created.
+Go back to groups, click into your created group.
+Click permissions and attach policy.
+Search for the policy you just created and select it.
+And click attach policy.
+```
+![Image of set up step19](https://timmy-bergkvist.github.io/Pralinorskan-app/media/set-up-step19-img.jpg)
+
+```shell
+Nex create the user.
+Click users and then add user.
+```
+![Image of set up step20](https://timmy-bergkvist.github.io/Pralinorskan-app/media/set-up-step20-img.jpg)
+
+```shell
+Create a user named <your-app-name>-staticfiles-user.
+Give them programmatic access.
+```
+![Image of set up step21](https://timmy-bergkvist.github.io/Pralinorskan-app/media/set-up-step21-img.jpg)
+
+```shell
+Now you can put the user in our group.
+You don't need to change anything else, click through to the end and then click create user.
+```
+![Image of set up step22](https://timmy-bergkvist.github.io/Pralinorskan-app/media/set-up-step22-img.jpg)
+
+```shell
+Next download and save this CSV which will contain this users access key and secret access key to authenticate them from your django app.
+It's important to download and save this CSV because once you gone through this process you can't download them again.
+```
+
+  V.  Conect Django
+```shell
+First you need to install boto and django-storages for this project I needed to install both boto and boto3.
+
+pip install boto
+pip install boto3
+pip install django-storages
+
+next do a
+
+pip freeze > requirements.txt
+```
+
+  VI.  Setup in settings
+```shell
+Then add 'storages' to your settings.py file at INSTALLED_APPS
+
+Tell it which bucket it should be communicating with.
+
+if 'USE_AWS' in os.environ:
+    # Cache control
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+
+    # Bucket Config
+    AWS_STORAGE_BUCKET_NAME = '<your-app-name>'
+    AWS_S3_REGION_NAME = 'eu-north-1'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+    # Static and media files
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+
+    # Override static and media URLs in production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+```
+
+  VII.  Setup in Heroku
+
+|**KEY NAME**|**KEY VALUE**|
+| :---: |:---:|
+|AWS_ACCESS_KEY_ID|your aws access key|
+|AWS_SECRET_ACCESS_KEY|your aws secret access key|
+|DATABASE_URL|your database url|
+|EMAIL_HOST_PASS|your email host password|
+|EMAIL_HOST_USER|your email@gmail.com|
+|HEROKU_HOSTNAME|your heroku hostname.herokuapp.com|
+|SECRET_KEY|your secret key|
+|STRIPE_PUBLIC_KEY|your stripe public key|
+|STRIPE_SECRET_KEY|your stripe secret key|
+|STRIPE_WH_SECRET|your stripe webhook key|
+|USE_AWS|True|
+
+  VIII.  Custom storages
+```shell
+Use s3 to store our static files whenever someone runs collectstatic.
+And that we want any uploaded product images to go there also.
+
+Create a custom_storages.py file
+
+Next add this function to it
+
+from django.conf import settings
+from storages.backends.s3boto3 import S3Boto3Storage
+
+
+class StaticStorage(S3Boto3Storage):
+    location = settings.STATICFILES_LOCATION
+
+
+class MediaStorage(S3Boto3Storage):
+    location = settings.MEDIAFILES_LOCATION
+```
+
+  IX.  Upload images and files
+```shell
+Next go to s3 and create a new folder called media.
+```
+![Image of set up step23](https://timmy-bergkvist.github.io/Pralinorskan-app/media/set-up-step23-img.jpg)
+
+```shell
+Inside it, click upload. Add files. And then select all the product images.
+Now click Next and under manage public permissions select grant public read access to these objects.
+Click next through to the end here. And then click upload.
+```
+![Image of set up step24](https://timmy-bergkvist.github.io/Pralinorskan-app/media/set-up-step24-img.jpg)
+
 </details>
 
 ## Credits
