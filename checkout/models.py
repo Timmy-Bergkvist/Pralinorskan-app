@@ -1,3 +1,8 @@
+"""
+This code is written following Code Institute video lessons
+with some few changes.
+"""
+
 import uuid
 
 from django.db import models

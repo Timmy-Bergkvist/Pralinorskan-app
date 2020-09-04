@@ -14,6 +14,8 @@
                 <hr class="mt-1 mb-3">
             </div>
         </div>
+
+        <!-- Success toast pop up for adding items to cart -->
         {% if grand_total and not on_profile_page %}
         {% load tools %}
             <p class="logo-font bg-white text-black py-1">Your Cart ({{ product_count }})</p>

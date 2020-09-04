@@ -1,3 +1,8 @@
+"""
+This code is written following Code Institute video lessons
+with some few changes.
+"""
+
 from django.shortcuts import(
     render, redirect, reverse, get_object_or_404, HttpResponse)
 

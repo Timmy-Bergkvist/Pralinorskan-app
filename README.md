@@ -215,7 +215,7 @@ Admin user:
 
 #### Features Left to Implement
 
-- Delete customer information button.
+- TDD, Test-driven development for all python files.
 
 - Contact page so the customer can send emails directly from the store.
 
@@ -245,19 +245,19 @@ Admin user:
 
 #### Libraries and frameworks
 
-- <p><a href="https://www.djangoproject.com/" target="_blank"> Django</a>- A python web-framework to build projects.</p>
+- <p><a href="https://www.djangoproject.com/" target="_blank"> Django </a>- A python web-framework to build projects.</p>
 
-- <p><a href="https://getbootstrap.com/" target="_blank"> Bootstrap</a>- A CSS library grid.</p>
+- <p><a href="https://getbootstrap.com/" target="_blank"> Bootstrap </a>- A CSS library grid.</p>
 
-- <p><a href="https://fontawesome.com/" target="_blank"> Fontawesome</a>- Provides icons.</p>
+- <p><a href="https://fontawesome.com/" target="_blank"> Fontawesome </a>- Provides icons.</p>
 
-- <p><a href="https://fonts.google.com/" target="_blank"> Google fonts</a>- Custom font styling.</p>
+- <p><a href="https://fonts.google.com/" target="_blank"> Google fonts </a>- Custom font styling.</p>
 
-- <p><a href="https://jinja.palletsprojects.com/en/2.11.x/" target="_blank"> Jinja</a>- A template language for python.</p>
+- <p><a href="https://jinja.palletsprojects.com/en/2.11.x/" target="_blank"> Jinja </a>- A template language for python.</p>
 
-- <p><a href="https://pypi.org/project/psycopg2-binary/#description" target="_blank"> Psycopg2</a>- Python PostgreSQL adapter.</p>
+- <p><a href="https://pypi.org/project/psycopg2-binary/#description" target="_blank"> Psycopg2 </a>- Python PostgreSQL adapter.</p>
 
-- <p><a href="https://jquery.com/" target="_blank"> Jquery</a>- Javascript library to simplify the code.</p>
+- <p><a href="https://jquery.com/" target="_blank"> Jquery </a>- Javascript library to simplify the code.</p>
 
 - <p><a href="https://boto3.amazonaws.com/v1/documentation/api/latest/index.html" target="_blank"> Boto3 </a>- A library that enables python code to modify AWS service.</p>
 
@@ -272,7 +272,7 @@ Admin user:
 
 - <p><a href="https://www.figma.com/" target="_blank"> Figma </a>- A collaborative interface design tool.</p>
 
-- <p><a href="https://en.wikipedia.org/wiki/Amazon_Web_Services" target="_blank"> Amazon Web Services</a>- A cloud computing services.</p>
+- <p><a href="https://en.wikipedia.org/wiki/Amazon_Web_Services" target="_blank"> Amazon Web Services </a>- A cloud computing services.</p>
   
 ## Database structure
 
@@ -316,7 +316,7 @@ User profile, categories, products, cart contents, order and order details
     
   - The Python is run and tested at:
     - http://pep8online.com/
-    - 
+  
 
 #### Tests
 
@@ -407,6 +407,21 @@ User Story 6:
 </details>
  
 #### Bugs
+
+
+  - Order number in Order History:
+```shell
+    When the customer is done with a purchase and is checking out a order number will be providet.
+    Somehow the customer will be provided with double order numbers in order history page.
+
+    At the moment I have not locate the issue, but I think it have something to do with the connection to heroku and that databases sends out duplicate order numbers.
+    This will not affect customers payments, Stripe will only charged customers once and only sends out one confirmation email.
+    The lack of UX is understandable and customers will get confused and wonders why there is duplicate order numbers.
+
+    Due to lack of time and the risk of crashing the project, I have not deleted the Heroku application and tried to upload the project again.
+    This will be done as soon as possible after the submission.
+```
+
 
   - Stripe card element in mobile view:
 ```shell

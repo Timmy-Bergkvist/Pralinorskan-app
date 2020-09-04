@@ -1,4 +1,6 @@
 
+<!-- Mobile and tablet Navbar -->
+
     {% if request.user.is_authenticated %}
     <li id="list-inline-item" class="list-inline-item dropdown">
        <a class="text-black nav-link extra-nav-link d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -38,7 +40,6 @@
         Register
         </a>
     </li>
-
     <li id="list-inline-item" class="list-inline-item text-lg-left">
         <a id="nav-link" class="{% if total %} font-weight-bold {% else %} text-black {% endif %} text-black nav-link" href="{% url 'view_cart' %}">
             <div class="text-center">

@@ -67,6 +67,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# For testing responsive.
+# SECURITY WARNING: don't run in production!
 # X_FRAME_OPTIONS = 'ALLOW-FROM http://ami.responsivedesign.is'
 
 ROOT_URLCONF = 'pralinorskan_app.urls'
