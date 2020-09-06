@@ -9,9 +9,9 @@ This project is part of the 'Full Stack Frameworks with Django' module of the Co
 
 **Target Audience**
  
-Pralinörskan is a ecommerce app that allows customer to choose between 30+ different variations of pralines such as Vegan, Gluten free and Special Offers.
+Pralinörskan is an ecommerce app that allows customers to choose between 30+ different variations of pralines such as Vegan, Gluten free and Special Offers.
 Customers can choose to have them delivered to their one country with payment using Stripe.
-Customers also have the option to save their profile details for future purchases and to view order history from older purchases.
+Customers also have the option to save their profile details for future purchases and to view order history from previous purchases.
 
 When testing this app, to make a payment, the following details should be provided:
 
@@ -96,15 +96,15 @@ When testing this app, to make a payment, the following details should be provid
   
   - **Products:** Containing all products that the store is selling.
   
-  - **Product:** Containing specific information and image about the product.
+  - **Product:** Containing an image and specific information about the product.
 
-  - **Sign up form:** Containing a form that enables customer to sign up for the app.
+  - **Sign up form:** Containing a form that enables customer to sign up to the app.
   
-  - **Login form:** Containing a form that enables customer to login for the app.
+  - **Login form:** Containing a form that enables customer to login to the app.
   
-  - **Shopping cart:** Contains information on products that are posted by the customer ready to be purchased, updated or deleted.
+  - **Shopping cart:** Contains information about the products that have been chosen by the customer ready to be purchased, updated or deleted.
   
-  - **Checkout:** Contains a form to be filled by the customer to make the payment and delivery.
+  - **Checkout:** Contains a form to be filled out by the customer to make the payment and delivery.
   
   - **Profile:** Containing customer information and the options to edit and delete customer information.
   
@@ -115,7 +115,7 @@ When testing this app, to make a payment, the following details should be provid
 #### User Stories
 
 None registered customer:
-- As a customer, I want to access the platform from a desktop, tablet and a smartphone.
+- As a customer, I want to access the platform from a desktop, tablet or a smartphone.
 - As a customer, I want to view several kinds of products.
 - As a customer, I want to buy products.
 - As a customer, I want to view a specific kind of product.
@@ -123,20 +123,21 @@ None registered customer:
 - As a customer, I want to remove products in my cart.
 - As a customer, I want to make online payments.
 - As a customer, I want to see details of a specific product.
-- As a customer, I want to receive orderdetails to my email.
+- As a customer, I want to receive order details to my email.
 - As a customer, I want to registrate for an account.
 - As a customer, I want to login and logout of the account.
+- As a customer, I want to view all my products in my shopping cart to see the total amount of articles and the total cost.
 
 Registered customer:
-- As a registered customer, I want to view order history from previous purchases.
-- As a registered customer, I want to view all my products to see the total amount.
+- As a registered customer, I want to view my order history from previous purchases.
 
 Admin user:
-- As a admin, I want to add, remove and update products.
+- As an admin, I want to add, remove and update products.
+- As an admin, I want to view placed orders.
   
 #### Mockups
   
-  I have used Figma Mockups to visualize images I can work from.
+  I have used Figma Mockups to visualize images of the layout I want to create.
 
 - <a href="media/mockup-desktop.jpg" target="_blank">Desktop</a>
 
@@ -150,25 +151,25 @@ Admin user:
 #### Existing Features
 
 ##### Navbar:
-- A hamburger menu button that will display options in phone and tablet mode.
-- Products on click a drop down menu will be displayed with different products alternatives.
-- Logo on click redirects the customer to home page.
-- Home on click redirects the customer to home page.
-- Cart on click redirects the customer to cart page.
-- Special Offers on click redirects the customer to Special Offers page.
+- A hamburger menu button that will display options on phone and tablet mode.
+- Products, when clicked a drop down menu will be displayed with different products alternatives.
+- Logo, when clicked it redirects the customer to the home page.
+- Home, when clicked it redirects the customer to the home page.
+- Cart, when clicked it redirects the customer to the cart page.
+- Special Offers, when clicked it redirects the customer to the Special Offers page.
 ###### Logged In:
-  - My Account on click gives the customer three options to choose between Profile detail, Order History and Logout
-  - Order History on click redirects the customer to order history page.
-  - Profile detail on click redirects the customer to profile detail page.
-  - Logout on click redirects the customer to logout form.
+  - My Account, when clicked it gives the customer three options to choose between: Profile details, Order History and Logout.
+  - Order History. when clicked it redirects the customer to the Order History page.
+  - Profile details when clicked it redirects the customer to Profile Details page.
+  - Logout, when clicked it redirects the customer to the Logout form.
 
 ###### Logged Out:
-  - Register on click redirects the customer to register form.
-  - Login on click redirects the customer to login form.
+  - Register, when clicked it redirects the customer to the register form.
+  - Login, when clicked it redirects the customer to the login form.
 
 ##### Home page:
 - Button. Redirects the customer to products page.
-- Cards images. Four cards of the stores best selling products. If the customer click the card it will redirect 
+- Card images. Four cards of the stores best selling products. Clicking the card will redirect 
   the customer to that specific product page.
 
 ##### Toast:
@@ -187,29 +188,29 @@ Admin user:
 ##### Profile page:
 - Order form. Displays a form with the customer's order number and order history.
 - Order number link. Redirects the customer to more detailed order information.
-- Customer informaton. Displays a form with the customer's current information.
+- Customer information. Displays a form with the customer's current information.
 - Update button. Updates the form with the customer's information.
 - Home button. Redirects the customer to products page, will only be displayed if the customer is not registered.
 - Orders button. Redirects the customer to order history page, will only be displayed if the customer is registered.
 
 ##### Cart page:
-- Delete button. Delete the specific product information.
+- Delete button. Deletes the specific product.
 - Update button. Updates the amount of items in the cart.
 - Increment and Decrement buttons. Option to increase or decrease the amount.
-- Back to home button. Redirects the customer to products page.
+- Back to products button. Redirects the customer to products page.
 - Checkout button. Redirects the customer to checkout page.
 
 ##### Checkout page:
-- Billing information form. Form that needs to be filled in by customer to make a order.
+- Billing information form that needs to be filled out by customer to make an order.
 - Payment fieldset. A fieldset that needs to be filled with card number, CVC and expiration date.
-- Submit button. Submits the order and redirects the customer to checkout success that displays order information.
-- Save check label. Gives the customer the option to save order details for future purchase.
-- Login link. Gives the customer the option to login before purchase.
-- Register link. Gives the customer the option to get registered before purchase.
+- Submit button that submits the order and redirects the customer to a checkout success page that displays order information.
+- Save check symbol. Gives the customer the option to save order details for future purchases.
+- Login link. Gives the customer the option to login before purchasing.
+- Register link. Gives the customer the option to get registered before purchasing.
 - Adjust cart button. Redirects the customer to cart page.
 
 ##### Footer:
-- Social links. On click redirects the customer to Facebook, Twitter, Instagram and Linkedin.
+- Social links. When clicked it redirects the customer to Facebook, Twitter, Instagram and Linkedin.
 
 
 
@@ -217,11 +218,11 @@ Admin user:
 
 - TDD, Test-driven development for all python files.
 
-- Contact page so the customer can send emails directly from the store.
+- Contact page so the customer can send emails directly from the store to the admin.
 
-- Sort flavors function on the all product page.
+- Sort flavors function on the All Products page.
 
-- Search function on the all product page.
+- Search function on the All Products page.
 
 - Comment section so the customer can comment, review and rate.
 
@@ -322,35 +323,35 @@ User profile, categories, products, cart contents, order and order details
 
 |**Feature type**|**Feature**|**Tests**|**Bugs**|
 | :---: |:---:| :---:|:---:|
-|Button|Add to Cart|Getting  the right items. Posts the right items|No bugs|
-|Button|Shop Now|Sends the customer to the right page|No bugs|
-|Button|Navbar toggler|Displays all links. Sends the customer to the right page|No bugs|
-|Button|Login|Logs in the customer and redirect to home page. Toast popup|No bugs|
-|Button|Register|Registers the customer. Toast popup. Registration confirmation email sent|No bugs|
-|Button|Add to cart|Adds items to cart. Toast popup|No bugs|
-|Button|Decrement/Increment|Adds the right amount|No bugs|
-|Button|Update Information|Updates customers contact information|No bugs|
-|Button|Delete user account|Delete all user information and redirects to home page|No bugs|
-|Button|Complete Order|Complete customers order. Order email sent. Redirects the customer to checkout success page|No bugs|
-|Link|Image|Clicking on product image redirect customer to product page|No bugs|
-|Link|Order number|Sends the customer to right order number page. Displays all information about the purchase|No bugs|
-|Link|Login|Sends the customer to right page|No bugs|
-|Link|Register|Sends the customer to right html|No bugs|
-|Link|Navbar|Sends the customer to right pages|No bugs|
-|Link|Main logo|Sends the customer to home page|No bugs|
-|Link|Product detail|Sends the customer to right page. Displays right item|No bugs|
-|Functions|Paginator|Displays the right pages. Clicking the numbers Sends the customer to right page|No bugs|
-|Functions|Sort|Sorts the right categorys|No bugs|
-|Functions|Order Summary|Calculates the order summary|No bugs|
-|Functions|Quantity|Calculates the quantity. Updates the quantity|No bugs|
-|Functions|Delivery cost|Calculates the delivery cost|No bugs. But displaying the wrong amount|
-|Functions|Forms|Displays the right form. Saves the right information|No bugs|
-|Structure|Mobile view|Tested on iphone 6s and 8|No bugs|
-|Structure|Tablet view|Tested on google chrome debugger tool|No bugs|
-|Structure|Desktop view|Tested on Asus 13 inch and lenovo 15,6 ince|No bugs|
-|Structure|Web browser|Tested on Firefox, Chrome and Brave|No bugs. But some of the font awesome features may not work properly|
+|Button|Add to Cart|Getting  the right items. Adds the right items.|No bugs|
+|Button|Shop Now|Sends the customer to the right page.|No bugs|
+|Button|Navbar toggler|Displays all links. Sends the customer to the right page.|No bugs|
+|Button|Login|Logs in the customer and redirects to home page. Toast popup.|No bugs|
+|Button|Register|Registers the customer. Toast popup. Registration confirmation email gets sent.|No bugs|
+|Button|Add to cart|Adds items to cart. Toast popup.|No bugs|
+|Button|Decrement/Increment|Adds the right amount.|No bugs|
+|Button|Update Information|Updates customers contact information.|No bugs|
+|Button|Delete user account|Deletes all user information and redirects to the home page.|No bugs|
+|Button|Complete Order|Completes customers order. Order email gets sent. Redirects the customer to the checkout success page.|No bugs|
+|Link|Image|Clicking on product image redirects the customer to the specific product page.|No bugs|
+|Link|Order number|Sends the customer to right order number page. Displays all information about the purchase. |No bugs|
+|Link|Login|Sends the customer to the right page.|No bugs|
+|Link|Register|Sends the customer to the right html.|No bugs|
+|Link|Navbar|Sends the customer to the right pages.|No bugs|
+|Link|Main logo|Sends the customer to the home page.|No bugs|
+|Link|Product detail|Sends the customer to the right page. Displays the specific item.|No bugs|
+|Functions|Paginator|Displays the the right pages. Clicking the numbers sends the customer to the right page.|No bugs|
+|Functions|Sort|Sorts the right categorys.|No bugs|
+|Functions|Order Summary|Calculates the order summary.|No bugs|
+|Functions|Quantity|Calculates the quantity. Updates the quantity.|No bugs|
+|Functions|Delivery cost|Calculates the delivery cost.|No bugs. But displaying the wrong amount|
+|Functions|Forms|Displays the right form. Saves the right information.|No bugs|
+|Structure|Mobile view|Tested on iPhone 6s and 8.|No bugs|
+|Structure|Tablet view|Tested on google chrome debugger tool.|No bugs|
+|Structure|Desktop view|Tested on Asus 13 inch and Lenovo 15,6".|No bugs|
+|Structure|Web browser|Tested on Firefox, Chrome and Brave.|No bugs. But some of the font awesome features may not work properly|
 |Structure|Navbar|Works in mobile and tablet view. Sends the customer to right html.|No bugs. Responsive is working|
-|Structure|Navbar toggler|Works in mobile and tablet view. Sends the customer to right page|No bugs|
+|Structure|Navbar toggler|Works in mobile and tablet view. Sends the customer to right page.|No bugs|
 |Structure|Content|Stays in the midle. Works in mobile and tablet view.|No bugs. Responsive is working|
 |Structure|Footer|Stays at the bottom. Works in mobile and tablet view.|No bugs|
 
@@ -379,25 +380,25 @@ User Story 1:
   Customers also have the options to buy as a non registered customer.
   
 User Story 2:
-- On the profile page customer can delete and update their account. By updating their account, the customer must fill in the form and then click on the update button.
-  By deleting their account, the customer just click the delete button, a pop up will appear and ask the customer if they really want to delete the account.
+- On the profile page customer can delete and update their account. By updating their account, the customer must fill out the form and then click on the update button.
+  When deleting their account, the customer click the delete button, a pop up will appear and ask the customer if they really want to delete their account.
 
 User Story 3:
 - Customer can add products that they want to buy and the cart in the right corner will show the amount for each added item.
-  By adding an item, a pop up will be displayed with images of the items that the customer has added and Proceed to checkout button.
+  By adding an item, a pop up will be displayed with images of the items that the customer has added and a Proceed to checkout button.
   By clicking Proceed to checkout button and the cart logo will take the customer to Shopping Cart page.
 
 User Story 4:
 - On the Shopping Cart page, customer have the options to update and remove items from the cart.
-  A card will display total, delivery, grand total and a Proceed to checkout button.
-  When the customer feels satisfied with the items that will be purchased he/she can then kick on Proceed to checkout button that will take the customer to checkout page.
+  A card will display total cost, delivery cost, grand total cost and a Proceed to checkout button.
+  When the customer feels satisfied with the items that will be purchased he/she can then click on Proceed to checkout button that will take the customer to checkout page.
 
 User Story 5:
 - On the checkout page, customer need to fill in a form with the billing informations and add their card information to make a purchase.
   If the customer is not registered there will be an option to login or create an account link.
   If the customer is registered there will be an option to save billing information.
   When the customer is ready, he/she can then press the Complete Order button.
-  Klicking Complete Order button will send the user an email confirmation with order information and redirect the user to checkout success page
+  Clicking Complete Order button will send the user an email confirmation with order information and redirect the user to checkout success page
   that displays all the billing and purchase information.
   
 User Story 6:
@@ -411,12 +412,12 @@ User Story 6:
 
   - Order number in Order History:
 ```shell
-    When the customer is done with a purchase and is checking out a order number will be providet.
+    When the customer is done with a purchase and is checking out a order number will be provided.
     Somehow the customer will be provided with double order numbers in order history page.
 
-    At the moment I have not locate the issue, but I think it have something to do with the connection to heroku and that databases sends out duplicate order numbers.
-    This will not affect customers payments, Stripe will only charged customers once and only sends out one confirmation email.
-    The lack of UX is understandable and customers will get confused and wonders why there is duplicate order numbers.
+    At the moment I have not located this issue, but I think it has something to do with the connection to heroku and the database sends out duplicate order numbers.
+    This will not affect the customers payments. Stripe will only charge the customer once and only sends out one confirmation email.
+    <I understand that the the lack of UX is a problem and that the customer will get confused and wonder why there are duplicate order numbers.
 
     Due to lack of time and the risk of crashing the project, I have not deleted the Heroku application and tried to upload the project again.
     This will be done as soon as possible after the submission.
@@ -426,8 +427,8 @@ User Story 6:
   - Stripe card element in mobile view:
 ```shell
     When the customer types in the card number, CVC and date the numbers overlap and it looks messy.
-    It does not affect the purchase but it looks bad from a user's experience.
-    This is an issue from Stripe in card element.
+    It does not affect the purchase but it looks bad from a users point of view.
+    This is an issue from Stripe in the card element.
 ```
   
 ## Deployment
@@ -453,12 +454,12 @@ The following instructions are based on Windows 10 and VS Code editor.
 
 > Instructions:
 
-  I.    Clone the repository in Github
+  I.    Clone the repository in Github.
  ```shell
   git clone <repository name>.git
  ```
 
-  II.   Install all the packages that are required
+  II.   Install all the packages that are required.
 ```shell
 pip install python
 pip install django
@@ -478,7 +479,7 @@ https://django-allauth.readthedocs.io/en/latest/installation.html
  python -m venv env
 ```
 
-  V.   Activate an environment
+  V.   Activate an environment.
 ```shell
 
 virtualenv env
@@ -499,7 +500,7 @@ python manage.py createsuperuser
 ```
 
 
-  IX.   Run the application
+  IX.   Run the application.
 ```shell
 python manage.py runserver
 
@@ -564,7 +565,7 @@ This project is hosted using Heroku.
 
 > Instructions:
 
-  I.  Install Heroku
+  I.  Install Heroku.
 ```shell
 npm install -g heroku
 heroku login
@@ -574,7 +575,7 @@ git init
 Existing Git repository:heroku git:remote -a <app name>
 ```
 
-  II. Install the necessary requirements
+  II. Install the necessary requirements.
 ```shell
 pip install dj_database_url
 pip install psycopg2-binary
@@ -586,17 +587,17 @@ pip install gunicorn
 pip freeze > requirements.txt
 ```
 
-  IV. Seting up Heroku.
+  IV. Setting up Heroku.
 ```shell
 On the resources tab select:
 Heroku Postgres Database
 ```
 
-  V.  Setting up to connect to Heroku Postgres Database In settings.py.
+  V.  Setting up to connect to Heroku Postgres Database in settings.py.
 ```shell
 Step 1 import dj_database_url
 
-Step 2 comment out the default configuration.
+Step 2 Comment out the default configuration.
 #DATABASES = {
 #  'default': {
 #     'ENGINE': 'django.db.backends.sqlite3',
@@ -604,7 +605,7 @@ Step 2 comment out the default configuration.
 #  }
 #}
 
-Step 3  replace the default database with a call to dj_database_url.parse
+Step 3  Replace the default database with a call to dj_database_url.parse
         And give it the database URL from Heroku.
 
 DATABASES = {
@@ -622,7 +623,7 @@ It is important to do them in this order!
 3. python manage.py createsuperuser
 
 Step 6 Put back everything as it was.
-when everything is migrate and done remove the Heroku database config.
+When everything is migrated and done remove the Heroku database config.
 And uncomment the original so it doesn't end up in version control and then set up the databases like this.
 
 if 'DATABASE_URL' in os.environ:
@@ -638,7 +639,7 @@ else:
     }
 ```
     
-  VI. Create a Procfile
+  VI. Create a Procfile.
 ```shell
 echo web: python app.py > Procfile
 
@@ -646,7 +647,7 @@ web: gunicorn <your application name>.wsgi:application
 ```
 
   VII.  Login to Heroku and temporarily disable collectstatic,
-        So that Heroku won't try to collect static files on deploy.
+        so that Heroku won't try to collect static files on deploy.
 ```shell
 Heroku config:set DISABLE_COLLECTSTATIC=1 --app <your app name>
       
@@ -673,7 +674,7 @@ IX. Set the config variables in your Heroku settings.
 |USE_AWS|True|
 
  
- X. Deploy your application to Heroku
+ X. Deploy your application to Heroku.
 ```shell
 git add .
 git commit -am "make it better"
@@ -697,20 +698,20 @@ Which is a cloud-based storage service.
 
 > Instructions:
 
-  I.  Create an account
+  I.  Create an account.
 ```shell
 First create a user account at https://aws.amazon.com/
 And sign-in in the upper right by accessing the AWS management console under my account.
 ```
 ![Image of set up step1](https://timmy-bergkvist.github.io/Pralinorskan-app/media/set-up-step1-img.jpg)
 ```shell
-Search or open s3 and create a new bucket. Which will be used to store files.
+Search or open s3 and create a new bucket which will be used to store files.
 ```
 ![Image of set up step2](https://timmy-bergkvist.github.io/Pralinorskan-app/media/set-up-step2-img.jpg)
 
   II.  Create bucket.
 ```shell
-Click create bucket and give the bucket a name, recommend naming your bucket to match your Heroku app name.
+Click create bucket and give the bucket a name (I recommend you to match your bucket name to your Heroku app name).
 ```
 ![Image of set up step3](https://timmy-bergkvist.github.io/Pralinorskan-app/media/set-up-step3-img.jpg)
 ![Image of set up step4](https://timmy-bergkvist.github.io/Pralinorskan-app/media/set-up-step4-img.jpg)
@@ -793,7 +794,7 @@ Give the group a name and click next two times.
 ![Image of set up step14](https://timmy-bergkvist.github.io/Pralinorskan-app/media/set-up-step14-img.jpg)
 
 ```shell
-Nex create the policy.
+Next create the policy.
 Click policies and then create policy.
 Go to the JSON tab and then select import managed policy which will let you import one that AWS has pre-built for full access to s3.
 ```
@@ -806,9 +807,9 @@ Search for s3 and then import the s3 full access policy.
 ![Image of set up step17](https://timmy-bergkvist.github.io/Pralinorskan-app/media/set-up-step17-img.jpg)
 
 ```shell
-You don't want to allow full access to everything you only want to allow full access to your new bucket and everything within it.
+You don't want to allow full access to everything, you only want to allow full access to your new bucket and everything within it.
 Copy the bucket ARN from the bucket policy page in s3.
-click review policy.
+Click review policy.
 Give it a name and a description.
 Then click create policy.
 ```
@@ -842,7 +843,7 @@ You don't need to change anything else, click through to the end and then click 
 ![Image of set up step22](https://timmy-bergkvist.github.io/Pralinorskan-app/media/set-up-step22-img.jpg)
 
 ```shell
-Next download and save this CSV which will contain this users access key and secret access key to authenticate them from your django app.
+Next download and save this CSV which will contain this users access key and secret access key to authenticate them from your Django app.
 It's important to download and save this CSV because once you gone through this process you can't download them again.
 ```
 
@@ -859,7 +860,7 @@ next do a
 pip freeze > requirements.txt
 ```
 
-  VI.  Setup in settings
+  VI.  Setup in settings.
 ```shell
 Then add 'storages' to your settings.py file at INSTALLED_APPS
 
@@ -890,7 +891,7 @@ if 'USE_AWS' in os.environ:
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 ```
 
-  VII.  Setup in Heroku
+  VII.  Setup in Heroku.
 
 |**KEY NAME**|**KEY VALUE**|
 | :---: |:---:|
@@ -929,14 +930,14 @@ class MediaStorage(S3Boto3Storage):
     location = settings.MEDIAFILES_LOCATION
 ```
 
-Next push it up to github
+Next push it up to github.
 ```shell
 git add .
 git commit -m "Set up for Amazon Web Services s3"
 git push origin master
 ```
 
-  IX.  Upload images and files
+  IX.  Upload images and files.
 ```shell
 Next go to s3 and create a new folder called media.
 ```
@@ -953,7 +954,7 @@ Click next through to the end here. And then click upload.
 
 ## Credits
   
-   #### media
+   #### Media
   - The photos used in this site were obtained from:
 
     - https://pixabay.com/sv/
@@ -971,4 +972,4 @@ Click next through to the end here. And then click upload.
     
     - https://www.templatemonster.com/blog/top-45-ecommerce-business-ideas/
     
-I wanna say thank you to my mentor Oluwafemi Medale for helping me through this project.
+I want to say thank you to my mentor Oluwafemi Medale for helping me with this project.
