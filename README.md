@@ -61,7 +61,7 @@ When testing this app, to make a payment, the following details should be provid
 <summary>Testing</summary>
 
   * [Testing](#testing)
-    + [Testing tools](#local-deployment)
+    + [Testing tools](#testing-tools)
     + [Tests](#tests)
     + [Stripe payment testing](#stripe-payment-testing)
     + [User Stories Testing](#user-stories-testing)
