@@ -3,6 +3,8 @@
 
 Milestone project: Full Stack Frameworks with Django.
 
+This project is part of a course from <a href="https://codeinstitute.net/" target="_blank"> Code Institute. </a>
+
 ![Image of responsive](https://timmy-bergkvist.github.io/Pralinorskan-app/media/pralinorskan.display.jpg)
 
 This project is part of the 'Full Stack Frameworks with Django' module of the Code Institute Full Stack Software Development course.
